@@ -1,0 +1,979 @@
+<!-- ============================================================
+     FILE: index.html (الصفحة الرئيسية)
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>روايات الكاتب شادي رحال</title>
+    <meta name="description" content="روايات الكاتب شادي رحال: سكاي لاين، الأماكن، ماذا لو ما كانت الحرب؟ - روايات عربية مميزة للقراءة والتحميل بصيغة PDF" />
+    <meta name="keywords" content="روايات, شادي رحال, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, روايات عربية, تحميل روايات PDF" />
+    <meta name="author" content="شادي رحال" />
+    <meta property="og:title" content="روايات الكاتب شادي رحال" />
+    <meta property="og:description" content="روايات عربية مميزة للكاتب شادي رحال - اقرأ وتحميل مجاني" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://your-domain.com/index.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ============================================================
+           ROOT & RESET
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6C3CE1;
+            --primary-light: #8B5CF6;
+            --primary-dark: #4F29A8;
+            --gold: #F59E0B;
+            --gold-light: #FBBF24;
+            --bg: #07050E;
+            --bg-card: #110B1F;
+            --bg-card-hover: #1A122E;
+            --text: #F3F0FF;
+            --text-muted: #9CA3AF;
+            --glass: rgba(17, 11, 31, 0.7);
+            --shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ============================================================
+           ANIMATED BACKGROUND ORBS
+           ============================================================ */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            animation: orbFloat 20s infinite alternate ease-in-out;
+        }
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--primary);
+            top: -200px;
+            right: -150px;
+            opacity: 0.2;
+        }
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--gold);
+            bottom: -150px;
+            left: -100px;
+            opacity: 0.15;
+            animation-delay: 6s;
+        }
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary-light);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.08;
+            animation-delay: 12s;
+        }
+
+        @keyframes orbFloat {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(40px, -60px) scale(1.1);
+            }
+            66% {
+                transform: translate(-30px, 40px) scale(0.95);
+            }
+            100% {
+                transform: translate(50px, -30px) scale(1.05);
+            }
+        }
+
+        /* ============================================================
+           GLASS GRID OVERLAY
+           ============================================================ */
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(108, 60, 225, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(108, 60, 225, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* ============================================================
+           CONTAINER
+           ============================================================ */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 20px 80px;
+        }
+
+        /* ============================================================
+           HEADER
+           ============================================================ */
+        .header {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 30px 35px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 30%, rgba(108, 60, 225, 0.12), transparent 60%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-brand .logo-icon {
+            width: 54px;
+            height: 54px;
+            background: linear-gradient(135deg, var(--primary-light), var(--gold));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.35);
+            flex-shrink: 0;
+        }
+
+        .header-brand .brand-text h1 {
+            font-size: 1.7rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 30%, var(--primary-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .header-brand .brand-text span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            -webkit-text-fill-color: var(--text-muted);
+        }
+
+        .header-brand .brand-text span i {
+            color: var(--gold);
+            -webkit-text-fill-color: var(--gold);
+        }
+
+        .header-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 8px 22px 8px 18px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        .header-badge i {
+            font-size: 0.9rem;
+        }
+
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(245, 158, 11, 0.25);
+            }
+        }
+
+        /* ============================================================
+           CONTROLS
+           ============================================================ */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 36px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-wrapper {
+            flex: 1 1 300px;
+            max-width: 460px;
+            position: relative;
+        }
+
+        .search-wrapper i {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            pointer-events: none;
+        }
+
+        .search-wrapper input {
+            width: 100%;
+            padding: 14px 48px 14px 20px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 60px;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-wrapper input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+
+        .search-wrapper input:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 30px rgba(108, 60, 225, 0.15);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 60px;
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--text);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-color: var(--primary);
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
+        }
+
+        /* ============================================================
+           NOVEL GRID
+           ============================================================ */
+        .novel-grid {
+            display: grid;
+            gap: 28px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        /* ============================================================
+           NOVEL CARD
+           ============================================================ */
+        .novel-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .novel-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.7);
+            background: var(--bg-card-hover);
+        }
+
+        .novel-card .card-image {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1A122E, #0F0A1A);
+            flex-shrink: 0;
+        }
+
+        .novel-card .card-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .novel-card:hover .card-image img {
+            transform: scale(1.04);
+        }
+
+        .novel-card .card-image .image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(7, 5, 14, 0.7) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .novel-card .card-image .badge-chapters {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: rgba(7, 5, 14, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            letter-spacing: 0.3px;
+        }
+
+        .novel-card .card-image .badge-category {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(108, 60, 225, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 4px 14px;
+            border-radius: 40px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.3px;
+        }
+
+        .novel-card .card-body {
+            padding: 20px 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .novel-card .card-body .card-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+
+        .novel-card .card-body .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .novel-card .card-body .card-meta i {
+            color: var(--gold);
+            width: 16px;
+        }
+
+        .novel-card .card-body .card-desc {
+            margin-top: 12px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            opacity: 0.75;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .novel-card .card-body .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .novel-card .card-body .read-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 60px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .novel-card .card-body .read-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 40px rgba(108, 60, 225, 0.4);
+        }
+
+        .novel-card .card-body .read-btn i {
+            font-size: 0.8rem;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer {
+            text-align: center;
+            padding: 35px 20px 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer .heart {
+            color: var(--gold);
+            display: inline-block;
+            animation: heartBeat 1.6s infinite;
+        }
+
+        @keyframes heartBeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .footer .author-name {
+            color: var(--primary-light);
+            font-weight: 700;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (min-width: 1400px) {
+            .novel-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 32px;
+            }
+            .container {
+                padding: 30px 40px 100px;
+            }
+            .header {
+                padding: 40px 50px;
+            }
+            .header-brand .brand-text h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 1399px) and (min-width: 1100px) {
+            .novel-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 1099px) and (min-width: 768px) {
+            .novel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .header-brand .brand-text h1 {
+                font-size: 1.4rem;
+            }
+            .header {
+                padding: 22px 24px;
+            }
+        }
+
+        @media (max-width: 767px) and (min-width: 480px) {
+            .novel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            .container {
+                padding: 14px 14px 80px;
+            }
+            .header {
+                padding: 18px 18px;
+                border-radius: 16px;
+            }
+            .header-brand .logo-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 1.4rem;
+            }
+            .header-brand .brand-text h1 {
+                font-size: 1.2rem;
+            }
+            .header-brand .brand-text span {
+                font-size: 0.7rem;
+            }
+            .header-badge {
+                font-size: 0.65rem;
+                padding: 5px 14px 5px 12px;
+            }
+            .header-badge i {
+                font-size: 0.7rem;
+            }
+            .novel-card .card-body .card-title {
+                font-size: 1.1rem;
+            }
+            .novel-card .card-body .card-desc {
+                font-size: 0.8rem;
+                -webkit-line-clamp: 2;
+            }
+            .novel-card .card-body .read-btn {
+                padding: 8px 18px;
+                font-size: 0.75rem;
+            }
+            .controls {
+                gap: 10px;
+            }
+            .search-wrapper {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .search-wrapper input {
+                padding: 12px 44px 12px 16px;
+                font-size: 0.85rem;
+            }
+            .filter-btn {
+                padding: 7px 16px;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 479px) {
+            .novel-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .container {
+                padding: 10px 8px 70px;
+            }
+
+            .header {
+                padding: 14px 12px;
+                border-radius: 14px;
+                margin-bottom: 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .header-brand .logo-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 1.2rem;
+                border-radius: 10px;
+            }
+
+            .header-brand .brand-text h1 {
+                font-size: 1rem;
+            }
+
+            .header-brand .brand-text span {
+                font-size: 0.6rem;
+            }
+
+            .header-badge {
+                font-size: 0.55rem;
+                padding: 4px 12px 4px 10px;
+                justify-content: center;
+            }
+            .header-badge i {
+                font-size: 0.6rem;
+            }
+
+            .controls {
+                gap: 8px;
+                margin-bottom: 18px;
+            }
+
+            .search-wrapper input {
+                padding: 10px 38px 10px 12px;
+                font-size: 0.75rem;
+                border-radius: 40px;
+            }
+            .search-wrapper i {
+                right: 12px;
+                font-size: 0.75rem;
+            }
+
+            .filter-group {
+                gap: 4px;
+                justify-content: center;
+            }
+
+            .filter-btn {
+                padding: 5px 12px;
+                font-size: 0.65rem;
+                border-radius: 40px;
+            }
+
+            .novel-card {
+                border-radius: 14px;
+            }
+
+            .novel-card .card-image {
+                padding-top: 66%;
+            }
+
+            .novel-card .card-image .badge-chapters {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+                bottom: 8px;
+                right: 8px;
+            }
+
+            .novel-card .card-image .badge-category {
+                font-size: 0.5rem;
+                padding: 2px 10px;
+                top: 8px;
+                right: 8px;
+            }
+
+            .novel-card .card-body {
+                padding: 12px 10px 14px;
+            }
+
+            .novel-card .card-body .card-title {
+                font-size: 0.85rem;
+            }
+
+            .novel-card .card-body .card-meta {
+                font-size: 0.6rem;
+                gap: 4px 10px;
+                margin-top: 3px;
+            }
+            .novel-card .card-body .card-meta i {
+                width: 12px;
+                font-size: 0.6rem;
+            }
+
+            .novel-card .card-body .card-desc {
+                display: none;
+            }
+
+            .novel-card .card-body .card-footer {
+                margin-top: 8px;
+                padding-top: 8px;
+                border-top: 1px solid rgba(255, 255, 255, 0.04);
+            }
+
+            .novel-card .card-body .read-btn {
+                padding: 5px 14px;
+                font-size: 0.6rem;
+                border-radius: 40px;
+                box-shadow: 0 4px 16px rgba(108, 60, 225, 0.2);
+            }
+            .novel-card .card-body .read-btn i {
+                font-size: 0.6rem;
+            }
+
+            .footer {
+                font-size: 0.7rem;
+                padding: 20px 10px 5px;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 359px) {
+            .novel-grid {
+                gap: 8px;
+            }
+            .novel-card .card-body {
+                padding: 8px 6px 10px;
+            }
+            .novel-card .card-body .card-title {
+                font-size: 0.7rem;
+            }
+            .novel-card .card-body .card-meta {
+                font-size: 0.5rem;
+                gap: 2px 6px;
+            }
+            .novel-card .card-body .read-btn {
+                padding: 4px 10px;
+                font-size: 0.5rem;
+            }
+            .header-brand .brand-text h1 {
+                font-size: 0.85rem;
+            }
+            .header-brand .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            .filter-btn {
+                padding: 4px 8px;
+                font-size: 0.55rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ORBS -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+        <!-- ============================================================
+        HEADER
+        ============================================================ -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="logo-icon">📚</div>
+                    <div class="brand-text">
+                        <h1>روايات الكاتب شادي رحال</h1>
+                        <span><i class="fas fa-quote-right"></i> حيث تعيش الكلمات <i class="fas fa-quote-left"></i></span>
+                    </div>
+                </div>
+                <div class="header-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>VIP READER</span>
+                    <i class="fas fa-star" style="font-size:0.6rem; opacity:0.6;"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============================================================
+        CONTROLS
+        ============================================================ -->
+        <div class="controls">
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="ابحث عن رواية..." aria-label="بحث في الروايات" />
+            </div>
+            <div class="filter-group" id="filterGroup">
+                <button class="filter-btn active" data-filter="all" aria-label="عرض جميع الروايات">الكل</button>
+                <button class="filter-btn" data-filter="رومانسية" aria-label="تصفية رومانسية">💕 رومانسية</button>
+                <button class="filter-btn" data-filter="اجتماعية" aria-label="تصفية اجتماعية">🏙️ اجتماعية</button>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        NOVEL GRID
+        ============================================================ -->
+        <div class="novel-grid" id="novelGrid" role="list"></div>
+
+        <!-- ============================================================
+        FOOTER
+        ============================================================ -->
+        <footer class="footer">
+            <span class="heart">❤️</span>
+            جميع الحقوق محفوظة &copy; 2026
+            <span class="author-name">شادي رحال</span>
+            <span class="heart">❤️</span>
+        </footer>
+    </div>
+
+    <script>
+        // ============================================================
+        //  DATA - الروايات
+        // ============================================================
+        const novels = [{
+            id: 'skylane',
+            title: 'سكاي لاين',
+            category: 'رومانسية',
+            chapters: 19,
+            image: 'skylane.jpg',
+            description: 'قصة حب بين أستاذ وطالبة، تبدأ بكرسي وطاولة وتنتهي بوعد ودمعة. رحلة من الحلم إلى الواقع في وادي الياسمين.',
+            file: 'skylane.html'
+        }, {
+            id: 'places',
+            title: 'الأماكن',
+            category: 'رومانسية',
+            chapters: 13,
+            image: 'places.jpg',
+            description: 'أربع سنوات من الوفاء والانتظار. رحلة عبر الأماكن التي شهدت حباً لا يموت، ومواجهة مع الزمن والذكريات.',
+            file: 'places.html'
+        }, {
+            id: 'what-if-war',
+            title: 'ماذا لو ما كانت الحرب؟',
+            category: 'اجتماعية',
+            chapters: 10,
+            image: 'what-if-war.jpg',
+            description: 'رواية تأملية عن النزوح والفقد والأمل. سؤال واحد يغير كل شيء: ماذا لو لم تكن الحرب؟',
+            file: 'what-if-war.html'
+        }];
+
+        // ============================================================
+        //  RENDER
+        // ============================================================
+        const grid = document.getElementById('novelGrid');
+        const searchInput = document.getElementById('searchInput');
+        let activeFilter = 'all';
+
+        function render() {
+            const query = searchInput.value.trim().toLowerCase();
+            const filtered = novels.filter(n => {
+                const matchFilter = activeFilter === 'all' || n.category === activeFilter;
+                const matchSearch = n.title.includes(query) ||
+                    n.category.includes(query) ||
+                    n.description.includes(query);
+                return matchFilter && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column:1/-1; text-align:center; padding:70px 20px; color:var(--text-muted);">
+                        <i class="fas fa-book-open" style="font-size:3.5rem; opacity:0.2; display:block; margin-bottom:18px;"></i>
+                        <p style="font-size:1.1rem;">لا توجد روايات تطابق البحث</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(n => `
+                <div class="novel-card" data-category="${n.category}" data-title="${n.title}" role="listitem">
+                    <div class="card-image">
+                        <img src="${n.image}" alt="غلاف رواية ${n.title}" loading="lazy" onerror="this.style.display='none'" />
+                        <div class="image-overlay"></div>
+                        <span class="badge-category">${n.category}</span>
+                        <span class="badge-chapters"><i class="fas fa-book"></i> ${n.chapters} فصل</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">${n.title}</h3>
+                        <div class="card-meta">
+                            <span><i class="fas fa-tag"></i> ${n.category}</span>
+                            <span><i class="fas fa-file-alt"></i> ${n.chapters} فصل</span>
+                        </div>
+                        <p class="card-desc">${n.description}</p>
+                        <div class="card-footer">
+                            <button class="read-btn" data-file="${n.file}" aria-label="اقرأ رواية ${n.title}">
+                                <i class="fas fa-arrow-left"></i> اقرأ الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.querySelectorAll('.read-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const file = btn.dataset.file;
+                    if (file) window.location.href = file;
+                });
+            });
+
+            document.querySelectorAll('.novel-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const btn = this.querySelector('.read-btn');
+                    if (btn) window.location.href = btn.dataset.file;
+                });
+            });
+        }
+
+        // ============================================================
+        //  FILTER EVENTS
+        // ============================================================
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                activeFilter = this.dataset.filter;
+                render();
+            });
+        });
+
+        searchInput.addEventListener('input', render);
+
+        // ============================================================
+        //  INIT
+        // ============================================================
+        render();
+    </script>
+
+</body>
+</html>
