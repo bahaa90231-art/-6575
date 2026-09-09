@@ -1,20 +1,22 @@
 <!-- ============================================================
-     FILE: places.html (رواية الأماكن - مع تحميل PDF)
+     FILE: places.html (رواية الأماكن - محدثة لـ SEO)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الأماكن - روايات الكاتب شادي رحال</title>
-    <meta name="description" content="الأماكن - رواية رومانسية للكاتب شادي رحال. أربع سنوات من الوفاء والانتظار. اقرأ وتحميل PDF مجاني." />
-    <meta name="keywords" content="الأماكن, شادي رحال, رواية رومانسية, تحميل رواية PDF" />
+    <title>الأماكن - رواية رومانسية للكاتب شادي رحال | تحميل PDF</title>
+    <meta name="description" content="رواية الأماكن للكاتب شادي رحال - أربع سنوات من الوفاء والانتظار. رحلة عبر الأماكن التي شهدت حباً لا يموت. اقرأ وتحميل PDF مجاني." />
+    <meta name="keywords" content="الأماكن, رواية الأماكن, شادي رحال, الأماكن PDF, رواية رومانسية, تحميل رواية الأماكن, رامي وعسل, رواية عربية" />
     <meta name="author" content="شادي رحال" />
-    <meta property="og:title" content="الأماكن - شادي رحال" />
-    <meta property="og:description" content="رواية الأماكن للكاتب شادي رحال - أربع سنوات من الوفاء والانتظار" />
+    <meta property="og:title" content="الأماكن - رواية رومانسية للكاتب شادي رحال" />
+    <meta property="og:description" content="رواية الأماكن للكاتب شادي رحال - أربع سنوات من الوفاء والانتظار. اقرأ وتحميل PDF مجاني." />
+    <meta property="og:image" content="https://bahaa90231-art.github.io/-6575/places.jpg" />
+    <meta property="og:url" content="https://bahaa90231-art.github.io/-6575/places.html" />
     <meta property="og:type" content="article" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://your-domain.com/places.html" />
+    <link rel="canonical" href="https://bahaa90231-art.github.io/-6575/places.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,15 +26,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
     </script>
     <style>
-        /* ============================================================
-           ROOT & RESET
-           ============================================================ */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             --primary: #6C3CE1;
             --primary-light: #8B5CF6;
@@ -50,11 +48,9 @@
             --radius-sm: 12px;
             --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Cairo', sans-serif;
             background: var(--bg);
@@ -64,9 +60,6 @@
             position: relative;
         }
 
-        /* ============================================================
-           ANIMATED BACKGROUND ORBS
-           ============================================================ */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -102,7 +95,6 @@
             opacity: 0.08;
             animation-delay: 12s;
         }
-
         @keyframes orbFloat {
             0% {
                 transform: translate(0, 0) scale(1);
@@ -129,9 +121,6 @@
             background-size: 60px 60px;
         }
 
-        /* ============================================================
-           CONTAINER
-           ============================================================ */
         .container {
             position: relative;
             z-index: 2;
@@ -140,9 +129,7 @@
             padding: 20px 20px 80px;
         }
 
-        /* ============================================================
-           HEADER
-           ============================================================ */
+        /* ===== HEADER ===== */
         .header {
             background: var(--glass);
             backdrop-filter: blur(20px);
@@ -158,7 +145,6 @@
             flex-wrap: wrap;
             gap: 16px;
         }
-
         .header .back-btn {
             background: var(--bg-card);
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -175,18 +161,15 @@
             gap: 10px;
             text-decoration: none;
         }
-
         .header .back-btn:hover {
             background: var(--primary);
             border-color: var(--primary);
             transform: translateX(-4px);
         }
-
         .header .title-section {
             text-align: center;
             flex: 1;
         }
-
         .header .title-section h1 {
             font-size: 2rem;
             font-weight: 900;
@@ -195,16 +178,13 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .header .title-section .sub {
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-
         .header .title-section .sub i {
             color: var(--gold);
         }
-
         .header .chapters-badge {
             background: var(--primary);
             padding: 8px 20px;
@@ -215,9 +195,7 @@
             white-space: nowrap;
         }
 
-        /* ============================================================
-           NOVEL COVER
-           ============================================================ */
+        /* ===== NOVEL COVER ===== */
         .novel-cover {
             width: 100%;
             max-height: 400px;
@@ -228,7 +206,6 @@
             border: 1px solid rgba(255, 255, 255, 0.04);
             background: var(--bg-card);
         }
-
         .novel-cover img {
             width: 100%;
             height: 100%;
@@ -237,9 +214,7 @@
             display: block;
         }
 
-        /* ============================================================
-           TOOLBAR
-           ============================================================ */
+        /* ===== TOOLBAR ===== */
         .toolbar {
             display: flex;
             flex-wrap: wrap;
@@ -247,7 +222,6 @@
             margin-bottom: 25px;
             justify-content: center;
         }
-
         .toolbar .btn-pdf {
             background: linear-gradient(135deg, #dc2626, #b91c1c);
             color: #fff;
@@ -264,25 +238,20 @@
             align-items: center;
             gap: 10px;
         }
-
         .toolbar .btn-pdf:hover {
             transform: scale(1.04);
             box-shadow: 0 12px 40px rgba(220, 38, 38, 0.45);
         }
-
         .toolbar .btn-pdf i {
             font-size: 1.1rem;
         }
-
         .toolbar .btn-pdf.loading {
             opacity: 0.7;
             pointer-events: none;
         }
-
         .toolbar .btn-pdf.loading i {
             animation: spin 1s linear infinite;
         }
-
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -292,15 +261,12 @@
             }
         }
 
-        /* ============================================================
-           CHAPTERS GRID
-           ============================================================ */
+        /* ===== CHAPTERS GRID ===== */
         .chapters-grid {
             display: grid;
             gap: 16px;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
-
         .chapter-card {
             background: var(--bg-card);
             border-radius: 16px;
@@ -311,13 +277,11 @@
             transition: var(--transition);
             text-align: center;
         }
-
         .chapter-card:hover {
             transform: translateY(-6px) scale(1.02);
             border-color: rgba(139, 92, 246, 0.2);
             box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
         }
-
         .chapter-card .num {
             font-size: 2.2rem;
             font-weight: 900;
@@ -327,14 +291,12 @@
             background-clip: text;
             line-height: 1;
         }
-
         .chapter-card .title {
             font-weight: 700;
             font-size: 0.95rem;
             margin-top: 6px;
             color: var(--text);
         }
-
         .chapter-card .icon-read {
             margin-top: 8px;
             color: var(--text-muted);
@@ -342,15 +304,12 @@
             opacity: 0;
             transition: var(--transition);
         }
-
         .chapter-card:hover .icon-read {
             opacity: 1;
             color: var(--gold);
         }
 
-        /* ============================================================
-           CHAPTER VIEW
-           ============================================================ */
+        /* ===== CHAPTER VIEW ===== */
         .chapter-view {
             display: none;
             background: var(--bg-card);
@@ -361,11 +320,9 @@
             margin-top: 25px;
             animation: fadeUp 0.4s ease;
         }
-
         .chapter-view.active {
             display: block;
         }
-
         @keyframes fadeUp {
             0% {
                 opacity: 0;
@@ -376,7 +333,6 @@
                 transform: translateY(0);
             }
         }
-
         .chapter-view .ch-header {
             display: flex;
             justify-content: space-between;
@@ -387,7 +343,6 @@
             padding-bottom: 16px;
             margin-bottom: 20px;
         }
-
         .chapter-view .ch-header .ch-num {
             background: var(--primary);
             padding: 6px 18px;
@@ -395,7 +350,6 @@
             font-weight: 700;
             font-size: 0.85rem;
         }
-
         .chapter-view .ch-header .ch-title {
             font-size: 1.5rem;
             font-weight: 800;
@@ -404,7 +358,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .chapter-view .ch-header .ch-close {
             background: transparent;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -416,12 +369,10 @@
             font-size: 0.85rem;
             transition: var(--transition);
         }
-
         .chapter-view .ch-header .ch-close:hover {
             border-color: var(--gold);
             color: var(--text);
         }
-
         .chapter-view .ch-body {
             font-size: 1.05rem;
             line-height: 2.1;
@@ -429,11 +380,9 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-
         .chapter-view .ch-body p {
             margin-bottom: 1.2rem;
         }
-
         .chapter-view .ch-body .first-letter {
             font-size: 3.2rem;
             font-weight: 900;
@@ -444,9 +393,7 @@
             line-height: 1;
         }
 
-        /* ============================================================
-           FOOTER
-           ============================================================ */
+        /* ===== FOOTER ===== */
         .footer {
             text-align: center;
             padding: 30px 20px 10px;
@@ -455,19 +402,15 @@
             color: var(--text-muted);
             font-size: 0.8rem;
         }
-
         .footer .heart {
             color: var(--gold);
         }
-
         .footer .author-name {
             color: var(--primary-light);
             font-weight: 700;
         }
 
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .container {
                 padding: 12px 12px 70px;
@@ -505,7 +448,6 @@
                 font-size: 0.85rem;
             }
         }
-
         @media (max-width: 480px) {
             .chapters-grid {
                 grid-template-columns: 1fr 1fr;
@@ -561,9 +503,7 @@
     <div class="grid-overlay"></div>
 
     <div class="container">
-        <!-- ============================================================
-        HEADER
-        ============================================================ -->
+        <!-- ===== HEADER ===== -->
         <div class="header">
             <a href="index.html" class="back-btn">
                 <i class="fas fa-arrow-right"></i> العودة
@@ -575,16 +515,12 @@
             <div class="chapters-badge"><i class="fas fa-book"></i> 13 فصلاً</div>
         </div>
 
-        <!-- ============================================================
-        COVER
-        ============================================================ -->
+        <!-- ===== COVER ===== -->
         <div class="novel-cover">
             <img src="places.jpg" alt="الأماكن - غلاف الرواية" onerror="this.style.display='none'" />
         </div>
 
-        <!-- ============================================================
-        TOOLBAR
-        ============================================================ -->
+        <!-- ===== TOOLBAR ===== -->
         <div class="toolbar">
             <button class="btn-pdf" id="downloadPdfBtn">
                 <i class="fas fa-file-pdf"></i>
@@ -592,14 +528,10 @@
             </button>
         </div>
 
-        <!-- ============================================================
-        CHAPTERS
-        ============================================================ -->
+        <!-- ===== CHAPTERS ===== -->
         <div class="chapters-grid" id="chaptersGrid"></div>
 
-        <!-- ============================================================
-        CHAPTER VIEW
-        ============================================================ -->
+        <!-- ===== CHAPTER VIEW ===== -->
         <div class="chapter-view" id="chapterView">
             <div class="ch-header">
                 <span class="ch-num" id="viewNum">الفصل 1</span>
@@ -609,9 +541,7 @@
             <div class="ch-body" id="viewBody"></div>
         </div>
 
-        <!-- ============================================================
-        FOOTER
-        ============================================================ -->
+        <!-- ===== FOOTER ===== -->
         <div class="footer">
             <span class="heart">❤️</span> جميع الحقوق محفوظة &copy; 2026
             <span class="author-name">شادي رحال</span>
@@ -1035,16 +965,13 @@
             btn.classList.add('loading');
             btn.innerHTML = '<i class="fas fa-spinner"></i> جاري التحميل...';
 
-            // عناصر للإخفاء في الـ PDF
             const elementsToHide = document.querySelectorAll('.header .back-btn, .header .chapters-badge, .toolbar, .chapter-view .ch-close, .chapters-grid');
             elementsToHide.forEach(el => el.style.display = 'none');
 
-            // إظهار كل الفصول في الـ PDF
             const pdfContainer = document.createElement('div');
             pdfContainer.id = 'pdfContainer';
             pdfContainer.style.cssText = 'padding: 30px; background: #fff; color: #000; direction: rtl; font-family: Cairo, sans-serif; max-width: 100%;';
 
-            // عنوان الرواية
             pdfContainer.innerHTML = `
                 <div style="text-align:center; margin-bottom:30px;">
                     <h1 style="font-size:32px; color:#6C3CE1; margin-bottom:5px;">🏛️ الأماكن</h1>
@@ -1054,7 +981,6 @@
                 </div>
             `;
 
-            // إضافة جميع الفصول
             chapters.forEach((ch) => {
                 const content = ch.content.replace(/\n/g, '<br>');
                 pdfContainer.innerHTML += `
@@ -1068,7 +994,6 @@
                 `;
             });
 
-            // تذييل
             pdfContainer.innerHTML += `
                 <div style="text-align:center; color:#999; font-size:14px; margin-top:30px; border-top:1px solid #eee; padding-top:20px;">
                     ❤️ جميع الحقوق محفوظة &copy; 2026 شادي رحال ❤️
@@ -1077,7 +1002,6 @@
 
             document.body.appendChild(pdfContainer);
 
-            // إعدادات الـ PDF
             const opt = {
                 margin: [15, 15, 15, 15],
                 filename: 'الأماكن_شادي_رحال.pdf',
@@ -1098,7 +1022,6 @@
             };
 
             html2pdf().set(opt).from(pdfContainer).save().then(() => {
-                // إعادة العناصر المخفية
                 elementsToHide.forEach(el => el.style.display = '');
                 document.body.removeChild(pdfContainer);
                 btn.classList.remove('loading');
@@ -1117,6 +1040,5 @@
         // ============================================================
         renderChapters();
     </script>
-
 </body>
 </html>
