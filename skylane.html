@@ -1,5 +1,5 @@
 <!-- ============================================================
-     FILE: skylane.html (رواية سكاي لاين - محدثة لـ SEO)
+     FILE: skylane.html (سكاي لاين - مع الوضع الداكن/الفاتح + فتح الفصل في صفحة منفصلة)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -8,13 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>سكاي لاين - رواية رومانسية للكاتب شادي رحال | تحميل PDF</title>
     <meta name="description" content="رواية سكاي لاين للكاتب شادي رحال - قصة حب بين أستاذ وطالبة في وادي الياسمين. اقرأ وتحميل PDF مجاني." />
-    <meta name="keywords" content="سكاي لاين, رواية سكاي لاين, شادي رحال, سكاي لاين PDF, رواية رومانسية, تحميل رواية سكاي لاين, رامي وعسل" />
+    <meta name="keywords" content="سكاي لاين, رواية سكاي لاين, شادي رحال, سكاي لاين PDF, رواية رومانسية, رامي وعسل" />
     <meta name="author" content="شادي رحال" />
     <meta property="og:title" content="سكاي لاين - رواية رومانسية للكاتب شادي رحال" />
-    <meta property="og:description" content="رواية سكاي لاين للكاتب شادي رحال - قصة حب بين أستاذ وطالبة. اقرأ وتحميل PDF مجاني." />
+    <meta property="og:description" content="رواية سكاي لاين للكاتب شادي رحال - قصة حب بين أستاذ وطالبة." />
     <meta property="og:image" content="https://bahaa90231-art.github.io/-6575/skylane.jpg" />
     <meta property="og:url" content="https://bahaa90231-art.github.io/-6575/skylane.html" />
-    <meta property="og:type" content="article" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://bahaa90231-art.github.io/-6575/skylane.html" />
 
@@ -22,35 +21,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- ===== html2pdf ===== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* الوضع الداكن (الافتراضي) */
         :root {
             --primary: #6C3CE1;
             --primary-light: #8B5CF6;
             --primary-dark: #4F29A8;
             --gold: #F59E0B;
-            --gold-light: #FBBF24;
             --bg: #07050E;
             --bg-card: #110B1F;
             --bg-card-hover: #1A122E;
             --text: #F3F0FF;
             --text-muted: #9CA3AF;
             --glass: rgba(17, 11, 31, 0.7);
+            --border-color: rgba(255, 255, 255, 0.06);
             --shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+            --shadow-hover: 0 35px 70px rgba(0, 0, 0, 0.7);
+            --grid-line: rgba(108, 60, 225, 0.03);
             --radius: 20px;
-            --radius-sm: 12px;
             --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        html {
-            scroll-behavior: smooth;
+
+        /* الوضع الفاتح */
+        body.light-mode {
+            --primary: #6C3CE1;
+            --primary-light: #8B5CF6;
+            --primary-dark: #4F29A8;
+            --gold: #D97706;
+            --bg: #F5F3FF;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #FAF5FF;
+            --text: #1F1B2E;
+            --text-muted: #6B7280;
+            --glass: rgba(255, 255, 255, 0.75);
+            --border-color: rgba(108, 60, 225, 0.12);
+            --shadow: 0 15px 40px rgba(108, 60, 225, 0.1);
+            --shadow-hover: 0 25px 60px rgba(108, 60, 225, 0.18);
+            --grid-line: rgba(108, 60, 225, 0.05);
         }
+
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Cairo', sans-serif;
             background: var(--bg);
@@ -58,8 +72,10 @@
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
+            transition: background 0.4s ease, color 0.4s ease;
         }
 
+        /* ORBS */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -67,47 +83,21 @@
             pointer-events: none;
             z-index: 0;
             animation: orbFloat 20s infinite alternate ease-in-out;
+            transition: opacity 0.4s ease;
         }
-        .orb-1 {
-            width: 600px;
-            height: 600px;
-            background: var(--primary);
-            top: -200px;
-            right: -150px;
-            opacity: 0.2;
-        }
-        .orb-2 {
-            width: 500px;
-            height: 500px;
-            background: var(--gold);
-            bottom: -150px;
-            left: -100px;
-            opacity: 0.15;
-            animation-delay: 6s;
-        }
-        .orb-3 {
-            width: 400px;
-            height: 400px;
-            background: var(--primary-light);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.08;
-            animation-delay: 12s;
-        }
+        .orb-1 { width: 600px; height: 600px; background: var(--primary); top: -200px; right: -150px; opacity: 0.2; }
+        .orb-2 { width: 500px; height: 500px; background: var(--gold); bottom: -150px; left: -100px; opacity: 0.15; animation-delay: 6s; }
+        .orb-3 { width: 400px; height: 400px; background: var(--primary-light); top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.08; animation-delay: 12s; }
+
+        body.light-mode .orb-1 { opacity: 0.08; }
+        body.light-mode .orb-2 { opacity: 0.06; }
+        body.light-mode .orb-3 { opacity: 0.04; }
+
         @keyframes orbFloat {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(40px, -60px) scale(1.1);
-            }
-            66% {
-                transform: translate(-30px, 40px) scale(0.95);
-            }
-            100% {
-                transform: translate(50px, -30px) scale(1.05);
-            }
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -60px) scale(1.1); }
+            66% { transform: translate(-30px, 40px) scale(0.95); }
+            100% { transform: translate(50px, -30px) scale(1.05); }
         }
 
         .grid-overlay {
@@ -116,9 +106,10 @@
             z-index: 0;
             pointer-events: none;
             background-image:
-                linear-gradient(rgba(108, 60, 225, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(108, 60, 225, 0.03) 1px, transparent 1px);
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
             background-size: 60px 60px;
+            transition: background-image 0.4s ease;
         }
 
         .container {
@@ -129,14 +120,14 @@
             padding: 20px 20px 80px;
         }
 
-        /* ===== HEADER ===== */
+        /* HEADER */
         .header {
             background: var(--glass);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            padding: 20px 30px;
+            padding: 18px 24px;
             margin-bottom: 30px;
             box-shadow: var(--shadow);
             display: flex;
@@ -144,10 +135,12 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 16px;
+            transition: all 0.4s ease;
         }
+
         .header .back-btn {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
             color: var(--text);
             padding: 10px 22px;
             border-radius: 60px;
@@ -161,41 +154,75 @@
             gap: 10px;
             text-decoration: none;
         }
+
         .header .back-btn:hover {
             background: var(--primary);
             border-color: var(--primary);
+            color: #fff;
             transform: translateX(-4px);
         }
-        .header .title-section {
-            text-align: center;
-            flex: 1;
-        }
+
+        .header .title-section { text-align: center; flex: 1; }
+
         .header .title-section h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 900;
             background: linear-gradient(135deg, var(--primary-light), var(--gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .header .title-section .sub {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
-        .header .title-section .sub i {
-            color: var(--gold);
-        }
+
+        .header .title-section .sub i { color: var(--gold); }
+
         .header .chapters-badge {
             background: var(--primary);
             padding: 8px 20px;
             border-radius: 60px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            color: #fff;
             box-shadow: 0 8px 24px rgba(108, 60, 225, 0.3);
             white-space: nowrap;
         }
 
-        /* ===== NOVEL COVER ===== */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .theme-toggle {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
+            border-color: var(--primary-light);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
+        }
+
+        body:not(.light-mode) .theme-toggle .fa-sun { display: none; }
+        body.light-mode .theme-toggle .fa-moon { display: none; }
+
+        /* COVER */
         .novel-cover {
             width: 100%;
             max-height: 400px;
@@ -203,9 +230,10 @@
             overflow: hidden;
             margin-bottom: 30px;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
             background: var(--bg-card);
         }
+
         .novel-cover img {
             width: 100%;
             height: 100%;
@@ -214,7 +242,7 @@
             display: block;
         }
 
-        /* ===== TOOLBAR ===== */
+        /* TOOLBAR */
         .toolbar {
             display: flex;
             flex-wrap: wrap;
@@ -222,6 +250,7 @@
             margin-bottom: 25px;
             justify-content: center;
         }
+
         .toolbar .btn-pdf {
             background: linear-gradient(135deg, #dc2626, #b91c1c);
             color: #fff;
@@ -238,50 +267,44 @@
             align-items: center;
             gap: 10px;
         }
+
         .toolbar .btn-pdf:hover {
             transform: scale(1.04);
             box-shadow: 0 12px 40px rgba(220, 38, 38, 0.45);
         }
-        .toolbar .btn-pdf i {
-            font-size: 1.1rem;
-        }
-        .toolbar .btn-pdf.loading {
-            opacity: 0.7;
-            pointer-events: none;
-        }
-        .toolbar .btn-pdf.loading i {
-            animation: spin 1s linear infinite;
-        }
+
+        .toolbar .btn-pdf.loading { opacity: 0.7; pointer-events: none; }
+        .toolbar .btn-pdf.loading i { animation: spin 1s linear infinite; }
+
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
-        /* ===== CHAPTERS GRID ===== */
+        /* CHAPTERS GRID */
         .chapters-grid {
             display: grid;
             gap: 16px;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
+
         .chapter-card {
             background: var(--bg-card);
             border-radius: 16px;
             padding: 18px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
             cursor: pointer;
             transition: var(--transition);
             text-align: center;
         }
+
         .chapter-card:hover {
             transform: translateY(-6px) scale(1.02);
-            border-color: rgba(139, 92, 246, 0.2);
-            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: var(--shadow-hover);
         }
+
         .chapter-card .num {
             font-size: 2.2rem;
             font-weight: 900;
@@ -291,12 +314,14 @@
             background-clip: text;
             line-height: 1;
         }
+
         .chapter-card .title {
             font-weight: 700;
             font-size: 0.95rem;
             margin-top: 6px;
             color: var(--text);
         }
+
         .chapter-card .icon-read {
             margin-top: 8px;
             color: var(--text-muted);
@@ -304,52 +329,66 @@
             opacity: 0;
             transition: var(--transition);
         }
+
         .chapter-card:hover .icon-read {
             opacity: 1;
             color: var(--gold);
         }
 
-        /* ===== CHAPTER VIEW ===== */
+        /* ============================================================
+           CHAPTER VIEW - يفتح في صفحة منفصلة (بديل الصفحة)
+           ============================================================ */
         .chapter-view {
             display: none;
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 35px 30px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            box-shadow: var(--shadow);
-            margin-top: 25px;
-            animation: fadeUp 0.4s ease;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--bg);
+            overflow-y: auto;
+            padding: 30px 20px;
         }
+
         .chapter-view.active {
             display: block;
+            animation: pageIn 0.4s ease;
         }
-        @keyframes fadeUp {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        @keyframes pageIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
+
+        .chapter-view .chapter-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px 35px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
         .chapter-view .ch-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            padding-bottom: 16px;
-            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 18px;
+            margin-bottom: 25px;
         }
+
         .chapter-view .ch-header .ch-num {
             background: var(--primary);
+            color: #fff;
             padding: 6px 18px;
             border-radius: 60px;
             font-weight: 700;
             font-size: 0.85rem;
         }
+
         .chapter-view .ch-header .ch-title {
             font-size: 1.5rem;
             font-weight: 800;
@@ -357,22 +396,30 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            flex: 1;
+            text-align: center;
         }
+
         .chapter-view .ch-header .ch-close {
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 6px 16px;
+            padding: 8px 18px;
             border-radius: 60px;
             cursor: pointer;
             font-family: inherit;
             font-size: 0.85rem;
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
+
         .chapter-view .ch-header .ch-close:hover {
             border-color: var(--gold);
             color: var(--text);
         }
+
         .chapter-view .ch-body {
             font-size: 1.05rem;
             line-height: 2.1;
@@ -380,9 +427,11 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+
         .chapter-view .ch-body p {
             margin-bottom: 1.2rem;
         }
+
         .chapter-view .ch-body .first-letter {
             font-size: 3.2rem;
             font-weight: 900;
@@ -393,106 +442,92 @@
             line-height: 1;
         }
 
-        /* ===== FOOTER ===== */
+        /* FOOTER */
         .footer {
             text-align: center;
-            padding: 30px 20px 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            margin-top: 40px;
+            padding: 40px 20px 20px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 50px;
             color: var(--text-muted);
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.8;
         }
+
         .footer .heart {
             color: var(--gold);
+            display: inline-block;
+            animation: heartBeat 1.6s infinite;
         }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
         .footer .author-name {
             color: var(--primary-light);
             font-weight: 700;
         }
 
-        /* ===== RESPONSIVE ===== */
+        .footer .dev-info {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.85rem;
+        }
+
+        .footer .dev-info .dev-name {
+            color: var(--gold);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer .dev-info .phone {
+            color: var(--primary-light);
+            font-weight: 700;
+            direction: ltr;
+            display: inline-block;
+            margin-top: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .container {
-                padding: 12px 12px 70px;
-            }
+            .container { padding: 12px 12px 70px; }
             .header {
                 flex-direction: column;
                 text-align: center;
                 padding: 16px;
             }
-            .header .title-section h1 {
-                font-size: 1.5rem;
-            }
-            .novel-cover {
-                max-height: 250px;
-            }
-            .novel-cover img {
-                max-height: 250px;
-            }
-            .chapters-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-            .chapter-view {
-                padding: 20px 16px;
-            }
-            .chapter-view .ch-header .ch-title {
-                font-size: 1.2rem;
-            }
-            .chapter-view .ch-body {
-                font-size: 0.95rem;
-                line-height: 1.9;
-            }
-            .toolbar .btn-pdf {
-                padding: 10px 22px;
-                font-size: 0.85rem;
-            }
+            .header .title-section h1 { font-size: 1.4rem; }
+            .novel-cover { max-height: 250px; }
+            .novel-cover img { max-height: 250px; }
+            .chapters-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .chapter-view { padding: 15px; }
+            .chapter-view .chapter-inner { padding: 25px 18px; }
+            .chapter-view .ch-header .ch-title { font-size: 1.15rem; }
+            .chapter-view .ch-body { font-size: 0.95rem; line-height: 1.9; }
+            .toolbar .btn-pdf { padding: 10px 22px; font-size: 0.85rem; }
         }
+
         @media (max-width: 480px) {
-            .chapters-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-            }
-            .chapter-card {
-                padding: 14px 10px;
-            }
-            .chapter-card .num {
-                font-size: 1.8rem;
-            }
-            .chapter-card .title {
-                font-size: 0.8rem;
-            }
-            .header .title-section h1 {
-                font-size: 1.2rem;
-            }
-            .header .chapters-badge {
-                font-size: 0.7rem;
-                padding: 4px 14px;
-            }
-            .novel-cover {
-                max-height: 180px;
-            }
-            .novel-cover img {
-                max-height: 180px;
-            }
-            .chapter-view {
-                padding: 16px 12px;
-            }
-            .chapter-view .ch-header .ch-title {
-                font-size: 1rem;
-            }
-            .chapter-view .ch-body {
-                font-size: 0.85rem;
-                line-height: 1.8;
-            }
-            .toolbar .btn-pdf {
-                padding: 8px 16px;
-                font-size: 0.75rem;
-                gap: 6px;
-            }
-            .toolbar .btn-pdf i {
-                font-size: 0.85rem;
-            }
+            .chapters-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .chapter-card { padding: 14px 10px; }
+            .chapter-card .num { font-size: 1.8rem; }
+            .chapter-card .title { font-size: 0.8rem; }
+            .header .title-section h1 { font-size: 1.15rem; }
+            .header .chapters-badge { font-size: 0.7rem; padding: 4px 14px; }
+            .theme-toggle { width: 40px; height: 40px; font-size: 1rem; }
+            .novel-cover { max-height: 180px; }
+            .novel-cover img { max-height: 180px; }
+            .chapter-view .chapter-inner { padding: 20px 14px; }
+            .chapter-view .ch-header .ch-title { font-size: 1rem; }
+            .chapter-view .ch-body { font-size: 0.85rem; line-height: 1.8; }
+            .toolbar .btn-pdf { padding: 8px 16px; font-size: 0.75rem; }
+            .footer { font-size: 0.75rem; }
+            .footer .dev-info { font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -503,7 +538,7 @@
     <div class="grid-overlay"></div>
 
     <div class="container">
-        <!-- ===== HEADER ===== -->
+        <!-- HEADER -->
         <div class="header">
             <a href="index.html" class="back-btn">
                 <i class="fas fa-arrow-right"></i> العودة
@@ -512,15 +547,21 @@
                 <h1>🌅 سكاي لاين</h1>
                 <div class="sub"><i class="fas fa-quote-right"></i> قصة حب بين أستاذ وطالبة <i class="fas fa-quote-left"></i></div>
             </div>
-            <div class="chapters-badge"><i class="fas fa-book"></i> 19 فصلاً</div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="chapters-badge"><i class="fas fa-book"></i> 19 فصلاً</div>
+            </div>
         </div>
 
-        <!-- ===== COVER ===== -->
+        <!-- COVER -->
         <div class="novel-cover">
             <img src="skylane.jpg" alt="سكاي لاين - غلاف الرواية" onerror="this.style.display='none'" />
         </div>
 
-        <!-- ===== TOOLBAR ===== -->
+        <!-- TOOLBAR -->
         <div class="toolbar">
             <button class="btn-pdf" id="downloadPdfBtn">
                 <i class="fas fa-file-pdf"></i>
@@ -528,28 +569,62 @@
             </button>
         </div>
 
-        <!-- ===== CHAPTERS ===== -->
+        <!-- CHAPTERS GRID -->
         <div class="chapters-grid" id="chaptersGrid"></div>
 
-        <!-- ===== CHAPTER VIEW ===== -->
-        <div class="chapter-view" id="chapterView">
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div>
+                <span class="heart">❤️</span>
+                جميع الحقوق محفوظة &copy; 2026
+                <span class="author-name">شادي رحال</span>
+                <span class="heart">❤️</span>
+            </div>
+            <div class="dev-info">
+                <div class="dev-name">
+                    <i class="fas fa-code"></i>
+                    برمجة وتطوير: بهاء الدين الحسين
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone"></i> 0982520358
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============================================================
+         CHAPTER VIEW - صفحة الفصل (تفتح كصفحة كاملة)
+         ============================================================ -->
+    <div class="chapter-view" id="chapterView">
+        <div class="chapter-inner">
             <div class="ch-header">
                 <span class="ch-num" id="viewNum">الفصل 1</span>
                 <span class="ch-title" id="viewTitle">عنوان الفصل</span>
-                <button class="ch-close" onclick="closeChapter()"><i class="fas fa-times"></i> إغلاق</button>
+                <button class="ch-close" onclick="closeChapter()">
+                    <i class="fas fa-times"></i> إغلاق
+                </button>
             </div>
             <div class="ch-body" id="viewBody"></div>
-        </div>
-
-        <!-- ===== FOOTER ===== -->
-        <div class="footer">
-            <span class="heart">❤️</span> جميع الحقوق محفوظة &copy; 2026
-            <span class="author-name">شادي رحال</span>
-            <span class="heart">❤️</span>
         </div>
     </div>
 
     <script>
+        // ============================================================
+        //  THEME TOGGLE
+        // ============================================================
+        (function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('light-mode');
+                const isLight = document.body.classList.contains('light-mode');
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            });
+        })();
+
         // ============================================================
         //  DATA - جميع فصول سكاي لاين
         // ============================================================
@@ -708,7 +783,7 @@
     قلوبهم كانت تدق. الخطوة الجاية كانت أول مواجهة رسمية.`
         }, {
             id: 12,
-            title: 'الفصل الثاني عشر: الرفض الأول - النسخة المعدلة',
+            title: 'الفصل الثاني عشر: الرفض الأول',
             content: `نص شهر 1 - 2018
 
     اليوم اللي رامي اتصل فيه بأم عسل كان أسوأ يوم.
@@ -754,7 +829,7 @@
     كانت الأيام طويلة وتقيلة. رامي صار يشتغل شغلتين. يحط مصاري على جنب، للبيت ويثبت حاله بالمعهد. وعسل صارت الأولى عالدورة. كل علامة كانت بتجيبها كانت تقول لأمها "لولا شرح الأستاذ رامي".`
         }, {
             id: 15,
-            title: 'الفصل الرابع عشر - تابع: الموقف اللي غير كل شي',
+            title: 'الفصل الخامس عشر: الموقف اللي غير كل شي',
             content: `آخر شهر 2، أم عسل كان عندها معاملة مهمة بالدوائر الحكومية ومتعبة فيها. أوراق وتواقيع وطوابير. رامي سمع من عسل وبدون ما يحكي لحدا راح وساعدها. خلصها كلها بيوم واحد.
 
     تاني يوم دقت أم عسل لعسل:
@@ -786,7 +861,7 @@
     رامي: "وعد... كل المشاوير الجاية رح تكون بالحلال قدام الكل"`
         }, {
             id: 16,
-            title: 'الفصل الخامس عشر: شهرين قبل العاصفة',
+            title: 'الفصل السادس عشر: شهرين قبل العاصفة',
             content: `شهر 4 - شهر 6 | 2018
 
     كان باقي شهرين للمتحانات النهائية ورح تبدأ. الجو كله صار دراسة وتوتر. بس التوتر هاد كان حلو... لأنه كان "توتر سوا."
@@ -816,7 +891,7 @@
     وعد رامي لنفسه: "رح أجيب الشهادة بايدي، وبايدي الثانية رح أطلبها"`
         }, {
             id: 17,
-            title: 'الفصل السادس عشر: 06/4 واليومين اللي تغيرت فيهم',
+            title: 'الفصل السابع عشر: اليوم اللي تغيرت فيه',
             content: `بداية شهر 6 - 2018
 
     أول يوم بالامتحانات كان بتاريخ 2018/06/4. رامي وعسل صاحيين من الفجر، متوترين وفرحانين بنفس الوقت.
@@ -834,7 +909,7 @@
     بس رامي كان حاسس... في شي. ضل يحاول يعرف شو صاير. يسأل، يطمن، يمزح. بس ما حسّن يطلع منها شي. وقلبه بلش يخاف.`
         }, {
             id: 18,
-            title: 'الفصل السابع عشر: الدقيقة اللي غيرت كل شي',
+            title: 'الفصل الثامن عشر: الدقيقة اللي غيرت كل شي',
             content: `نص شهر 6 - 2018
 
     كانت مبسوطة وعم تزمّت على امتحاناتها: "جبت منيح والله" وصلها للمكان اللي متعود يوصله عليه، وباس راسها ومشي على شغله التاني. كان عم يشتغل أكثر من دوام... مشانها. مشان يثبت حاله ويحصل عليها.
@@ -859,7 +934,7 @@
     في شي كان عم يصير وهنن ما بيعرفوا. في قرار أبوها أخدوه من ورا ضهرهم.`
         }, {
             id: 19,
-            title: 'الفصل الثامن عشر: الانكسار',
+            title: 'الفصل التاسع عشر: الانكسار',
             content: `وصل الخبر. شخص بقربها تقدم لخطبتها. وأبوها وافق. وقروا الفاتحة.
 
     وهون رامي مات فعليا.
@@ -876,7 +951,7 @@
     انتهت قصة "خالو وحبيبتي". وبلشت قصة "الوجع اللي ما بينتهي"`
         }, {
             id: 20,
-            title: 'الفصل التاسع عشر: سكاي الين - بعد سنين',
+            title: 'الفصل العشرون: سكاي الين - بعد سنين',
             content: `...بعد سنين. معهد "سكاي الين" لساته واقف بمكانه. نفس الباب، نفس السبورة، نفس أول طاولتين. رامي كبر وصار أستاذ الكل بيحترمه. وعسل صارت ناجحة وقوية مثل ما وعدها. ما التقوا. وما حكوا. بس كل واحد فيهم شايل قصة كاملة بقلبه.
 
     الناس بتقول "قصة فشلت".
@@ -920,7 +995,7 @@
 
         function renderChapters() {
             gridContainer.innerHTML = chapters.map((ch, idx) => `
-                <div class="chapter-card" data-index="${idx}" role="button" tabindex="0" aria-label="قراءة ${ch.title}">
+                <div class="chapter-card" data-index="${idx}" role="button" tabindex="0">
                     <div class="num">${idx === 0 ? 'م' : idx}</div>
                     <div class="title">${ch.title}</div>
                     <div class="icon-read"><i class="fas fa-chevron-left"></i> اقرأ</div>
@@ -943,7 +1018,7 @@
         }
 
         // ============================================================
-        //  OPEN / CLOSE CHAPTER
+        //  OPEN / CLOSE CHAPTER - يفتح كصفحة منفصلة
         // ============================================================
         const view = document.getElementById('chapterView');
         const viewNum = document.getElementById('viewNum');
@@ -953,6 +1028,7 @@
         function openChapter(idx) {
             const ch = chapters[idx];
             if (!ch) return;
+
             viewNum.textContent = idx === 0 ? 'المقدمة' : `الفصل ${idx}`;
             viewTitle.textContent = ch.title;
 
@@ -971,13 +1047,39 @@
             });
             viewBody.innerHTML = html;
             view.classList.add('active');
-            view.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // منع التمرير في الخلفية
+            document.body.style.overflow = 'hidden';
+            // تحديث الرابط (hash) لمشاركة الفصل
+            history.pushState({ chapterIdx: idx }, '', `#chapter-${idx}`);
+            // التمرير لأعلى
+            view.scrollTop = 0;
         }
 
         function closeChapter() {
             view.classList.remove('active');
+            document.body.style.overflow = '';
+            history.pushState({}, '', window.location.pathname);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // زر الرجوع في المتصفح
+        window.addEventListener('popstate', function(e) {
+            if (view.classList.contains('active')) {
+                view.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // فتح الفصل تلقائياً إذا كان الرابط يحتوي على hash
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#chapter-')) {
+                const idx = parseInt(hash.replace('#chapter-', ''));
+                if (!isNaN(idx) && chapters[idx]) {
+                    setTimeout(() => openChapter(idx), 100);
+                }
+            }
+        });
 
         // ============================================================
         //  DOWNLOAD PDF
@@ -987,7 +1089,7 @@
             btn.classList.add('loading');
             btn.innerHTML = '<i class="fas fa-spinner"></i> جاري التحميل...';
 
-            const elementsToHide = document.querySelectorAll('.header .back-btn, .header .chapters-badge, .toolbar, .chapter-view .ch-close, .chapters-grid');
+            const elementsToHide = document.querySelectorAll('.header .back-btn, .header .chapters-badge, .header .theme-toggle, .toolbar, .chapters-grid, .footer');
             elementsToHide.forEach(el => el.style.display = 'none');
 
             const pdfContainer = document.createElement('div');
@@ -1019,7 +1121,8 @@
 
             pdfContainer.innerHTML += `
                 <div style="text-align:center; color:#999; font-size:14px; margin-top:30px; border-top:1px solid #eee; padding-top:20px;">
-                    ❤️ جميع الحقوق محفوظة &copy; 2026 شادي رحال ❤️
+                    ❤️ جميع الحقوق محفوظة &copy; 2026 شادي رحال ❤️<br>
+                    🔧 برمجة وتطوير: بهاء الدين الحسين - 📞 0982520358
                 </div>
             `;
 
@@ -1036,11 +1139,7 @@
                     scrollY: 0,
                     windowHeight: pdfContainer.scrollHeight
                 },
-                jsPDF: {
-                    unit: 'mm',
-                    format: 'a4',
-                    orientation: 'portrait'
-                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
                 pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
             };
 
