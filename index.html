@@ -1,5 +1,5 @@
 <!-- ============================================================
-     FILE: index.html (الصفحة الرئيسية - محدثة لـ SEO)
+     FILE: index.html (الصفحة الرئيسية - مع الوضع الداكن/الفاتح)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>روايات الكاتب شادي رحال - سكاي لاين، الأماكن، ماذا لو ما كانت الحرب؟</title>
     <meta name="description" content="روايات الكاتب شادي رحال: سكاي لاين (رومانسية)، الأماكن (رومانسية)، ماذا لو ما كانت الحرب؟ (اجتماعية). اقرأ وتحميل PDF مجاني." />
-    <meta name="keywords" content="روايات, شادي رحال, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, روايات عربية, تحميل روايات PDF, روايات رومانسية, روايات اجتماعية" />
+    <meta name="keywords" content="روايات, شادي رحال, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, روايات عربية, تحميل روايات PDF" />
     <meta name="author" content="شادي رحال" />
     <meta property="og:title" content="روايات الكاتب شادي رحال" />
     <meta property="og:description" content="روايات عربية مميزة للكاتب شادي رحال - اقرأ وتحميل مجاني" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         /* ============================================================
-           ROOT & RESET
+           ROOT & RESET - وضع داكن وفاتح
            ============================================================ */
         * {
             margin: 0;
@@ -31,22 +31,42 @@
             box-sizing: border-box;
         }
 
+        /* الوضع الداكن (الافتراضي) */
         :root {
             --primary: #6C3CE1;
             --primary-light: #8B5CF6;
             --primary-dark: #4F29A8;
             --gold: #F59E0B;
-            --gold-light: #FBBF24;
             --bg: #07050E;
             --bg-card: #110B1F;
             --bg-card-hover: #1A122E;
             --text: #F3F0FF;
             --text-muted: #9CA3AF;
             --glass: rgba(17, 11, 31, 0.7);
+            --border-color: rgba(255, 255, 255, 0.06);
             --shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+            --shadow-hover: 0 35px 70px rgba(0, 0, 0, 0.7);
+            --grid-line: rgba(108, 60, 225, 0.03);
             --radius: 20px;
-            --radius-sm: 12px;
             --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* الوضع الفاتح */
+        body.light-mode {
+            --primary: #6C3CE1;
+            --primary-light: #8B5CF6;
+            --primary-dark: #4F29A8;
+            --gold: #D97706;
+            --bg: #F5F3FF;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #FAF5FF;
+            --text: #1F1B2E;
+            --text-muted: #6B7280;
+            --glass: rgba(255, 255, 255, 0.7);
+            --border-color: rgba(108, 60, 225, 0.12);
+            --shadow: 0 15px 40px rgba(108, 60, 225, 0.1);
+            --shadow-hover: 0 25px 60px rgba(108, 60, 225, 0.18);
+            --grid-line: rgba(108, 60, 225, 0.05);
         }
 
         html {
@@ -60,6 +80,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
+            transition: background 0.4s ease, color 0.4s ease;
         }
 
         /* ============================================================
@@ -72,6 +93,7 @@
             pointer-events: none;
             z-index: 0;
             animation: orbFloat 20s infinite alternate ease-in-out;
+            transition: opacity 0.4s ease;
         }
         .orb-1 {
             width: 600px;
@@ -101,19 +123,15 @@
             animation-delay: 12s;
         }
 
+        body.light-mode .orb-1 { opacity: 0.08; }
+        body.light-mode .orb-2 { opacity: 0.06; }
+        body.light-mode .orb-3 { opacity: 0.04; }
+
         @keyframes orbFloat {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(40px, -60px) scale(1.1);
-            }
-            66% {
-                transform: translate(-30px, 40px) scale(0.95);
-            }
-            100% {
-                transform: translate(50px, -30px) scale(1.05);
-            }
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -60px) scale(1.1); }
+            66% { transform: translate(-30px, 40px) scale(0.95); }
+            100% { transform: translate(50px, -30px) scale(1.05); }
         }
 
         /* ============================================================
@@ -125,9 +143,10 @@
             z-index: 0;
             pointer-events: none;
             background-image:
-                linear-gradient(rgba(108, 60, 225, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(108, 60, 225, 0.03) 1px, transparent 1px);
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
             background-size: 60px 60px;
+            transition: background-image 0.4s ease;
         }
 
         /* ============================================================
@@ -148,13 +167,14 @@
             background: var(--glass);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            padding: 30px 35px;
+            padding: 20px 30px;
             margin-bottom: 40px;
             box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
+            transition: all 0.4s ease;
         }
 
         .header::before {
@@ -197,7 +217,7 @@
         .header-brand .brand-text h1 {
             font-size: 1.7rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #fff 30%, var(--primary-light), var(--gold));
+            background: linear-gradient(135deg, var(--text) 30%, var(--primary-light), var(--gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -208,12 +228,51 @@
             font-size: 0.85rem;
             color: var(--text-muted);
             display: block;
-            -webkit-text-fill-color: var(--text-muted);
         }
 
         .header-brand .brand-text span i {
             color: var(--gold);
-            -webkit-text-fill-color: var(--gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* زر الوضع الداكن/الفاتح */
+        .theme-toggle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
+            border-color: var(--primary-light);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
+        }
+
+        .theme-toggle i {
+            transition: transform 0.4s ease;
+        }
+
+        body:not(.light-mode) .theme-toggle .fa-sun {
+            display: none;
+        }
+
+        body.light-mode .theme-toggle .fa-moon {
+            display: none;
         }
 
         .header-badge {
@@ -236,13 +295,8 @@
         }
 
         @keyframes pulseGlow {
-            0%,
-            100% {
-                box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(245, 158, 11, 0.25);
-            }
+            0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.1); }
+            50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.25); }
         }
 
         /* ============================================================
@@ -277,7 +331,7 @@
             width: 100%;
             padding: 14px 48px 14px 20px;
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
             border-radius: 60px;
             color: var(--text);
             font-size: 0.95rem;
@@ -305,7 +359,7 @@
         .filter-btn {
             padding: 10px 24px;
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
             border-radius: 60px;
             color: var(--text-muted);
             font-family: inherit;
@@ -344,7 +398,7 @@
             background: var(--bg-card);
             border-radius: var(--radius);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
             box-shadow: var(--shadow);
             transition: var(--transition);
             cursor: pointer;
@@ -355,8 +409,8 @@
 
         .novel-card:hover {
             transform: translateY(-8px) scale(1.01);
-            border-color: rgba(139, 92, 246, 0.2);
-            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.7);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: var(--shadow-hover);
             background: var(--bg-card-hover);
         }
 
@@ -365,7 +419,7 @@
             width: 100%;
             padding-top: 56.25%;
             overflow: hidden;
-            background: linear-gradient(135deg, #1A122E, #0F0A1A);
+            background: linear-gradient(135deg, var(--bg-card-hover), var(--bg-card));
             flex-shrink: 0;
         }
 
@@ -402,14 +456,13 @@
             font-weight: 700;
             color: var(--gold);
             border: 1px solid rgba(245, 158, 11, 0.2);
-            letter-spacing: 0.3px;
         }
 
         .novel-card .card-image .badge-category {
             position: absolute;
             top: 14px;
             right: 14px;
-            background: rgba(108, 60, 225, 0.8);
+            background: rgba(108, 60, 225, 0.85);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 4px 14px;
@@ -417,7 +470,6 @@
             font-size: 0.65rem;
             font-weight: 700;
             color: #fff;
-            letter-spacing: 0.3px;
         }
 
         .novel-card .card-body {
@@ -454,7 +506,7 @@
             color: var(--text-muted);
             font-size: 0.88rem;
             line-height: 1.7;
-            opacity: 0.75;
+            opacity: 0.85;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -468,7 +520,7 @@
             justify-content: space-between;
             margin-top: 16px;
             padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 1px solid var(--border-color);
         }
 
         .novel-card .card-body .read-btn {
@@ -493,20 +545,17 @@
             box-shadow: 0 12px 40px rgba(108, 60, 225, 0.4);
         }
 
-        .novel-card .card-body .read-btn i {
-            font-size: 0.8rem;
-        }
-
         /* ============================================================
-           FOOTER
+           FOOTER - محدث بمعلومات المطور
            ============================================================ */
         .footer {
             text-align: center;
-            padding: 35px 20px 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-            margin-top: 50px;
+            padding: 40px 20px 20px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            line-height: 1.8;
         }
 
         .footer .heart {
@@ -516,18 +565,37 @@
         }
 
         @keyframes heartBeat {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         .footer .author-name {
             color: var(--primary-light);
             font-weight: 700;
+        }
+
+        .footer .dev-info {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.85rem;
+        }
+
+        .footer .dev-info .dev-name {
+            color: var(--gold);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer .dev-info .phone {
+            color: var(--primary-light);
+            font-weight: 700;
+            direction: ltr;
+            display: inline-block;
+            margin-top: 6px;
+            letter-spacing: 0.5px;
         }
 
         /* ============================================================
@@ -538,15 +606,9 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 32px;
             }
-            .container {
-                padding: 30px 40px 100px;
-            }
-            .header {
-                padding: 40px 50px;
-            }
-            .header-brand .brand-text h1 {
-                font-size: 2rem;
-            }
+            .container { padding: 30px 40px 100px; }
+            .header { padding: 25px 50px; }
+            .header-brand .brand-text h1 { font-size: 2rem; }
         }
 
         @media (max-width: 1399px) and (min-width: 1100px) {
@@ -561,12 +623,8 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 24px;
             }
-            .header-brand .brand-text h1 {
-                font-size: 1.4rem;
-            }
-            .header {
-                padding: 22px 24px;
-            }
+            .header-brand .brand-text h1 { font-size: 1.4rem; }
+            .header { padding: 22px 24px; }
         }
 
         @media (max-width: 767px) and (min-width: 480px) {
@@ -574,11 +632,9 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 18px;
             }
-            .container {
-                padding: 14px 14px 80px;
-            }
+            .container { padding: 14px 14px 80px; }
             .header {
-                padding: 18px 18px;
+                padding: 16px;
                 border-radius: 16px;
             }
             .header-brand .logo-icon {
@@ -586,37 +642,24 @@
                 height: 44px;
                 font-size: 1.4rem;
             }
-            .header-brand .brand-text h1 {
-                font-size: 1.2rem;
-            }
-            .header-brand .brand-text span {
-                font-size: 0.7rem;
-            }
+            .header-brand .brand-text h1 { font-size: 1.2rem; }
+            .header-brand .brand-text span { font-size: 0.7rem; }
             .header-badge {
                 font-size: 0.65rem;
                 padding: 5px 14px 5px 12px;
             }
-            .header-badge i {
-                font-size: 0.7rem;
+            .theme-toggle {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
             }
-            .novel-card .card-body .card-title {
-                font-size: 1.1rem;
-            }
-            .novel-card .card-body .card-desc {
-                font-size: 0.8rem;
-                -webkit-line-clamp: 2;
-            }
+            .novel-card .card-body .card-title { font-size: 1.1rem; }
             .novel-card .card-body .read-btn {
                 padding: 8px 18px;
                 font-size: 0.75rem;
             }
-            .controls {
-                gap: 10px;
-            }
-            .search-wrapper {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
+            .controls { gap: 10px; }
+            .search-wrapper { flex: 1 1 100%; max-width: 100%; }
             .search-wrapper input {
                 padding: 12px 44px 12px 16px;
                 font-size: 0.85rem;
@@ -632,176 +675,79 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 12px;
             }
-
-            .container {
-                padding: 10px 8px 70px;
-            }
-
+            .container { padding: 10px 8px 70px; }
             .header {
                 padding: 14px 12px;
                 border-radius: 14px;
                 margin-bottom: 20px;
             }
-
-            .header-content {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 10px;
-            }
-
+            .header-content { gap: 10px; }
             .header-brand .logo-icon {
                 width: 38px;
                 height: 38px;
                 font-size: 1.2rem;
                 border-radius: 10px;
             }
-
-            .header-brand .brand-text h1 {
-                font-size: 1rem;
+            .header-brand .brand-text h1 { font-size: 1rem; }
+            .header-brand .brand-text span { font-size: 0.6rem; }
+            .header-actions { gap: 8px; }
+            .theme-toggle {
+                width: 38px;
+                height: 38px;
+                font-size: 0.9rem;
             }
-
-            .header-brand .brand-text span {
-                font-size: 0.6rem;
-            }
-
             .header-badge {
                 font-size: 0.55rem;
-                padding: 4px 12px 4px 10px;
-                justify-content: center;
+                padding: 4px 12px;
             }
-            .header-badge i {
-                font-size: 0.6rem;
-            }
-
-            .controls {
-                gap: 8px;
-                margin-bottom: 18px;
-            }
-
+            .header-badge i { font-size: 0.6rem; }
+            .controls { gap: 8px; margin-bottom: 18px; }
             .search-wrapper input {
                 padding: 10px 38px 10px 12px;
                 font-size: 0.75rem;
                 border-radius: 40px;
             }
-            .search-wrapper i {
-                right: 12px;
-                font-size: 0.75rem;
-            }
-
-            .filter-group {
-                gap: 4px;
-                justify-content: center;
-            }
-
+            .filter-group { gap: 4px; justify-content: center; }
             .filter-btn {
                 padding: 5px 12px;
                 font-size: 0.65rem;
                 border-radius: 40px;
             }
-
-            .novel-card {
-                border-radius: 14px;
-            }
-
-            .novel-card .card-image {
-                padding-top: 66%;
-            }
-
+            .novel-card { border-radius: 14px; }
+            .novel-card .card-image { padding-top: 66%; }
             .novel-card .card-image .badge-chapters {
                 font-size: 0.55rem;
                 padding: 2px 10px;
                 bottom: 8px;
                 right: 8px;
             }
-
             .novel-card .card-image .badge-category {
                 font-size: 0.5rem;
                 padding: 2px 10px;
                 top: 8px;
                 right: 8px;
             }
-
-            .novel-card .card-body {
-                padding: 12px 10px 14px;
-            }
-
-            .novel-card .card-body .card-title {
-                font-size: 0.85rem;
-            }
-
+            .novel-card .card-body { padding: 12px 10px 14px; }
+            .novel-card .card-body .card-title { font-size: 0.85rem; }
             .novel-card .card-body .card-meta {
                 font-size: 0.6rem;
                 gap: 4px 10px;
-                margin-top: 3px;
             }
-            .novel-card .card-body .card-meta i {
-                width: 12px;
-                font-size: 0.6rem;
-            }
-
-            .novel-card .card-body .card-desc {
-                display: none;
-            }
-
-            .novel-card .card-body .card-footer {
-                margin-top: 8px;
-                padding-top: 8px;
-                border-top: 1px solid rgba(255, 255, 255, 0.04);
-            }
-
+            .novel-card .card-body .card-desc { display: none; }
             .novel-card .card-body .read-btn {
                 padding: 5px 14px;
                 font-size: 0.6rem;
-                border-radius: 40px;
-                box-shadow: 0 4px 16px rgba(108, 60, 225, 0.2);
             }
-            .novel-card .card-body .read-btn i {
-                font-size: 0.6rem;
-            }
-
             .footer {
                 font-size: 0.7rem;
                 padding: 20px 10px 5px;
                 margin-top: 30px;
             }
-        }
-
-        @media (max-width: 359px) {
-            .novel-grid {
-                gap: 8px;
-            }
-            .novel-card .card-body {
-                padding: 8px 6px 10px;
-            }
-            .novel-card .card-body .card-title {
-                font-size: 0.7rem;
-            }
-            .novel-card .card-body .card-meta {
-                font-size: 0.5rem;
-                gap: 2px 6px;
-            }
-            .novel-card .card-body .read-btn {
-                padding: 4px 10px;
-                font-size: 0.5rem;
-            }
-            .header-brand .brand-text h1 {
-                font-size: 0.85rem;
-            }
-            .header-brand .logo-icon {
-                width: 32px;
-                height: 32px;
-                font-size: 1rem;
-            }
-            .filter-btn {
-                padding: 4px 8px;
-                font-size: 0.55rem;
-            }
+            .footer .dev-info { font-size: 0.65rem; }
         }
     </style>
 </head>
 <body>
-
-    <!-- ORBS -->
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
@@ -820,10 +766,15 @@
                         <span><i class="fas fa-quote-right"></i> حيث تعيش الكلمات <i class="fas fa-quote-left"></i></span>
                     </div>
                 </div>
-                <div class="header-badge">
-                    <i class="fas fa-crown"></i>
-                    <span>VIP READER</span>
-                    <i class="fas fa-star" style="font-size:0.6rem; opacity:0.6;"></i>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <div class="header-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>VIP READER</span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -837,29 +788,60 @@
                 <input type="text" id="searchInput" placeholder="ابحث عن رواية..." aria-label="بحث في الروايات" />
             </div>
             <div class="filter-group" id="filterGroup">
-                <button class="filter-btn active" data-filter="all" aria-label="عرض جميع الروايات">الكل</button>
-                <button class="filter-btn" data-filter="رومانسية" aria-label="تصفية رومانسية">💕 رومانسية</button>
-                <button class="filter-btn" data-filter="اجتماعية" aria-label="تصفية اجتماعية">🏙️ اجتماعية</button>
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="رومانسية">💕 رومانسية</button>
+                <button class="filter-btn" data-filter="اجتماعية">🏙️ اجتماعية</button>
             </div>
         </div>
 
         <!-- ============================================================
         NOVEL GRID
         ============================================================ -->
-        <div class="novel-grid" id="novelGrid" role="list"></div>
+        <div class="novel-grid" id="novelGrid"></div>
 
         <!-- ============================================================
-        FOOTER
+        FOOTER - محدث بمعلومات المطور
         ============================================================ -->
         <footer class="footer">
-            <span class="heart">❤️</span>
-            جميع الحقوق محفوظة &copy; 2026
-            <span class="author-name">شادي رحال</span>
-            <span class="heart">❤️</span>
+            <div>
+                <span class="heart">❤️</span>
+                جميع الحقوق محفوظة &copy; 2026
+                <span class="author-name">شادي رحال</span>
+                <span class="heart">❤️</span>
+            </div>
+            <div class="dev-info">
+                <div class="dev-name">
+                    <i class="fas fa-code"></i>
+                    برمجة وتطوير: بهاء الدين الحسين
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone"></i> 0982520358
+                </div>
+            </div>
         </footer>
     </div>
 
     <script>
+        // ============================================================
+        //  THEME TOGGLE - الوضع الداكن/الفاتح
+        // ============================================================
+        (function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const savedTheme = localStorage.getItem('theme');
+
+            // تطبيق الوضع المحفوظ
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+
+            // تبديل الوضع
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('light-mode');
+                const isLight = document.body.classList.contains('light-mode');
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            });
+        })();
+
         // ============================================================
         //  DATA - الروايات
         // ============================================================
@@ -917,7 +899,7 @@
             }
 
             grid.innerHTML = filtered.map(n => `
-                <div class="novel-card" data-category="${n.category}" data-title="${n.title}" role="listitem">
+                <div class="novel-card" data-category="${n.category}" data-title="${n.title}">
                     <div class="card-image">
                         <img src="${n.image}" alt="غلاف رواية ${n.title}" loading="lazy" onerror="this.style.display='none'" />
                         <div class="image-overlay"></div>
@@ -932,7 +914,7 @@
                         </div>
                         <p class="card-desc">${n.description}</p>
                         <div class="card-footer">
-                            <button class="read-btn" data-file="${n.file}" aria-label="اقرأ رواية ${n.title}">
+                            <button class="read-btn" data-file="${n.file}">
                                 <i class="fas fa-arrow-left"></i> اقرأ الآن
                             </button>
                         </div>
@@ -956,9 +938,6 @@
             });
         }
 
-        // ============================================================
-        //  FILTER EVENTS
-        // ============================================================
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -970,11 +949,7 @@
 
         searchInput.addEventListener('input', render);
 
-        // ============================================================
-        //  INIT
-        // ============================================================
         render();
     </script>
-
 </body>
 </html>
