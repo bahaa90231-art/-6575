@@ -1,5 +1,5 @@
 <!-- ============================================================
-     FILE: index.html (الصفحة الرئيسية - مع الوضع الداكن/الفاتح)
+     FILE: index.html (الصفحة الرئيسية - بدون صورة غلاف المكتبة)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -16,22 +16,17 @@
     <meta property="og:url" content="https://bahaa90231-art.github.io/-6575/index.html" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://bahaa90231-art.github.io/-6575/index.html" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* ============================================================
-           ROOT & RESET - وضع داكن وفاتح
-           ============================================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* الوضع الداكن (الافتراضي) */
         :root {
             --primary: #6C3CE1;
             --primary-light: #8B5CF6;
@@ -51,7 +46,6 @@
             --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* الوضع الفاتح */
         body.light-mode {
             --primary: #6C3CE1;
             --primary-light: #8B5CF6;
@@ -62,16 +56,14 @@
             --bg-card-hover: #FAF5FF;
             --text: #1F1B2E;
             --text-muted: #6B7280;
-            --glass: rgba(255, 255, 255, 0.7);
+            --glass: rgba(255, 255, 255, 0.75);
             --border-color: rgba(108, 60, 225, 0.12);
             --shadow: 0 15px 40px rgba(108, 60, 225, 0.1);
             --shadow-hover: 0 25px 60px rgba(108, 60, 225, 0.18);
             --grid-line: rgba(108, 60, 225, 0.05);
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Cairo', sans-serif;
@@ -83,9 +75,7 @@
             transition: background 0.4s ease, color 0.4s ease;
         }
 
-        /* ============================================================
-           ANIMATED BACKGROUND ORBS
-           ============================================================ */
+        /* ORBS */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -95,33 +85,9 @@
             animation: orbFloat 20s infinite alternate ease-in-out;
             transition: opacity 0.4s ease;
         }
-        .orb-1 {
-            width: 600px;
-            height: 600px;
-            background: var(--primary);
-            top: -200px;
-            right: -150px;
-            opacity: 0.2;
-        }
-        .orb-2 {
-            width: 500px;
-            height: 500px;
-            background: var(--gold);
-            bottom: -150px;
-            left: -100px;
-            opacity: 0.15;
-            animation-delay: 6s;
-        }
-        .orb-3 {
-            width: 400px;
-            height: 400px;
-            background: var(--primary-light);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.08;
-            animation-delay: 12s;
-        }
+        .orb-1 { width: 600px; height: 600px; background: var(--primary); top: -200px; right: -150px; opacity: 0.2; }
+        .orb-2 { width: 500px; height: 500px; background: var(--gold); bottom: -150px; left: -100px; opacity: 0.15; animation-delay: 6s; }
+        .orb-3 { width: 400px; height: 400px; background: var(--primary-light); top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.08; animation-delay: 12s; }
 
         body.light-mode .orb-1 { opacity: 0.08; }
         body.light-mode .orb-2 { opacity: 0.06; }
@@ -134,9 +100,6 @@
             100% { transform: translate(50px, -30px) scale(1.05); }
         }
 
-        /* ============================================================
-           GLASS GRID OVERLAY
-           ============================================================ */
         .grid-overlay {
             position: fixed;
             inset: 0;
@@ -149,20 +112,16 @@
             transition: background-image 0.4s ease;
         }
 
-        /* ============================================================
-           CONTAINER
-           ============================================================ */
+        /* CONTAINER */
         .container {
             position: relative;
             z-index: 2;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px 20px 80px;
+            padding: 30px 20px 80px;
         }
 
-        /* ============================================================
-           HEADER
-           ============================================================ */
+        /* HEADER */
         .header {
             background: var(--glass);
             backdrop-filter: blur(20px);
@@ -212,6 +171,13 @@
             font-size: 1.8rem;
             box-shadow: 0 8px 30px rgba(108, 60, 225, 0.35);
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .header-brand .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .header-brand .brand-text h1 {
@@ -230,9 +196,7 @@
             display: block;
         }
 
-        .header-brand .brand-text span i {
-            color: var(--gold);
-        }
+        .header-brand .brand-text span i { color: var(--gold); }
 
         .header-actions {
             display: flex;
@@ -240,7 +204,6 @@
             gap: 12px;
         }
 
-        /* زر الوضع الداكن/الفاتح */
         .theme-toggle {
             width: 48px;
             height: 48px;
@@ -263,17 +226,8 @@
             box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
         }
 
-        .theme-toggle i {
-            transition: transform 0.4s ease;
-        }
-
-        body:not(.light-mode) .theme-toggle .fa-sun {
-            display: none;
-        }
-
-        body.light-mode .theme-toggle .fa-moon {
-            display: none;
-        }
+        body:not(.light-mode) .theme-toggle .fa-sun { display: none; }
+        body.light-mode .theme-toggle .fa-moon { display: none; }
 
         .header-badge {
             display: flex;
@@ -290,18 +244,14 @@
             animation: pulseGlow 2.5s infinite;
         }
 
-        .header-badge i {
-            font-size: 0.9rem;
-        }
+        .header-badge i { font-size: 0.9rem; }
 
         @keyframes pulseGlow {
             0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.1); }
             50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.25); }
         }
 
-        /* ============================================================
-           CONTROLS
-           ============================================================ */
+        /* CONTROLS */
         .controls {
             display: flex;
             flex-wrap: wrap;
@@ -340,21 +290,14 @@
             transition: var(--transition);
         }
 
-        .search-wrapper input::placeholder {
-            color: var(--text-muted);
-            opacity: 0.6;
-        }
+        .search-wrapper input::placeholder { color: var(--text-muted); opacity: 0.6; }
 
         .search-wrapper input:focus {
             border-color: var(--primary-light);
             box-shadow: 0 0 30px rgba(108, 60, 225, 0.15);
         }
 
-        .filter-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+        .filter-group { display: flex; flex-wrap: wrap; gap: 8px; }
 
         .filter-btn {
             padding: 10px 24px;
@@ -382,18 +325,13 @@
             box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
         }
 
-        /* ============================================================
-           NOVEL GRID
-           ============================================================ */
+        /* NOVEL GRID */
         .novel-grid {
             display: grid;
             gap: 28px;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
 
-        /* ============================================================
-           NOVEL CARD
-           ============================================================ */
         .novel-card {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -432,9 +370,7 @@
             transition: var(--transition);
         }
 
-        .novel-card:hover .card-image img {
-            transform: scale(1.04);
-        }
+        .novel-card:hover .card-image img { transform: scale(1.04); }
 
         .novel-card .card-image .image-overlay {
             position: absolute;
@@ -545,9 +481,7 @@
             box-shadow: 0 12px 40px rgba(108, 60, 225, 0.4);
         }
 
-        /* ============================================================
-           FOOTER - محدث بمعلومات المطور
-           ============================================================ */
+        /* FOOTER */
         .footer {
             text-align: center;
             padding: 40px 20px 20px;
@@ -569,10 +503,7 @@
             50% { transform: scale(1.2); }
         }
 
-        .footer .author-name {
-            color: var(--primary-light);
-            font-weight: 700;
-        }
+        .footer .author-name { color: var(--primary-light); font-weight: 700; }
 
         .footer .dev-info {
             margin-top: 14px;
@@ -598,151 +529,66 @@
             letter-spacing: 0.5px;
         }
 
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
+        /* RESPONSIVE */
         @media (min-width: 1400px) {
-            .novel-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 32px;
-            }
+            .novel-grid { grid-template-columns: repeat(4, 1fr); gap: 32px; }
             .container { padding: 30px 40px 100px; }
             .header { padding: 25px 50px; }
             .header-brand .brand-text h1 { font-size: 2rem; }
         }
 
         @media (max-width: 1399px) and (min-width: 1100px) {
-            .novel-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 28px;
-            }
+            .novel-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
         }
 
         @media (max-width: 1099px) and (min-width: 768px) {
-            .novel-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
+            .novel-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
             .header-brand .brand-text h1 { font-size: 1.4rem; }
             .header { padding: 22px 24px; }
         }
 
         @media (max-width: 767px) and (min-width: 480px) {
-            .novel-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-            }
+            .novel-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
             .container { padding: 14px 14px 80px; }
-            .header {
-                padding: 16px;
-                border-radius: 16px;
-            }
-            .header-brand .logo-icon {
-                width: 44px;
-                height: 44px;
-                font-size: 1.4rem;
-            }
+            .header { padding: 16px; border-radius: 16px; }
+            .header-brand .logo-icon { width: 44px; height: 44px; font-size: 1.4rem; }
             .header-brand .brand-text h1 { font-size: 1.2rem; }
             .header-brand .brand-text span { font-size: 0.7rem; }
-            .header-badge {
-                font-size: 0.65rem;
-                padding: 5px 14px 5px 12px;
-            }
-            .theme-toggle {
-                width: 42px;
-                height: 42px;
-                font-size: 1rem;
-            }
+            .header-badge { font-size: 0.65rem; padding: 5px 14px; }
+            .theme-toggle { width: 42px; height: 42px; font-size: 1rem; }
             .novel-card .card-body .card-title { font-size: 1.1rem; }
-            .novel-card .card-body .read-btn {
-                padding: 8px 18px;
-                font-size: 0.75rem;
-            }
+            .novel-card .card-body .read-btn { padding: 8px 18px; font-size: 0.75rem; }
             .controls { gap: 10px; }
             .search-wrapper { flex: 1 1 100%; max-width: 100%; }
-            .search-wrapper input {
-                padding: 12px 44px 12px 16px;
-                font-size: 0.85rem;
-            }
-            .filter-btn {
-                padding: 7px 16px;
-                font-size: 0.75rem;
-            }
+            .search-wrapper input { padding: 12px 44px 12px 16px; font-size: 0.85rem; }
+            .filter-btn { padding: 7px 16px; font-size: 0.75rem; }
         }
 
         @media (max-width: 479px) {
-            .novel-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
+            .novel-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
             .container { padding: 10px 8px 70px; }
-            .header {
-                padding: 14px 12px;
-                border-radius: 14px;
-                margin-bottom: 20px;
-            }
+            .header { padding: 14px 12px; border-radius: 14px; margin-bottom: 20px; }
             .header-content { gap: 10px; }
-            .header-brand .logo-icon {
-                width: 38px;
-                height: 38px;
-                font-size: 1.2rem;
-                border-radius: 10px;
-            }
+            .header-brand .logo-icon { width: 38px; height: 38px; font-size: 1.2rem; border-radius: 10px; }
             .header-brand .brand-text h1 { font-size: 1rem; }
             .header-brand .brand-text span { font-size: 0.6rem; }
             .header-actions { gap: 8px; }
-            .theme-toggle {
-                width: 38px;
-                height: 38px;
-                font-size: 0.9rem;
-            }
-            .header-badge {
-                font-size: 0.55rem;
-                padding: 4px 12px;
-            }
-            .header-badge i { font-size: 0.6rem; }
+            .theme-toggle { width: 38px; height: 38px; font-size: 0.9rem; }
+            .header-badge { font-size: 0.55rem; padding: 4px 12px; }
             .controls { gap: 8px; margin-bottom: 18px; }
-            .search-wrapper input {
-                padding: 10px 38px 10px 12px;
-                font-size: 0.75rem;
-                border-radius: 40px;
-            }
+            .search-wrapper input { padding: 10px 38px 10px 12px; font-size: 0.75rem; border-radius: 40px; }
             .filter-group { gap: 4px; justify-content: center; }
-            .filter-btn {
-                padding: 5px 12px;
-                font-size: 0.65rem;
-                border-radius: 40px;
-            }
+            .filter-btn { padding: 5px 12px; font-size: 0.65rem; border-radius: 40px; }
             .novel-card { border-radius: 14px; }
             .novel-card .card-image { padding-top: 66%; }
-            .novel-card .card-image .badge-chapters {
-                font-size: 0.55rem;
-                padding: 2px 10px;
-                bottom: 8px;
-                right: 8px;
-            }
-            .novel-card .card-image .badge-category {
-                font-size: 0.5rem;
-                padding: 2px 10px;
-                top: 8px;
-                right: 8px;
-            }
+            .novel-card .card-image .badge-chapters { font-size: 0.55rem; padding: 2px 10px; bottom: 8px; right: 8px; }
+            .novel-card .card-image .badge-category { font-size: 0.5rem; padding: 2px 10px; top: 8px; right: 8px; }
             .novel-card .card-body { padding: 12px 10px 14px; }
             .novel-card .card-body .card-title { font-size: 0.85rem; }
-            .novel-card .card-body .card-meta {
-                font-size: 0.6rem;
-                gap: 4px 10px;
-            }
+            .novel-card .card-body .card-meta { font-size: 0.6rem; gap: 4px 10px; }
             .novel-card .card-body .card-desc { display: none; }
-            .novel-card .card-body .read-btn {
-                padding: 5px 14px;
-                font-size: 0.6rem;
-            }
-            .footer {
-                font-size: 0.7rem;
-                padding: 20px 10px 5px;
-                margin-top: 30px;
-            }
+            .novel-card .card-body .read-btn { padding: 5px 14px; font-size: 0.6rem; }
+            .footer { font-size: 0.7rem; padding: 20px 10px 5px; margin-top: 30px; }
             .footer .dev-info { font-size: 0.65rem; }
         }
     </style>
@@ -754,13 +600,13 @@
     <div class="grid-overlay"></div>
 
     <div class="container">
-        <!-- ============================================================
-        HEADER
-        ============================================================ -->
+        <!-- HEADER -->
         <header class="header">
             <div class="header-content">
                 <div class="header-brand">
-                    <div class="logo-icon">📚</div>
+                    <div class="logo-icon">
+                        <img src="favicon.png" alt="شعار المكتبة" onerror="this.style.display='none'; this.parentElement.innerHTML='📚';" />
+                    </div>
                     <div class="brand-text">
                         <h1>روايات الكاتب شادي رحال</h1>
                         <span><i class="fas fa-quote-right"></i> حيث تعيش الكلمات <i class="fas fa-quote-left"></i></span>
@@ -779,9 +625,7 @@
             </div>
         </header>
 
-        <!-- ============================================================
-        CONTROLS
-        ============================================================ -->
+        <!-- CONTROLS -->
         <div class="controls">
             <div class="search-wrapper">
                 <i class="fas fa-search"></i>
@@ -794,14 +638,10 @@
             </div>
         </div>
 
-        <!-- ============================================================
-        NOVEL GRID
-        ============================================================ -->
+        <!-- NOVEL GRID -->
         <div class="novel-grid" id="novelGrid"></div>
 
-        <!-- ============================================================
-        FOOTER - محدث بمعلومات المطور
-        ============================================================ -->
+        <!-- FOOTER -->
         <footer class="footer">
             <div>
                 <span class="heart">❤️</span>
@@ -822,19 +662,11 @@
     </div>
 
     <script>
-        // ============================================================
-        //  THEME TOGGLE - الوضع الداكن/الفاتح
-        // ============================================================
+        // THEME TOGGLE
         (function() {
             const themeToggle = document.getElementById('themeToggle');
             const savedTheme = localStorage.getItem('theme');
-
-            // تطبيق الوضع المحفوظ
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-            }
-
-            // تبديل الوضع
+            if (savedTheme === 'light') document.body.classList.add('light-mode');
             themeToggle.addEventListener('click', function() {
                 document.body.classList.toggle('light-mode');
                 const isLight = document.body.classList.contains('light-mode');
@@ -844,7 +676,10 @@
 
         // ============================================================
         //  DATA - الروايات
-        // ============================================================
+        //  ═══════════════════════════════════════════════════════════
+        //  📸 لتغيير صورة الغلاف: عدّل قيمة image فقط
+        //  ⚠️ مهم: اسم الصورة يجب أن يطابق اسم الملف بالضبط
+        //  ═══════════════════════════════════════════════════════════
         const novels = [{
             id: 'skylane',
             title: 'سكاي لاين',
@@ -871,9 +706,7 @@
             file: 'what-if-war.html'
         }];
 
-        // ============================================================
-        //  RENDER
-        // ============================================================
+        // RENDER
         const grid = document.getElementById('novelGrid');
         const searchInput = document.getElementById('searchInput');
         let activeFilter = 'all';
@@ -948,7 +781,6 @@
         });
 
         searchInput.addEventListener('input', render);
-
         render();
     </script>
 </body>
