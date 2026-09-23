@@ -1,11 +1,11 @@
 <!-- ============================================================
-     FILE: what-if-war.html (تصميم Vercel/Linear الاحترافي)
+     FILE: what-if-war.html (تصميم احترافي - متوافق مع جميع الجوالات)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>ماذا لو ما كانت الحرب؟ - رواية اجتماعية للكاتب شادي رحال | تحميل PDF</title>
     <meta name="description" content="رواية ماذا لو ما كانت الحرب؟ للكاتب شادي رحال - رواية تأملية عن النزوح والفقد والأمل. اقرأ وحمّل PDF مجاناً." />
     <meta name="keywords" content="ماذا لو ما كانت الحرب, شادي رحال, رواية اجتماعية, تحميل رواية PDF, رواية عن الحرب, رواية عن النزوح" />
@@ -51,7 +51,6 @@
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
             --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body.light-mode {
@@ -74,7 +73,11 @@
             --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
         }
 
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
 
         body {
             font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -109,16 +112,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
-            padding: 14px 0;
-            min-height: 64px;
+            gap: 12px;
+            padding: 12px 0;
+            min-height: 60px;
         }
 
         .back-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
+            gap: 6px;
+            padding: 8px 12px;
             background: transparent;
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
@@ -129,13 +132,10 @@
             text-decoration: none;
             cursor: pointer;
             transition: all var(--transition);
+            flex-shrink: 0;
         }
 
-        .back-btn:hover {
-            color: var(--text);
-            background: var(--bg-hover);
-            border-color: var(--border-hover);
-        }
+        .back-btn:active { transform: scale(0.95); }
 
         .header-title {
             font-size: 14px;
@@ -143,12 +143,16 @@
             color: var(--text);
             text-align: center;
             flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .header-actions {
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .icon-btn {
@@ -166,18 +170,14 @@
             font-size: 14px;
         }
 
-        .icon-btn:hover {
-            color: var(--text);
-            background: var(--bg-hover);
-            border-color: var(--border-hover);
-        }
+        .icon-btn:active { transform: scale(0.95); }
 
         body:not(.light-mode) .theme-toggle .fa-sun { display: none; }
         body.light-mode .theme-toggle .fa-moon { display: none; }
 
         /* HERO */
         .hero {
-            padding: 60px 0 40px;
+            padding: 40px 0 30px;
             position: relative;
         }
 
@@ -192,8 +192,8 @@
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            grid-template-columns: 1fr;
+            gap: 24px;
             align-items: center;
         }
 
@@ -201,22 +201,22 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 14px;
+            padding: 5px 12px;
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             border-radius: 100px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .hero-text h1 {
-            font-size: clamp(32px, 5vw, 56px);
+            font-size: 28px;
             font-weight: 800;
-            line-height: 1.05;
+            line-height: 1.15;
             letter-spacing: -0.03em;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             background: linear-gradient(180deg, var(--text) 0%, var(--text-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -224,26 +224,25 @@
         }
 
         .hero-text p {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 14px;
+            line-height: 1.7;
             color: var(--text-secondary);
-            margin-bottom: 24px;
-            max-width: 500px;
+            margin-bottom: 18px;
         }
 
         .hero-meta {
             display: flex;
-            gap: 20px;
+            gap: 14px;
             flex-wrap: wrap;
-            margin-bottom: 28px;
-            font-size: 13px;
+            margin-bottom: 20px;
+            font-size: 12px;
             color: var(--text-tertiary);
         }
 
         .hero-meta span {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             font-weight: 500;
         }
 
@@ -252,8 +251,9 @@
         .btn-pdf {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
             background: var(--primary);
             color: #FFFFFF;
             border: none;
@@ -264,13 +264,10 @@
             cursor: pointer;
             transition: all var(--transition);
             box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+            width: 100%;
         }
 
-        .btn-pdf:hover {
-            background: var(--primary-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
-        }
+        .btn-pdf:active { transform: scale(0.97); }
 
         .btn-pdf.loading { opacity: 0.7; pointer-events: none; }
         .btn-pdf.loading i { animation: spin 1s linear infinite; }
@@ -289,6 +286,7 @@
             background: var(--bg-subtle);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-lg);
+            order: -1;
         }
 
         .hero-cover img {
@@ -307,60 +305,55 @@
         }
 
         /* CHAPTERS */
-        .chapters-section { padding: 40px 0 80px; }
+        .chapters-section { padding: 24px 0 60px; }
 
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
+            margin-bottom: 16px;
             gap: 12px;
         }
 
         .section-header h2 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             letter-spacing: -0.01em;
         }
 
         .section-header .count {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-tertiary);
             font-weight: 500;
         }
 
         .chapters-grid {
             display: grid;
-            gap: 12px;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .chapter-card {
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 18px 16px;
+            padding: 14px 12px;
             cursor: pointer;
             transition: all var(--transition);
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
         }
 
-        .chapter-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        .chapter-card:hover .arrow {
-            transform: translateX(-4px);
-            color: var(--primary);
+        .chapter-card:active {
+            transform: scale(0.97);
+            background: var(--bg-hover);
         }
 
         .chapter-card .num {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--primary);
             line-height: 1;
@@ -368,7 +361,7 @@
         }
 
         .chapter-card .title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--text);
             line-height: 1.4;
@@ -379,10 +372,10 @@
         }
 
         .chapter-card .arrow {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-tertiary);
             transition: all var(--transition);
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         /* CHAPTER VIEW */
@@ -393,7 +386,8 @@
             z-index: 999;
             background: var(--bg);
             overflow-y: auto;
-            padding: 24px;
+            padding: 16px;
+            -webkit-overflow-scrolling: touch;
         }
 
         .chapter-view.active {
@@ -415,82 +409,85 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
-            padding-bottom: 24px;
-            margin-bottom: 32px;
+            gap: 10px;
+            padding: 12px 0;
+            margin-bottom: 20px;
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            background: color-mix(in srgb, var(--bg) 90%, transparent);
+            background: color-mix(in srgb, var(--bg) 92%, transparent);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             z-index: 10;
-            flex-wrap: wrap;
         }
 
         .chapter-view-header .title-info {
             display: flex;
-            align-items: center;
-            gap: 12px;
+            flex-direction: column;
+            gap: 4px;
             flex: 1;
-            min-width: 200px;
+            min-width: 0;
         }
 
         .chapter-view-header .ch-num {
             display: inline-block;
-            padding: 4px 12px;
+            padding: 3px 10px;
             background: var(--primary-subtle);
             color: var(--primary);
             border-radius: 6px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             white-space: nowrap;
+            align-self: flex-start;
         }
 
         .chapter-view-header .ch-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: var(--text);
             letter-spacing: -0.01em;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .btn-close {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px 14px;
+            justify-content: center;
+            gap: 5px;
+            padding: 8px 12px;
             background: transparent;
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
             color: var(--text-secondary);
             font-family: inherit;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             cursor: pointer;
             transition: all var(--transition);
+            flex-shrink: 0;
         }
 
-        .btn-close:hover {
-            color: var(--text);
-            background: var(--bg-hover);
-            border-color: var(--border-hover);
-        }
+        .btn-close:active { transform: scale(0.95); }
 
         .chapter-body {
-            font-size: 17px;
-            line-height: 2;
+            font-size: 16px;
+            line-height: 1.95;
             color: var(--text);
             padding-bottom: 60px;
         }
 
-        .chapter-body p { margin-bottom: 1.4rem; }
+        .chapter-body p { margin-bottom: 1.2rem; }
 
         .chapter-body .first-letter {
-            font-size: 3.2rem;
+            font-size: 2.8rem;
             font-weight: 800;
             float: right;
-            margin-left: 12px;
-            margin-top: 6px;
+            margin-left: 10px;
+            margin-top: 4px;
             color: var(--primary);
             line-height: 0.9;
         }
@@ -498,17 +495,17 @@
         /* FOOTER */
         .footer {
             border-top: 1px solid var(--border);
-            padding: 40px 0 24px;
+            padding: 24px 0 16px;
             background: var(--bg-subtle);
         }
 
         .footer-bottom {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 12px;
+            text-align: center;
+            gap: 8px;
+            font-size: 11px;
             color: var(--text-tertiary);
         }
 
@@ -519,64 +516,138 @@
 
         .dev-credit {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 4px;
         }
 
-        .dev-credit i { color: var(--primary); }
+        .dev-credit i { color: var(--primary); margin-left: 3px; }
 
         .dev-credit .phone {
             direction: ltr;
             color: var(--text-secondary);
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .hero-cover {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            .hero-text h1 { font-size: 40px; }
+        @media (min-width: 1400px) {
+            .container { padding: 0 40px; }
+            .hero { padding: 80px 0 60px; }
+            .hero-content { grid-template-columns: 1fr 1fr; gap: 60px; }
+            .hero-cover { order: 0; }
+            .hero-text h1 { font-size: 52px; }
+            .hero-text p { font-size: 16px; }
+            .btn-pdf { width: auto; padding: 12px 24px; }
+            .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+            .chapter-card { padding: 18px 16px; }
+            .chapter-card .num { font-size: 24px; }
+            .chapter-card .title { font-size: 13px; }
+            .chapter-body { font-size: 17px; }
         }
 
-        @media (max-width: 768px) {
-            .container { padding: 0 20px; }
+        @media (min-width: 900px) and (max-width: 1399px) {
+            .hero-content { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .hero-cover { order: 0; }
+            .hero-text h1 { font-size: 42px; }
+            .hero-text p { font-size: 15px; }
+            .btn-pdf { width: auto; padding: 12px 24px; }
+            .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+        }
+
+        @media (min-width: 600px) and (max-width: 899px) {
+            .container { padding: 0 24px; }
             .hero { padding: 40px 0 30px; }
+            .hero-content { grid-template-columns: 1fr 1fr; gap: 32px; }
+            .hero-cover { order: 0; }
             .hero-text h1 { font-size: 32px; }
             .hero-text p { font-size: 14px; }
-            .hero-meta { font-size: 12px; gap: 14px; }
-            .btn-pdf { padding: 10px 20px; font-size: 13px; }
-            .chapters-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .btn-pdf { width: auto; padding: 10px 20px; font-size: 13px; }
+            .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+            .chapter-card { padding: 16px 14px; }
+            .chapter-card .num { font-size: 22px; }
+            .chapter-card .title { font-size: 13px; }
+            .chapter-view { padding: 20px; }
+            .chapter-body { font-size: 16px; }
+            .chapter-view-header .ch-title { font-size: 16px; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; text-align: right; font-size: 12px; }
+            .dev-credit { flex-direction: row; gap: 16px; }
+        }
+
+        @media (min-width: 480px) and (max-width: 599px) {
+            .container { padding: 0 20px; }
+            .hero-text h1 { font-size: 30px; }
+            .hero-text p { font-size: 14px; }
+            .chapters-grid { gap: 12px; }
+            .chapter-card { padding: 16px 14px; }
+            .chapter-card .num { font-size: 22px; }
+            .chapter-card .title { font-size: 13px; }
+            .chapter-view { padding: 18px; }
+            .chapter-body { font-size: 16px; }
+        }
+
+        @media (min-width: 375px) and (max-width: 479px) {
+            .container { padding: 0 16px; }
+            .header-inner { padding: 10px 0; min-height: 56px; }
+            .header-title { font-size: 12px; }
+            .back-btn { padding: 7px 10px; font-size: 12px; }
+            .back-btn span { display: none; }
+            .icon-btn { width: 34px; height: 34px; font-size: 13px; }
+            .hero { padding: 24px 0 20px; }
+            .hero-content { gap: 20px; }
+            .hero-text h1 { font-size: 24px; }
+            .hero-text p { font-size: 13px; }
+            .hero-meta { font-size: 11px; gap: 12px; }
+            .btn-pdf { padding: 11px 18px; font-size: 13px; }
+            .chapters-section { padding: 20px 0 50px; }
+            .section-header h2 { font-size: 16px; }
+            .chapters-grid { gap: 10px; }
             .chapter-card { padding: 14px 12px; }
             .chapter-card .num { font-size: 20px; }
             .chapter-card .title { font-size: 12px; }
-            .chapter-view { padding: 16px; }
-            .chapter-body { font-size: 16px; line-height: 1.9; }
-            .chapter-view-header { padding-bottom: 16px; margin-bottom: 24px; }
-            .chapter-view-header .ch-title { font-size: 14px; }
+            .chapter-view { padding: 14px; }
+            .chapter-view-header { padding: 10px 0; margin-bottom: 18px; }
+            .chapter-view-header .ch-title { font-size: 13px; }
+            .chapter-body { font-size: 15px; line-height: 1.9; }
+            .chapter-body .first-letter { font-size: 2.4rem; }
+            .btn-close span { display: none; }
+            .footer { padding: 20px 0 12px; }
         }
 
-        @media (max-width: 480px) {
-            .container { padding: 0 16px; }
-            .header-inner { padding: 12px 0; }
-            .header-title { display: none; }
-            .hero { padding: 30px 0 20px; }
-            .hero-text h1 { font-size: 26px; }
-            .hero-text p { font-size: 13px; }
+        @media (max-width: 374px) {
+            .container { padding: 0 12px; }
+            .header-inner { padding: 8px 0; min-height: 52px; }
+            .header-title { font-size: 11px; }
+            .back-btn { padding: 6px 8px; font-size: 11px; }
+            .icon-btn { width: 32px; height: 32px; font-size: 12px; }
+            .hero { padding: 20px 0 16px; }
+            .hero-content { gap: 16px; }
+            .hero-text h1 { font-size: 22px; }
+            .hero-text p { font-size: 12px; }
+            .hero-meta { font-size: 10px; gap: 10px; }
+            .hero-text .novel-tag { font-size: 10px; padding: 4px 10px; }
+            .btn-pdf { padding: 10px 16px; font-size: 12px; }
+            .chapters-section { padding: 16px 0 40px; }
+            .section-header h2 { font-size: 15px; }
             .chapters-grid { gap: 8px; }
             .chapter-card { padding: 12px 10px; }
             .chapter-card .num { font-size: 18px; }
-            .chapter-card .title { font-size: 11px; -webkit-line-clamp: 3; }
+            .chapter-card .title { font-size: 11px; }
             .chapter-view { padding: 12px; }
-            .chapter-body { font-size: 15px; line-height: 1.85; }
-            .chapter-body .first-letter { font-size: 2.4rem; }
-            .footer-bottom { flex-direction: column; text-align: center; }
+            .chapter-view-header .ch-title { font-size: 12px; }
+            .chapter-body { font-size: 14px; line-height: 1.85; }
+            .chapter-body .first-letter { font-size: 2.2rem; }
+            .footer-bottom { font-size: 10px; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .chapter-card:hover { border-color: var(--border); box-shadow: none; transform: none; }
+            .icon-btn:hover { background: transparent; color: var(--text-secondary); border-color: var(--border); }
+            .back-btn:hover { background: transparent; color: var(--text-secondary); border-color: var(--border); }
+            .btn-close:hover { background: transparent; color: var(--text-secondary); border-color: var(--border); }
+            .btn-pdf:hover { background: var(--primary); transform: none; }
         }
     </style>
 </head>
@@ -604,6 +675,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-cover">
+                    <img src="what-if-war.jpg" alt="غلاف ماذا لو ما كانت الحرب؟" onerror="this.style.display='none'" />
+                </div>
                 <div class="hero-text">
                     <span class="novel-tag">
                         <i class="fas fa-dove"></i>
@@ -623,9 +697,6 @@
                         <i class="fas fa-file-pdf"></i>
                         <span>تحميل PDF</span>
                     </button>
-                </div>
-                <div class="hero-cover">
-                    <img src="what-if-war.jpg" alt="غلاف ماذا لو ما كانت الحرب؟" onerror="this.style.display='none'" />
                 </div>
             </div>
         </div>
@@ -1025,9 +1096,7 @@
     شادي`
         }];
 
-        // ============================================================
-        //  RENDER
-        // ============================================================
+        // RENDER
         const gridContainer = document.getElementById('chaptersGrid');
 
         function renderChapters() {
@@ -1059,9 +1128,7 @@
             });
         }
 
-        // ============================================================
-        //  OPEN / CLOSE
-        // ============================================================
+        // OPEN / CLOSE
         const view = document.getElementById('chapterView');
         const viewNum = document.getElementById('viewNum');
         const viewTitle = document.getElementById('viewTitle');
@@ -1120,9 +1187,7 @@
             }
         });
 
-        // ============================================================
-        //  DOWNLOAD PDF
-        // ============================================================
+        // DOWNLOAD PDF
         document.getElementById('downloadPdfBtn').addEventListener('click', function() {
             const btn = this;
             btn.classList.add('loading');
