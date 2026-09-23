@@ -1,11 +1,11 @@
 <!-- ============================================================
-     FILE: index.html (تصميم Vercel/Linear الاحترافي)
+     FILE: index.html (تصميم احترافي - متوافق مع جميع الجوالات)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>روايات الكاتب شادي رحال - مكتبة عربية احترافية</title>
     <meta name="description" content="مكتبة روايات عربية احترافية للكاتب شادي رحال: سكاي لاين، الأماكن، ماذا لو ما كانت الحرب؟ - اقرأ وحمّل PDF مجاناً." />
     <meta name="keywords" content="روايات, شادي رحال, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, روايات عربية, تحميل روايات PDF" />
@@ -25,17 +25,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* ============================================================
-           RESET & ROOT
-           ============================================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            /* ألوان داكنة (افتراضي) */
             --bg: #0A0A0A;
             --bg-elevated: #111111;
             --bg-hover: #1A1A1A;
@@ -50,23 +42,15 @@
             --primary-subtle: rgba(124, 58, 237, 0.1);
             --gold: #F59E0B;
             --gold-subtle: rgba(245, 158, 11, 0.1);
-            --danger: #EF4444;
-            
             --radius-sm: 8px;
             --radius: 12px;
             --radius-lg: 16px;
-            --radius-xl: 24px;
-            
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
-            --shadow-primary: 0 8px 24px rgba(124, 58, 237, 0.25);
-            
             --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* الوضع الفاتح */
         body.light-mode {
             --bg: #FAFAFA;
             --bg-elevated: #FFFFFF;
@@ -82,16 +66,15 @@
             --primary-subtle: rgba(124, 58, 237, 0.08);
             --gold: #D97706;
             --gold-subtle: rgba(217, 119, 6, 0.08);
-            
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
-            --shadow-primary: 0 8px 24px rgba(124, 58, 237, 0.2);
         }
 
         html {
             scroll-behavior: smooth;
             -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -101,15 +84,11 @@
             min-height: 100vh;
             overflow-x: hidden;
             line-height: 1.6;
-            font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             transition: background var(--transition), color var(--transition);
         }
 
-        /* ============================================================
-           CONTAINER
-           ============================================================ */
         .container {
             max-width: 1280px;
             margin: 0 auto;
@@ -117,7 +96,7 @@
         }
 
         /* ============================================================
-           HEADER (Sticky)
+           HEADER
            ============================================================ */
         .header {
             position: sticky;
@@ -133,23 +112,24 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            padding: 16px 0;
-            min-height: 64px;
+            gap: 12px;
+            padding: 12px 0;
+            min-height: 60px;
         }
 
         .header-brand {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             color: var(--text);
             flex-shrink: 0;
+            min-width: 0;
         }
 
         .header-brand .logo {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 10px;
             overflow: hidden;
             display: flex;
@@ -158,11 +138,6 @@
             background: var(--primary-subtle);
             border: 1px solid var(--border);
             flex-shrink: 0;
-            transition: transform var(--transition);
-        }
-
-        .header-brand:hover .logo {
-            transform: scale(1.05);
         }
 
         .header-brand .logo img {
@@ -175,45 +150,32 @@
             display: flex;
             flex-direction: column;
             line-height: 1.2;
+            min-width: 0;
         }
 
         .header-brand .brand-info .name {
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             letter-spacing: -0.01em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .header-brand .brand-info .tag {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--text-tertiary);
             font-weight: 500;
-        }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .nav-link {
-            padding: 8px 14px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-decoration: none;
-            border-radius: var(--radius-sm);
-            transition: all var(--transition);
-        }
-
-        .nav-link:hover {
-            color: var(--text);
-            background: var(--bg-hover);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .header-actions {
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .icon-btn {
@@ -229,6 +191,7 @@
             cursor: pointer;
             transition: all var(--transition);
             font-size: 14px;
+            flex-shrink: 0;
         }
 
         .icon-btn:hover {
@@ -237,18 +200,22 @@
             border-color: var(--border-hover);
         }
 
+        .icon-btn:active {
+            transform: scale(0.95);
+        }
+
         body:not(.light-mode) .theme-toggle .fa-sun { display: none; }
         body.light-mode .theme-toggle .fa-moon { display: none; }
 
         .badge-vip {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             padding: 6px 12px;
             background: var(--gold-subtle);
             border: 1px solid rgba(245, 158, 11, 0.2);
             border-radius: 100px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             color: var(--gold);
             letter-spacing: 0.02em;
@@ -258,7 +225,7 @@
            HERO
            ============================================================ */
         .hero {
-            padding: 80px 0 60px;
+            padding: 60px 0 40px;
             text-align: center;
             position: relative;
         }
@@ -283,7 +250,7 @@
             font-size: 12px;
             font-weight: 500;
             color: var(--text-secondary);
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .hero-badge .dot {
@@ -301,11 +268,11 @@
         }
 
         .hero h1 {
-            font-size: clamp(32px, 6vw, 72px);
+            font-size: clamp(28px, 6vw, 64px);
             font-weight: 800;
-            line-height: 1.05;
+            line-height: 1.1;
             letter-spacing: -0.03em;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             background: linear-gradient(180deg, var(--text) 0%, var(--text-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -320,44 +287,54 @@
         }
 
         .hero p {
-            font-size: clamp(15px, 1.6vw, 18px);
+            font-size: clamp(13px, 1.6vw, 16px);
             color: var(--text-secondary);
             max-width: 640px;
-            margin: 0 auto 40px;
+            margin: 0 auto 32px;
             line-height: 1.7;
+            padding: 0 8px;
         }
 
         /* ============================================================
-           CONTROLS
+           CONTROLS - البحث والتصفية
            ============================================================ */
         .controls {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 12px;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
+            align-items: stretch;
         }
 
+        /* حقل البحث - الأيقونة داخل الحقل */
         .search-box {
             position: relative;
-            flex: 1 1 320px;
+            width: 100%;
             max-width: 480px;
+            margin: 0 auto;
+            display: block;
         }
 
-        .search-box i {
+        .search-box .search-icon {
             position: absolute;
-            right: 14px;
+            right: 16px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-tertiary);
             font-size: 14px;
             pointer-events: none;
+            z-index: 2;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
         }
 
         .search-box input {
             width: 100%;
-            padding: 12px 40px 12px 16px;
+            padding: 14px 48px 14px 16px;
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             border-radius: var(--radius);
@@ -366,6 +343,8 @@
             font-family: inherit;
             outline: none;
             transition: all var(--transition);
+            -webkit-appearance: none;
+            appearance: none;
         }
 
         .search-box input::placeholder {
@@ -377,6 +356,7 @@
             box-shadow: 0 0 0 3px var(--primary-subtle);
         }
 
+        /* أزرار التصفية */
         .filter-group {
             display: flex;
             gap: 6px;
@@ -384,20 +364,32 @@
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             border-radius: var(--radius);
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
         }
 
         .filter-btn {
-            padding: 8px 16px;
+            flex: 1;
+            padding: 10px 14px;
             background: transparent;
             border: none;
             border-radius: var(--radius-sm);
             color: var(--text-secondary);
             font-family: inherit;
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 12px;
+            font-weight: 600;
             cursor: pointer;
             transition: all var(--transition);
             white-space: nowrap;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .filter-btn:active {
+            transform: scale(0.97);
         }
 
         .filter-btn:hover {
@@ -416,9 +408,9 @@
            ============================================================ */
         .novel-grid {
             display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            padding-bottom: 80px;
+            gap: 16px;
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 60px;
         }
 
         .novel-card {
@@ -430,28 +422,12 @@
             transition: all var(--transition);
             display: flex;
             flex-direction: column;
-            position: relative;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
         }
 
-        .novel-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: var(--radius-lg);
-            background: linear-gradient(180deg, transparent 0%, var(--primary-subtle) 100%);
-            opacity: 0;
-            transition: opacity var(--transition);
-            pointer-events: none;
-        }
-
-        .novel-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .novel-card:hover::before {
-            opacity: 1;
+        .novel-card:active {
+            transform: scale(0.98);
         }
 
         .novel-card .cover {
@@ -467,88 +443,69 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform var(--transition-slow);
-        }
-
-        .novel-card:hover .cover img {
-            transform: scale(1.03);
+            transition: transform 0.4s ease;
+            display: block;
         }
 
         .novel-card .cover .tag {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            padding: 4px 10px;
-            background: color-mix(in srgb, var(--bg) 75%, transparent);
+            top: 8px;
+            right: 8px;
+            padding: 3px 8px;
+            background: color-mix(in srgb, var(--bg) 80%, transparent);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border-radius: 6px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 600;
             color: var(--text);
             border: 1px solid var(--border);
         }
 
         .novel-card .body {
-            padding: 20px;
+            padding: 14px;
             display: flex;
             flex-direction: column;
             flex: 1;
-            position: relative;
-            z-index: 1;
+            gap: 8px;
         }
 
         .novel-card .body h3 {
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 700;
             letter-spacing: -0.01em;
-            margin-bottom: 8px;
             color: var(--text);
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .novel-card .body .meta {
             display: flex;
-            gap: 14px;
-            font-size: 12px;
+            gap: 10px;
+            font-size: 11px;
             color: var(--text-tertiary);
-            margin-bottom: 12px;
             font-weight: 500;
+            flex-wrap: wrap;
         }
 
         .novel-card .body .meta span {
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-
-        .novel-card .body .meta i {
-            font-size: 11px;
-        }
-
-        .novel-card .body .desc {
-            font-size: 13px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            margin-bottom: 16px;
-            flex: 1;
+            gap: 4px;
         }
 
         .novel-card .body .cta {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            font-size: 13px;
+            gap: 4px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--primary);
-            transition: gap var(--transition);
-        }
-
-        .novel-card:hover .body .cta {
-            gap: 10px;
+            margin-top: auto;
+            padding-top: 4px;
         }
 
         /* ============================================================
@@ -557,19 +514,19 @@
         .empty-state {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
             color: var(--text-tertiary);
         }
 
         .empty-state i {
-            font-size: 48px;
+            font-size: 40px;
             opacity: 0.3;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             display: block;
         }
 
         .empty-state p {
-            font-size: 15px;
+            font-size: 14px;
         }
 
         /* ============================================================
@@ -577,61 +534,16 @@
            ============================================================ */
         .footer {
             border-top: 1px solid var(--border);
-            padding: 48px 0 32px;
+            padding: 32px 0 24px;
             background: var(--bg-subtle);
         }
 
-        .footer-inner {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 {
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--text);
-            letter-spacing: 0.02em;
-        }
-
-        .footer-col p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-col ul li a {
-            font-size: 13px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color var(--transition);
-        }
-
-        .footer-col ul li a:hover {
-            color: var(--text);
-        }
-
         .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-bottom .copy {
+            text-align: center;
+            gap: 12px;
             font-size: 12px;
             color: var(--text-tertiary);
         }
@@ -643,189 +555,204 @@
 
         .dev-credit {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 12px;
-            font-size: 12px;
-            color: var(--text-tertiary);
+            gap: 6px;
         }
 
         .dev-credit i {
             color: var(--primary);
+            margin-left: 4px;
         }
 
         .dev-credit .phone {
             direction: ltr;
             color: var(--text-secondary);
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
         /* ============================================================
-           RESPONSIVE
+           RESPONSIVE - تحسينات لكل شاشة
            ============================================================ */
-        @media (max-width: 1024px) {
-            .footer-inner {
-                grid-template-columns: 1fr 1fr;
+
+        /* شاشات كبيرة (1400+) */
+        @media (min-width: 1400px) {
+            .container { padding: 0 40px; }
+            .novel-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+            .novel-card .body h3 { font-size: 17px; }
+            .novel-card .body { padding: 20px; }
+            .novel-card .body .meta { font-size: 12px; }
+            .novel-card .body .cta { font-size: 13px; }
+            .hero { padding: 80px 0 60px; }
+        }
+
+        /* شاشات متوسطة-كبيرة (1100-1399) */
+        @media (min-width: 1100px) and (max-width: 1399px) {
+            .novel-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
             }
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
+        /* تابلت (768-1099) */
+        @media (min-width: 768px) and (max-width: 1099px) {
+            .novel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
             }
-
-            .hero {
-                padding: 60px 0 40px;
+            .hero { padding: 60px 0 40px; }
+            .controls {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
             }
-
-            .header-nav {
-                display: none;
+            .search-box { flex: 1 1 320px; max-width: 480px; }
+            .filter-group { width: auto; }
+            .filter-btn { flex: initial; padding: 8px 16px; font-size: 13px; }
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: right;
             }
+            .dev-credit {
+                flex-direction: row;
+                gap: 16px;
+            }
+        }
 
+        /* تابلت صغير / جوال كبير (480-767) */
+        @media (min-width: 480px) and (max-width: 767px) {
+            .container { padding: 0 20px; }
+            .hero { padding: 40px 0 30px; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 14px; margin-bottom: 24px; }
+            .hero-badge { font-size: 11px; }
+            .controls { margin-bottom: 24px; }
+            .search-box input { padding: 12px 44px 12px 14px; font-size: 14px; }
+            .filter-btn { font-size: 12px; padding: 8px 10px; }
             .novel-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 14px;
             }
-
-            .novel-card .body {
-                padding: 14px;
-            }
-
-            .novel-card .body h3 {
-                font-size: 14px;
-            }
-
-            .novel-card .body .meta {
-                font-size: 11px;
-                gap: 10px;
-            }
-
-            .novel-card .body .desc {
-                font-size: 12px;
-                -webkit-line-clamp: 2;
-            }
-
-            .novel-card .body .cta {
-                font-size: 12px;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
+            .novel-card .body { padding: 14px; }
+            .novel-card .body h3 { font-size: 14px; }
+            .novel-card .body .meta { font-size: 11px; gap: 8px; }
+            .novel-card .body .cta { font-size: 12px; }
+            .footer { padding: 24px 0 16px; }
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .header-inner {
-                padding: 12px 0;
-            }
-
-            .header-brand .brand-info .name {
+        /* جوال عادي (375-479) */
+        @media (min-width: 375px) and (max-width: 479px) {
+            .container { padding: 0 16px; }
+            .header-inner { padding: 10px 0; min-height: 56px; }
+            .header-brand .logo { width: 36px; height: 36px; }
+            .header-brand .brand-info .name { font-size: 13px; }
+            .header-brand .brand-info .tag { font-size: 10px; }
+            .badge-vip { display: none; }
+            .hero { padding: 32px 0 24px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 13px; margin-bottom: 20px; }
+            .hero-badge { font-size: 11px; padding: 5px 12px; margin-bottom: 16px; }
+            .controls { gap: 10px; margin-bottom: 20px; }
+            .search-box input {
+                padding: 12px 42px 12px 14px;
                 font-size: 13px;
+                border-radius: 10px;
             }
+            .search-box .search-icon { right: 14px; font-size: 13px; }
+            .filter-group { border-radius: 10px; }
+            .filter-btn { padding: 8px 10px; font-size: 11px; }
+            .novel-grid { gap: 12px; }
+            .novel-card .cover .tag { font-size: 9px; padding: 2px 6px; top: 6px; right: 6px; }
+            .novel-card .body { padding: 12px; gap: 6px; }
+            .novel-card .body h3 { font-size: 13px; }
+            .novel-card .body .meta { font-size: 10px; gap: 6px; }
+            .novel-card .body .cta { font-size: 11px; }
+            .footer { padding: 20px 0 12px; }
+            .footer-bottom { font-size: 11px; }
+        }
 
-            .header-brand .brand-info .tag {
-                font-size: 10px;
-            }
-
-            .badge-vip {
-                display: none;
-            }
-
-            .hero {
-                padding: 40px 0 30px;
-            }
-
-            .hero-badge {
-                font-size: 11px;
-                padding: 5px 10px;
-            }
-
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .search-box {
-                max-width: 100%;
-            }
-
-            .filter-group {
-                justify-content: center;
-                overflow-x: auto;
-            }
-
-            .filter-btn {
-                padding: 7px 12px;
+        /* جوال صغير (أقل من 375) */
+        @media (max-width: 374px) {
+            .container { padding: 0 12px; }
+            .header-inner { padding: 8px 0; min-height: 52px; }
+            .header-brand .logo { width: 32px; height: 32px; border-radius: 8px; }
+            .header-brand .brand-info .name { font-size: 12px; }
+            .header-brand .brand-info .tag { display: none; }
+            .icon-btn { width: 32px; height: 32px; font-size: 12px; }
+            .hero { padding: 24px 0 20px; }
+            .hero h1 { font-size: 24px; }
+            .hero p { font-size: 12px; margin-bottom: 16px; }
+            .hero-badge { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; }
+            .search-box input {
+                padding: 10px 38px 10px 12px;
                 font-size: 12px;
             }
+            .search-box .search-icon { right: 12px; font-size: 12px; }
+            .filter-btn { padding: 7px 8px; font-size: 10px; }
+            .novel-grid { gap: 10px; }
+            .novel-card .body { padding: 10px; gap: 5px; }
+            .novel-card .body h3 { font-size: 12px; }
+            .novel-card .body .meta { font-size: 9px; gap: 5px; }
+            .novel-card .body .cta { font-size: 10px; }
+            .novel-card .cover .tag { font-size: 8px; padding: 2px 5px; }
+        }
 
-            .novel-grid {
-                gap: 12px;
+        /* شاشات لمسية - تحسينات */
+        @media (hover: none) and (pointer: coarse) {
+            .novel-card:hover {
+                transform: none;
+                box-shadow: none;
+                border-color: var(--border);
             }
-
-            .novel-card .cover .tag {
-                font-size: 10px;
-                padding: 3px 8px;
-                top: 8px;
-                right: 8px;
+            .novel-card:active {
+                transform: scale(0.98);
+                background: var(--bg-hover);
             }
-
-            .novel-card .body {
-                padding: 12px;
+            .novel-card:active .cover img {
+                transform: scale(1.02);
             }
-
-            .novel-card .body h3 {
-                font-size: 13px;
-                margin-bottom: 6px;
+            .icon-btn:hover {
+                background: transparent;
+                color: var(--text-secondary);
+                border-color: var(--border);
             }
-
-            .novel-card .body .meta {
-                font-size: 10px;
-                gap: 8px;
-                margin-bottom: 8px;
+            .icon-btn:active {
+                background: var(--bg-hover);
+                color: var(--text);
             }
-
-            .novel-card .body .desc {
-                display: none;
+            .filter-btn:hover {
+                background: transparent;
+                color: var(--text-secondary);
             }
-
-            .novel-card .body .cta {
-                font-size: 11px;
+            .filter-btn:active {
+                background: var(--bg-hover);
+                color: var(--text);
             }
         }
     </style>
 </head>
 <body>
-    <!-- ============================================================
-         HEADER
-         ============================================================ -->
+    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="header-inner">
                 <a href="index.html" class="header-brand">
                     <div class="logo">
-                        <img src="favicon.png" alt="شعار" onerror="this.parentElement.innerHTML='📚'; this.parentElement.style.fontSize='20px';" />
+                        <img src="favicon.png" alt="شعار" onerror="this.parentElement.innerHTML='📚'; this.parentElement.style.fontSize='18px';" />
                     </div>
                     <div class="brand-info">
                         <span class="name">شادي رحال</span>
                         <span class="tag">مكتبة الروايات</span>
                     </div>
                 </a>
-
-                <nav class="header-nav">
-                    <a href="index.html" class="nav-link">الرئيسية</a>
-                    <a href="#novels" class="nav-link">الروايات</a>
-                    <a href="#about" class="nav-link">عن الكاتب</a>
-                </nav>
 
                 <div class="header-actions">
                     <button class="icon-btn theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
@@ -841,14 +768,12 @@
         </div>
     </header>
 
-    <!-- ============================================================
-         HERO
-         ============================================================ -->
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <div class="hero-badge">
                 <span class="dot"></span>
-                <span>مكتبة روايات عربية محدثة</span>
+                <span>مكتبة روايات عربية</span>
             </div>
             <h1>
                 روايات عربية <span class="gradient">بجودة عالمية</span>
@@ -860,15 +785,12 @@
         </div>
     </section>
 
-    <!-- ============================================================
-         CONTROLS + GRID
-         ============================================================ -->
-    <section id="novels">
+    <!-- CONTROLS + GRID -->
+    <section>
         <div class="container">
-            <!-- Controls -->
             <div class="controls">
                 <div class="search-box">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search search-icon"></i>
                     <input type="text" id="searchInput" placeholder="ابحث عن رواية..." aria-label="بحث" />
                 </div>
                 <div class="filter-group" id="filterGroup">
@@ -878,45 +800,16 @@
                 </div>
             </div>
 
-            <!-- Grid -->
             <div class="novel-grid" id="novelGrid"></div>
         </div>
     </section>
 
-    <!-- ============================================================
-         FOOTER
-         ============================================================ -->
-    <footer class="footer" id="about">
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-inner">
-                <div class="footer-col">
-                    <h4>عن المكتبة</h4>
-                    <p>
-                        مكتبة روايات عربية احترافية تعرض إبداعات الكاتب شادي رحال.
-                        روايات مختارة بعناية، تجمع بين الرومانسية والاجتماعية.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4>الروايات</h4>
-                    <ul>
-                        <li><a href="skylane.html">سكاي لاين</a></li>
-                        <li><a href="places.html">الأماكن</a></li>
-                        <li><a href="what-if-war.html">ماذا لو ما كانت الحرب؟</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>تواصل</h4>
-                    <ul>
-                        <li><a href="tel:0982520358"><i class="fas fa-phone"></i> 0982520358</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="footer-bottom">
                 <div class="copy">
-                    جميع الحقوق محفوظة &copy; 2026
-                    <span class="author">شادي رحال</span>
-                    ❤️
+                    جميع الحقوق محفوظة &copy; 2026 <span class="author">شادي رحال</span> ❤️
                 </div>
                 <div class="dev-credit">
                     <span><i class="fas fa-code"></i> برمجة وتطوير: بهاء الدين الحسين</span>
@@ -927,14 +820,11 @@
     </footer>
 
     <script>
-        // ============================================================
-        //  THEME TOGGLE
-        // ============================================================
+        // THEME TOGGLE
         (function() {
             const themeToggle = document.getElementById('themeToggle');
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'light') document.body.classList.add('light-mode');
-
             themeToggle.addEventListener('click', function() {
                 document.body.classList.toggle('light-mode');
                 const isLight = document.body.classList.contains('light-mode');
@@ -1012,9 +902,7 @@
                         <h3>${n.title}</h3>
                         <div class="meta">
                             <span><i class="fas fa-book"></i> ${n.chapters} فصل</span>
-                            <span><i class="fas fa-tag"></i> ${n.category}</span>
                         </div>
-                        <p class="desc">${n.description}</p>
                         <span class="cta">
                             اقرأ الآن <i class="fas fa-arrow-left"></i>
                         </span>
@@ -1030,9 +918,7 @@
             });
         }
 
-        // ============================================================
-        //  FILTERS
-        // ============================================================
+        // FILTERS
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1043,10 +929,6 @@
         });
 
         searchInput.addEventListener('input', render);
-
-        // ============================================================
-        //  INIT
-        // ============================================================
         render();
     </script>
 </body>
