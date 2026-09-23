@@ -1,17 +1,17 @@
 <!-- ============================================================
-     FILE: index.html (الصفحة الرئيسية - بدون صورة غلاف المكتبة)
+     FILE: index.html (تصميم Vercel/Linear الاحترافي)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>روايات الكاتب شادي رحال - سكاي لاين، الأماكن، ماذا لو ما كانت الحرب؟</title>
-    <meta name="description" content="روايات الكاتب شادي رحال: سكاي لاين (رومانسية)، الأماكن (رومانسية)، ماذا لو ما كانت الحرب؟ (اجتماعية). اقرأ وتحميل PDF مجاني." />
+    <title>روايات الكاتب شادي رحال - مكتبة عربية احترافية</title>
+    <meta name="description" content="مكتبة روايات عربية احترافية للكاتب شادي رحال: سكاي لاين، الأماكن، ماذا لو ما كانت الحرب؟ - اقرأ وحمّل PDF مجاناً." />
     <meta name="keywords" content="روايات, شادي رحال, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, روايات عربية, تحميل روايات PDF" />
     <meta name="author" content="شادي رحال" />
     <meta property="og:title" content="روايات الكاتب شادي رحال" />
-    <meta property="og:description" content="روايات عربية مميزة للكاتب شادي رحال - اقرأ وتحميل مجاني" />
+    <meta property="og:description" content="مكتبة روايات عربية احترافية - اقرأ وتحميل مجاني" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bahaa90231-art.github.io/-6575/index.html" />
     <meta name="robots" content="index, follow" />
@@ -22,651 +22,919 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ============================================================
+           RESET & ROOT
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
-            --primary: #6C3CE1;
-            --primary-light: #8B5CF6;
-            --primary-dark: #4F29A8;
+            /* ألوان داكنة (افتراضي) */
+            --bg: #0A0A0A;
+            --bg-elevated: #111111;
+            --bg-hover: #1A1A1A;
+            --bg-subtle: #161616;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.16);
+            --text: #FAFAFA;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --primary: #7C3AED;
+            --primary-hover: #8B5CF6;
+            --primary-subtle: rgba(124, 58, 237, 0.1);
             --gold: #F59E0B;
-            --bg: #07050E;
-            --bg-card: #110B1F;
-            --bg-card-hover: #1A122E;
-            --text: #F3F0FF;
-            --text-muted: #9CA3AF;
-            --glass: rgba(17, 11, 31, 0.7);
-            --border-color: rgba(255, 255, 255, 0.06);
-            --shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-            --shadow-hover: 0 35px 70px rgba(0, 0, 0, 0.7);
-            --grid-line: rgba(108, 60, 225, 0.03);
-            --radius: 20px;
-            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gold-subtle: rgba(245, 158, 11, 0.1);
+            --danger: #EF4444;
+            
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+            --shadow-primary: 0 8px 24px rgba(124, 58, 237, 0.25);
+            
+            --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* الوضع الفاتح */
         body.light-mode {
-            --primary: #6C3CE1;
-            --primary-light: #8B5CF6;
-            --primary-dark: #4F29A8;
+            --bg: #FAFAFA;
+            --bg-elevated: #FFFFFF;
+            --bg-hover: #F4F4F5;
+            --bg-subtle: #F9F9FA;
+            --border: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(0, 0, 0, 0.16);
+            --text: #09090B;
+            --text-secondary: #52525B;
+            --text-tertiary: #71717A;
+            --primary: #7C3AED;
+            --primary-hover: #6D28D9;
+            --primary-subtle: rgba(124, 58, 237, 0.08);
             --gold: #D97706;
-            --bg: #F5F3FF;
-            --bg-card: #FFFFFF;
-            --bg-card-hover: #FAF5FF;
-            --text: #1F1B2E;
-            --text-muted: #6B7280;
-            --glass: rgba(255, 255, 255, 0.75);
-            --border-color: rgba(108, 60, 225, 0.12);
-            --shadow: 0 15px 40px rgba(108, 60, 225, 0.1);
-            --shadow-hover: 0 25px 60px rgba(108, 60, 225, 0.18);
-            --grid-line: rgba(108, 60, 225, 0.05);
+            --gold-subtle: rgba(217, 119, 6, 0.08);
+            
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+            --shadow-primary: 0 8px 24px rgba(124, 58, 237, 0.2);
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative;
-            transition: background 0.4s ease, color 0.4s ease;
+            line-height: 1.6;
+            font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background var(--transition), color var(--transition);
         }
 
-        /* ORBS */
-        .orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(120px);
-            pointer-events: none;
-            z-index: 0;
-            animation: orbFloat 20s infinite alternate ease-in-out;
-            transition: opacity 0.4s ease;
-        }
-        .orb-1 { width: 600px; height: 600px; background: var(--primary); top: -200px; right: -150px; opacity: 0.2; }
-        .orb-2 { width: 500px; height: 500px; background: var(--gold); bottom: -150px; left: -100px; opacity: 0.15; animation-delay: 6s; }
-        .orb-3 { width: 400px; height: 400px; background: var(--primary-light); top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.08; animation-delay: 12s; }
-
-        body.light-mode .orb-1 { opacity: 0.08; }
-        body.light-mode .orb-2 { opacity: 0.06; }
-        body.light-mode .orb-3 { opacity: 0.04; }
-
-        @keyframes orbFloat {
-            0% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(40px, -60px) scale(1.1); }
-            66% { transform: translate(-30px, 40px) scale(0.95); }
-            100% { transform: translate(50px, -30px) scale(1.05); }
-        }
-
-        .grid-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            background-image:
-                linear-gradient(var(--grid-line) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-            background-size: 60px 60px;
-            transition: background-image 0.4s ease;
-        }
-
-        /* CONTAINER */
+        /* ============================================================
+           CONTAINER
+           ============================================================ */
         .container {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 30px 20px 80px;
+            padding: 0 24px;
         }
 
-        /* HEADER */
+        /* ============================================================
+           HEADER (Sticky)
+           ============================================================ */
         .header {
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 20px 30px;
-            margin-bottom: 40px;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: color-mix(in srgb, var(--bg) 85%, transparent);
+            backdrop-filter: saturate(180%) blur(16px);
+            -webkit-backdrop-filter: saturate(180%) blur(16px);
+            border-bottom: 1px solid var(--border);
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 20% 30%, rgba(108, 60, 225, 0.12), transparent 60%);
-            pointer-events: none;
-        }
-
-        .header-content {
+        .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-            position: relative;
-            z-index: 1;
+            gap: 24px;
+            padding: 16px 0;
+            min-height: 64px;
         }
 
         .header-brand {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            flex-shrink: 0;
         }
 
-        .header-brand .logo-icon {
-            width: 54px;
-            height: 54px;
-            background: linear-gradient(135deg, var(--primary-light), var(--gold));
-            border-radius: 14px;
+        .header-brand .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.35);
+            background: var(--primary-subtle);
+            border: 1px solid var(--border);
             flex-shrink: 0;
-            overflow: hidden;
+            transition: transform var(--transition);
         }
 
-        .header-brand .logo-icon img {
+        .header-brand:hover .logo {
+            transform: scale(1.05);
+        }
+
+        .header-brand .logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .header-brand .brand-text h1 {
-            font-size: 1.7rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--text) 30%, var(--primary-light), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.1;
+        .header-brand .brand-info {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
         }
 
-        .header-brand .brand-text span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            display: block;
+        .header-brand .brand-info .name {
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: -0.01em;
         }
 
-        .header-brand .brand-text span i { color: var(--gold); }
+        .header-brand .brand-info .tag {
+            font-size: 11px;
+            color: var(--text-tertiary);
+            font-weight: 500;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--text);
+            background: var(--bg-hover);
+        }
 
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
-        .theme-toggle {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: var(--text);
-            cursor: pointer;
+        .icon-btn {
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.4s ease;
-            box-shadow: var(--shadow);
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition);
+            font-size: 14px;
         }
 
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(15deg);
-            border-color: var(--primary-light);
-            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
+        .icon-btn:hover {
+            color: var(--text);
+            background: var(--bg-hover);
+            border-color: var(--border-hover);
         }
 
         body:not(.light-mode) .theme-toggle .fa-sun { display: none; }
         body.light-mode .theme-toggle .fa-moon { display: none; }
 
-        .header-badge {
-            display: flex;
+        .badge-vip {
+            display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: rgba(245, 158, 11, 0.12);
+            gap: 6px;
+            padding: 6px 12px;
+            background: var(--gold-subtle);
             border: 1px solid rgba(245, 158, 11, 0.2);
-            padding: 8px 22px 8px 18px;
-            border-radius: 60px;
-            font-size: 0.8rem;
-            color: var(--gold);
+            border-radius: 100px;
+            font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            animation: pulseGlow 2.5s infinite;
+            color: var(--gold);
+            letter-spacing: 0.02em;
         }
 
-        .header-badge i { font-size: 0.9rem; }
-
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.1); }
-            50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.25); }
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
         }
 
-        /* CONTROLS */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 0%, var(--primary-subtle), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #22C55E;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 72px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+            background: linear-gradient(180deg, var(--text) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(15px, 1.6vw, 18px);
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           CONTROLS
+           ============================================================ */
         .controls {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 36px;
+            gap: 12px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 48px;
         }
 
-        .search-wrapper {
-            flex: 1 1 300px;
-            max-width: 460px;
+        .search-box {
             position: relative;
+            flex: 1 1 320px;
+            max-width: 480px;
         }
 
-        .search-wrapper i {
+        .search-box i {
             position: absolute;
-            right: 16px;
+            right: 14px;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 0.95rem;
+            color: var(--text-tertiary);
+            font-size: 14px;
             pointer-events: none;
         }
 
-        .search-wrapper input {
+        .search-box input {
             width: 100%;
-            padding: 14px 48px 14px 20px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 60px;
+            padding: 12px 40px 12px 16px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
             color: var(--text);
-            font-size: 0.95rem;
+            font-size: 14px;
             font-family: inherit;
             outline: none;
-            transition: var(--transition);
+            transition: all var(--transition);
         }
 
-        .search-wrapper input::placeholder { color: var(--text-muted); opacity: 0.6; }
-
-        .search-wrapper input:focus {
-            border-color: var(--primary-light);
-            box-shadow: 0 0 30px rgba(108, 60, 225, 0.15);
+        .search-box input::placeholder {
+            color: var(--text-tertiary);
         }
 
-        .filter-group { display: flex; flex-wrap: wrap; gap: 8px; }
+        .search-box input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-subtle);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 6px;
+            padding: 4px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
 
         .filter-btn {
-            padding: 10px 24px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 60px;
-            color: var(--text-muted);
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
             font-family: inherit;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 13px;
+            font-weight: 500;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all var(--transition);
+            white-space: nowrap;
         }
 
         .filter-btn:hover {
-            border-color: var(--primary-light);
             color: var(--text);
-            transform: translateY(-2px);
+            background: var(--bg-hover);
         }
 
         .filter-btn.active {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-color: var(--primary);
-            color: #fff;
-            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
+            background: var(--bg);
+            color: var(--text);
+            box-shadow: var(--shadow-sm);
         }
 
-        /* NOVEL GRID */
+        /* ============================================================
+           NOVEL GRID
+           ============================================================ */
         .novel-grid {
             display: grid;
-            gap: 28px;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            padding-bottom: 80px;
         }
 
         .novel-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
             cursor: pointer;
-            position: relative;
+            transition: all var(--transition);
             display: flex;
             flex-direction: column;
-        }
-
-        .novel-card:hover {
-            transform: translateY(-8px) scale(1.01);
-            border-color: rgba(139, 92, 246, 0.3);
-            box-shadow: var(--shadow-hover);
-            background: var(--bg-card-hover);
-        }
-
-        .novel-card .card-image {
             position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--bg-card-hover), var(--bg-card));
-            flex-shrink: 0;
         }
 
-        .novel-card .card-image img {
+        .novel-card::before {
+            content: '';
             position: absolute;
             inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .novel-card:hover .card-image img { transform: scale(1.04); }
-
-        .novel-card .card-image .image-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(7, 5, 14, 0.7) 0%, transparent 60%);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(180deg, transparent 0%, var(--primary-subtle) 100%);
+            opacity: 0;
+            transition: opacity var(--transition);
             pointer-events: none;
         }
 
-        .novel-card .card-image .badge-chapters {
-            position: absolute;
-            bottom: 14px;
-            right: 14px;
-            background: rgba(7, 5, 14, 0.75);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 4px 16px;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: var(--gold);
-            border: 1px solid rgba(245, 158, 11, 0.2);
+        .novel-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .novel-card .card-image .badge-category {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: rgba(108, 60, 225, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 4px 14px;
-            border-radius: 40px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: #fff;
+        .novel-card:hover::before {
+            opacity: 1;
         }
 
-        .novel-card .card-body {
-            padding: 20px 22px 24px;
-            flex: 1;
+        .novel-card .cover {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            background: var(--bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .novel-card .cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .novel-card:hover .cover img {
+            transform: scale(1.03);
+        }
+
+        .novel-card .cover .tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 4px 10px;
+            background: color-mix(in srgb, var(--bg) 75%, transparent);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .novel-card .body {
+            padding: 20px;
             display: flex;
             flex-direction: column;
+            flex: 1;
+            position: relative;
+            z-index: 1;
         }
 
-        .novel-card .card-body .card-title {
-            font-size: 1.3rem;
-            font-weight: 800;
+        .novel-card .body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
             color: var(--text);
-            margin-bottom: 2px;
-            line-height: 1.3;
         }
 
-        .novel-card .card-body .card-meta {
+        .novel-card .body .meta {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px 16px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 6px;
+            gap: 14px;
+            font-size: 12px;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+            font-weight: 500;
         }
 
-        .novel-card .card-body .card-meta i {
-            color: var(--gold);
-            width: 16px;
+        .novel-card .body .meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .novel-card .card-body .card-desc {
-            margin-top: 12px;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            line-height: 1.7;
-            opacity: 0.85;
+        .novel-card .body .meta i {
+            font-size: 11px;
+        }
+
+        .novel-card .body .desc {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-secondary);
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            margin-bottom: 16px;
             flex: 1;
         }
 
-        .novel-card .card-body .card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .novel-card .card-body .read-btn {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #fff;
-            border: none;
-            padding: 10px 28px;
-            border-radius: 60px;
-            font-family: inherit;
-            font-size: 0.85rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.25);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .novel-card .card-body .read-btn:hover {
-            transform: scale(1.04);
-            box-shadow: 0 12px 40px rgba(108, 60, 225, 0.4);
-        }
-
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            padding: 40px 20px 20px;
-            border-top: 1px solid var(--border-color);
-            margin-top: 60px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .footer .heart {
-            color: var(--gold);
-            display: inline-block;
-            animation: heartBeat 1.6s infinite;
-        }
-
-        @keyframes heartBeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .footer .author-name { color: var(--primary-light); font-weight: 700; }
-
-        .footer .dev-info {
-            margin-top: 14px;
-            padding-top: 14px;
-            border-top: 1px dashed var(--border-color);
-            font-size: 0.85rem;
-        }
-
-        .footer .dev-info .dev-name {
-            color: var(--gold);
-            font-weight: 700;
+        .novel-card .body .cta {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
+            transition: gap var(--transition);
         }
 
-        .footer .dev-info .phone {
-            color: var(--primary-light);
+        .novel-card:hover .body .cta {
+            gap: 10px;
+        }
+
+        /* ============================================================
+           EMPTY STATE
+           ============================================================ */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-tertiary);
+        }
+
+        .empty-state i {
+            font-size: 48px;
+            opacity: 0.3;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .empty-state p {
+            font-size: 15px;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 0 32px;
+            background: var(--bg-subtle);
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 13px;
             font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text);
+            letter-spacing: 0.02em;
+        }
+
+        .footer-col p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text);
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom .copy {
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+
+        .footer-bottom .copy .author {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .dev-credit {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+
+        .dev-credit i {
+            color: var(--primary);
+        }
+
+        .dev-credit .phone {
             direction: ltr;
-            display: inline-block;
-            margin-top: 6px;
-            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            font-weight: 500;
         }
 
-        /* RESPONSIVE */
-        @media (min-width: 1400px) {
-            .novel-grid { grid-template-columns: repeat(4, 1fr); gap: 32px; }
-            .container { padding: 30px 40px 100px; }
-            .header { padding: 25px 50px; }
-            .header-brand .brand-text h1 { font-size: 2rem; }
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1024px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
-        @media (max-width: 1399px) and (min-width: 1100px) {
-            .novel-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero {
+                padding: 60px 0 40px;
+            }
+
+            .header-nav {
+                display: none;
+            }
+
+            .novel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .novel-card .body {
+                padding: 14px;
+            }
+
+            .novel-card .body h3 {
+                font-size: 14px;
+            }
+
+            .novel-card .body .meta {
+                font-size: 11px;
+                gap: 10px;
+            }
+
+            .novel-card .body .desc {
+                font-size: 12px;
+                -webkit-line-clamp: 2;
+            }
+
+            .novel-card .body .cta {
+                font-size: 12px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
         }
 
-        @media (max-width: 1099px) and (min-width: 768px) {
-            .novel-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .header-brand .brand-text h1 { font-size: 1.4rem; }
-            .header { padding: 22px 24px; }
-        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
 
-        @media (max-width: 767px) and (min-width: 480px) {
-            .novel-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-            .container { padding: 14px 14px 80px; }
-            .header { padding: 16px; border-radius: 16px; }
-            .header-brand .logo-icon { width: 44px; height: 44px; font-size: 1.4rem; }
-            .header-brand .brand-text h1 { font-size: 1.2rem; }
-            .header-brand .brand-text span { font-size: 0.7rem; }
-            .header-badge { font-size: 0.65rem; padding: 5px 14px; }
-            .theme-toggle { width: 42px; height: 42px; font-size: 1rem; }
-            .novel-card .card-body .card-title { font-size: 1.1rem; }
-            .novel-card .card-body .read-btn { padding: 8px 18px; font-size: 0.75rem; }
-            .controls { gap: 10px; }
-            .search-wrapper { flex: 1 1 100%; max-width: 100%; }
-            .search-wrapper input { padding: 12px 44px 12px 16px; font-size: 0.85rem; }
-            .filter-btn { padding: 7px 16px; font-size: 0.75rem; }
-        }
+            .header-inner {
+                padding: 12px 0;
+            }
 
-        @media (max-width: 479px) {
-            .novel-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-            .container { padding: 10px 8px 70px; }
-            .header { padding: 14px 12px; border-radius: 14px; margin-bottom: 20px; }
-            .header-content { gap: 10px; }
-            .header-brand .logo-icon { width: 38px; height: 38px; font-size: 1.2rem; border-radius: 10px; }
-            .header-brand .brand-text h1 { font-size: 1rem; }
-            .header-brand .brand-text span { font-size: 0.6rem; }
-            .header-actions { gap: 8px; }
-            .theme-toggle { width: 38px; height: 38px; font-size: 0.9rem; }
-            .header-badge { font-size: 0.55rem; padding: 4px 12px; }
-            .controls { gap: 8px; margin-bottom: 18px; }
-            .search-wrapper input { padding: 10px 38px 10px 12px; font-size: 0.75rem; border-radius: 40px; }
-            .filter-group { gap: 4px; justify-content: center; }
-            .filter-btn { padding: 5px 12px; font-size: 0.65rem; border-radius: 40px; }
-            .novel-card { border-radius: 14px; }
-            .novel-card .card-image { padding-top: 66%; }
-            .novel-card .card-image .badge-chapters { font-size: 0.55rem; padding: 2px 10px; bottom: 8px; right: 8px; }
-            .novel-card .card-image .badge-category { font-size: 0.5rem; padding: 2px 10px; top: 8px; right: 8px; }
-            .novel-card .card-body { padding: 12px 10px 14px; }
-            .novel-card .card-body .card-title { font-size: 0.85rem; }
-            .novel-card .card-body .card-meta { font-size: 0.6rem; gap: 4px 10px; }
-            .novel-card .card-body .card-desc { display: none; }
-            .novel-card .card-body .read-btn { padding: 5px 14px; font-size: 0.6rem; }
-            .footer { font-size: 0.7rem; padding: 20px 10px 5px; margin-top: 30px; }
-            .footer .dev-info { font-size: 0.65rem; }
+            .header-brand .brand-info .name {
+                font-size: 13px;
+            }
+
+            .header-brand .brand-info .tag {
+                font-size: 10px;
+            }
+
+            .badge-vip {
+                display: none;
+            }
+
+            .hero {
+                padding: 40px 0 30px;
+            }
+
+            .hero-badge {
+                font-size: 11px;
+                padding: 5px 10px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                max-width: 100%;
+            }
+
+            .filter-group {
+                justify-content: center;
+                overflow-x: auto;
+            }
+
+            .filter-btn {
+                padding: 7px 12px;
+                font-size: 12px;
+            }
+
+            .novel-grid {
+                gap: 12px;
+            }
+
+            .novel-card .cover .tag {
+                font-size: 10px;
+                padding: 3px 8px;
+                top: 8px;
+                right: 8px;
+            }
+
+            .novel-card .body {
+                padding: 12px;
+            }
+
+            .novel-card .body h3 {
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+
+            .novel-card .body .meta {
+                font-size: 10px;
+                gap: 8px;
+                margin-bottom: 8px;
+            }
+
+            .novel-card .body .desc {
+                display: none;
+            }
+
+            .novel-card .body .cta {
+                font-size: 11px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-brand">
+                    <div class="logo">
+                        <img src="favicon.png" alt="شعار" onerror="this.parentElement.innerHTML='📚'; this.parentElement.style.fontSize='20px';" />
+                    </div>
+                    <div class="brand-info">
+                        <span class="name">شادي رحال</span>
+                        <span class="tag">مكتبة الروايات</span>
+                    </div>
+                </a>
 
-    <div class="container">
-        <!-- HEADER -->
-        <header class="header">
-            <div class="header-content">
-                <div class="header-brand">
-                    <div class="logo-icon">
-                        <img src="favicon.png" alt="شعار المكتبة" onerror="this.style.display='none'; this.parentElement.innerHTML='📚';" />
-                    </div>
-                    <div class="brand-text">
-                        <h1>روايات الكاتب شادي رحال</h1>
-                        <span><i class="fas fa-quote-right"></i> حيث تعيش الكلمات <i class="fas fa-quote-left"></i></span>
-                    </div>
-                </div>
+                <nav class="header-nav">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                    <a href="#novels" class="nav-link">الروايات</a>
+                    <a href="#about" class="nav-link">عن الكاتب</a>
+                </nav>
+
                 <div class="header-actions">
-                    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+                    <button class="icon-btn theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
                         <i class="fas fa-moon"></i>
                         <i class="fas fa-sun"></i>
                     </button>
-                    <div class="header-badge">
+                    <div class="badge-vip">
                         <i class="fas fa-crown"></i>
-                        <span>VIP READER</span>
+                        <span>VIP</span>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- CONTROLS -->
-        <div class="controls">
-            <div class="search-wrapper">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="ابحث عن رواية..." aria-label="بحث في الروايات" />
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span>مكتبة روايات عربية محدثة</span>
             </div>
-            <div class="filter-group" id="filterGroup">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="رومانسية">💕 رومانسية</button>
-                <button class="filter-btn" data-filter="اجتماعية">🏙️ اجتماعية</button>
+            <h1>
+                روايات عربية <span class="gradient">بجودة عالمية</span>
+            </h1>
+            <p>
+                اكتشف مجموعة مختارة من الروايات العربية المميزة للكاتب شادي رحال.
+                اقرأ، استمتع، وحمّل بصيغة PDF مجاناً.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTROLS + GRID
+         ============================================================ -->
+    <section id="novels">
+        <div class="container">
+            <!-- Controls -->
+            <div class="controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="ابحث عن رواية..." aria-label="بحث" />
+                </div>
+                <div class="filter-group" id="filterGroup">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="رومانسية">💕 رومانسية</button>
+                    <button class="filter-btn" data-filter="اجتماعية">🏙️ اجتماعية</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="novel-grid" id="novelGrid"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h4>عن المكتبة</h4>
+                    <p>
+                        مكتبة روايات عربية احترافية تعرض إبداعات الكاتب شادي رحال.
+                        روايات مختارة بعناية، تجمع بين الرومانسية والاجتماعية.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>الروايات</h4>
+                    <ul>
+                        <li><a href="skylane.html">سكاي لاين</a></li>
+                        <li><a href="places.html">الأماكن</a></li>
+                        <li><a href="what-if-war.html">ماذا لو ما كانت الحرب؟</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل</h4>
+                    <ul>
+                        <li><a href="tel:0982520358"><i class="fas fa-phone"></i> 0982520358</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copy">
+                    جميع الحقوق محفوظة &copy; 2026
+                    <span class="author">شادي رحال</span>
+                    ❤️
+                </div>
+                <div class="dev-credit">
+                    <span><i class="fas fa-code"></i> برمجة وتطوير: بهاء الدين الحسين</span>
+                    <span class="phone"><i class="fas fa-phone"></i> 0982520358</span>
+                </div>
             </div>
         </div>
-
-        <!-- NOVEL GRID -->
-        <div class="novel-grid" id="novelGrid"></div>
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div>
-                <span class="heart">❤️</span>
-                جميع الحقوق محفوظة &copy; 2026
-                <span class="author-name">شادي رحال</span>
-                <span class="heart">❤️</span>
-            </div>
-            <div class="dev-info">
-                <div class="dev-name">
-                    <i class="fas fa-code"></i>
-                    برمجة وتطوير: بهاء الدين الحسين
-                </div>
-                <div class="phone">
-                    <i class="fas fa-phone"></i> 0982520358
-                </div>
-            </div>
-        </footer>
-    </div>
+    </footer>
 
     <script>
-        // THEME TOGGLE
+        // ============================================================
+        //  THEME TOGGLE
+        // ============================================================
         (function() {
             const themeToggle = document.getElementById('themeToggle');
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'light') document.body.classList.add('light-mode');
+
             themeToggle.addEventListener('click', function() {
                 document.body.classList.toggle('light-mode');
                 const isLight = document.body.classList.contains('light-mode');
@@ -676,37 +944,40 @@
 
         // ============================================================
         //  DATA - الروايات
-        //  ═══════════════════════════════════════════════════════════
-        //  📸 لتغيير صورة الغلاف: عدّل قيمة image فقط
-        //  ⚠️ مهم: اسم الصورة يجب أن يطابق اسم الملف بالضبط
-        //  ═══════════════════════════════════════════════════════════
-        const novels = [{
-            id: 'skylane',
-            title: 'سكاي لاين',
-            category: 'رومانسية',
-            chapters: 19,
-            image: 'skylane.jpg',
-            description: 'قصة حب بين أستاذ وطالبة، تبدأ بكرسي وطاولة وتنتهي بوعد ودمعة. رحلة من الحلم إلى الواقع في وادي الياسمين.',
-            file: 'skylane.html'
-        }, {
-            id: 'places',
-            title: 'الأماكن',
-            category: 'رومانسية',
-            chapters: 13,
-            image: 'places.jpg',
-            description: 'أربع سنوات من الوفاء والانتظار. رحلة عبر الأماكن التي شهدت حباً لا يموت، ومواجهة مع الزمن والذكريات.',
-            file: 'places.html'
-        }, {
-            id: 'what-if-war',
-            title: 'ماذا لو ما كانت الحرب؟',
-            category: 'اجتماعية',
-            chapters: 10,
-            image: 'what-if-war.jpg',
-            description: 'رواية تأملية عن النزوح والفقد والأمل. سؤال واحد يغير كل شيء: ماذا لو لم تكن الحرب؟',
-            file: 'what-if-war.html'
-        }];
+        // ============================================================
+        const novels = [
+            {
+                id: 'skylane',
+                title: 'سكاي لاين',
+                category: 'رومانسية',
+                chapters: 19,
+                image: 'skylane.jpg',
+                description: 'قصة حب بين أستاذ وطالبة، تبدأ بكرسي وطاولة وتنتهي بوعد ودمعة. رحلة من الحلم إلى الواقع في وادي الياسمين.',
+                file: 'skylane.html'
+            },
+            {
+                id: 'places',
+                title: 'الأماكن',
+                category: 'رومانسية',
+                chapters: 13,
+                image: 'places.jpg',
+                description: 'أربع سنوات من الوفاء والانتظار. رحلة عبر الأماكن التي شهدت حباً لا يموت، ومواجهة مع الزمن والذكريات.',
+                file: 'places.html'
+            },
+            {
+                id: 'what-if-war',
+                title: 'ماذا لو ما كانت الحرب؟',
+                category: 'اجتماعية',
+                chapters: 10,
+                image: 'what-if-war.jpg',
+                description: 'رواية تأملية عن النزوح والفقد والأمل. سؤال واحد يغير كل شيء: ماذا لو لم تكن الحرب؟',
+                file: 'what-if-war.html'
+            }
+        ];
 
-        // RENDER
+        // ============================================================
+        //  RENDER
+        // ============================================================
         const grid = document.getElementById('novelGrid');
         const searchInput = document.getElementById('searchInput');
         let activeFilter = 'all';
@@ -723,54 +994,45 @@
 
             if (filtered.length === 0) {
                 grid.innerHTML = `
-                    <div style="grid-column:1/-1; text-align:center; padding:70px 20px; color:var(--text-muted);">
-                        <i class="fas fa-book-open" style="font-size:3.5rem; opacity:0.2; display:block; margin-bottom:18px;"></i>
-                        <p style="font-size:1.1rem;">لا توجد روايات تطابق البحث</p>
+                    <div class="empty-state">
+                        <i class="fas fa-book-open"></i>
+                        <p>لا توجد روايات تطابق البحث</p>
                     </div>
                 `;
                 return;
             }
 
             grid.innerHTML = filtered.map(n => `
-                <div class="novel-card" data-category="${n.category}" data-title="${n.title}">
-                    <div class="card-image">
-                        <img src="${n.image}" alt="غلاف رواية ${n.title}" loading="lazy" onerror="this.style.display='none'" />
-                        <div class="image-overlay"></div>
-                        <span class="badge-category">${n.category}</span>
-                        <span class="badge-chapters"><i class="fas fa-book"></i> ${n.chapters} فصل</span>
+                <article class="novel-card" data-file="${n.file}">
+                    <div class="cover">
+                        <img src="${n.image}" alt="غلاف ${n.title}" loading="lazy" onerror="this.style.display='none'" />
+                        <span class="tag">${n.category}</span>
                     </div>
-                    <div class="card-body">
-                        <h3 class="card-title">${n.title}</h3>
-                        <div class="card-meta">
+                    <div class="body">
+                        <h3>${n.title}</h3>
+                        <div class="meta">
+                            <span><i class="fas fa-book"></i> ${n.chapters} فصل</span>
                             <span><i class="fas fa-tag"></i> ${n.category}</span>
-                            <span><i class="fas fa-file-alt"></i> ${n.chapters} فصل</span>
                         </div>
-                        <p class="card-desc">${n.description}</p>
-                        <div class="card-footer">
-                            <button class="read-btn" data-file="${n.file}">
-                                <i class="fas fa-arrow-left"></i> اقرأ الآن
-                            </button>
-                        </div>
+                        <p class="desc">${n.description}</p>
+                        <span class="cta">
+                            اقرأ الآن <i class="fas fa-arrow-left"></i>
+                        </span>
                     </div>
-                </div>
+                </article>
             `).join('');
-
-            document.querySelectorAll('.read-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const file = btn.dataset.file;
-                    if (file) window.location.href = file;
-                });
-            });
 
             document.querySelectorAll('.novel-card').forEach(card => {
                 card.addEventListener('click', function() {
-                    const btn = this.querySelector('.read-btn');
-                    if (btn) window.location.href = btn.dataset.file;
+                    const file = this.dataset.file;
+                    if (file) window.location.href = file;
                 });
             });
         }
 
+        // ============================================================
+        //  FILTERS
+        // ============================================================
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -781,6 +1043,10 @@
         });
 
         searchInput.addEventListener('input', render);
+
+        // ============================================================
+        //  INIT
+        // ============================================================
         render();
     </script>
 </body>
