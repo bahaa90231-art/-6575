@@ -1,25 +1,23 @@
 <!-- ============================================================
-     FILE: skylane.html (تصميم احترافي - متوافق مع جميع الجوالات)
+     FILE: skylane.html (عدسة الروايات - رواية سكاي لاين)
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>سكاي لاين - رواية رومانسية للكاتب شادي رحال | تحميل PDF</title>
-    <meta name="description" content="رواية سكاي لاين للكاتب شادي رحال - قصة حب بين أستاذ وطالبة في وادي الياسمين. اقرأ وحمّل PDF مجاناً." />
-    <meta name="keywords" content="سكاي لاين, رواية سكاي لاين, شادي رحال, سكاي لاين PDF, رواية رومانسية, رامي وعسل" />
-    <meta name="author" content="شادي رحال" />
-    <meta property="og:title" content="سكاي لاين - شادي رحال" />
-    <meta property="og:description" content="رواية سكاي لاين - قصة حب بين أستاذ وطالبة" />
+    <title>سكاي لاين - عدسة الروايات | LENS OF NOVELS</title>
+    <meta name="description" content="رواية سكاي لاين - قصة حب بين أستاذ وطالبة في وادي الياسمين | عدسة الروايات" />
+    <meta name="keywords" content="سكاي لاين, رواية سكاي لاين, عدسة الروايات, رواية رومانسية" />
+    <meta name="author" content="عدسة الروايات" />
+    <meta property="og:title" content="سكاي لاين - عدسة الروايات" />
+    <meta property="og:description" content="قصة حب بين أستاذ وطالبة في وادي الياسمين" />
     <meta property="og:image" content="https://bahaa90231-art.github.io/-6575/skylane.jpg" />
-    <meta property="og:url" content="https://bahaa90231-art.github.io/-6575/skylane.html" />
     <meta property="og:type" content="article" />
-    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://bahaa90231-art.github.io/-6575/skylane.html" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
-    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="icon" type="image/jpeg" href="logo.jpeg" />
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpeg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,56 +29,31 @@
 
         :root {
             --bg: #0A0A0A;
-            --bg-elevated: #111111;
-            --bg-hover: #1A1A1A;
-            --bg-subtle: #161616;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.16);
-            --text: #FAFAFA;
-            --text-secondary: #A1A1AA;
-            --text-tertiary: #71717A;
-            --primary: #7C3AED;
-            --primary-hover: #8B5CF6;
-            --primary-subtle: rgba(124, 58, 237, 0.1);
-            --gold: #F59E0B;
-            --gold-subtle: rgba(245, 158, 11, 0.1);
+            --bg-secondary: #111111;
+            --bg-card: #161616;
+            --bg-hover: #1F1F1F;
+            --gold: #F5B400;
+            --gold-light: #FFC933;
+            --gold-dark: #D49400;
+            --gold-glow: rgba(245, 180, 0, 0.15);
+            --text: #FFFFFF;
+            --text-secondary: #B8B8B8;
+            --text-muted: #7A7A7A;
+            --border: rgba(245, 180, 0, 0.12);
+            --border-hover: rgba(245, 180, 0, 0.3);
             --radius-sm: 8px;
             --radius: 12px;
-            --radius-lg: 16px;
-            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
-            --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-lg: 20px;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+            --shadow-gold: 0 8px 24px rgba(245, 180, 0, 0.25);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        body.light-mode {
-            --bg: #FAFAFA;
-            --bg-elevated: #FFFFFF;
-            --bg-hover: #F4F4F5;
-            --bg-subtle: #F9F9FA;
-            --border: rgba(0, 0, 0, 0.08);
-            --border-hover: rgba(0, 0, 0, 0.16);
-            --text: #09090B;
-            --text-secondary: #52525B;
-            --text-tertiary: #71717A;
-            --primary: #7C3AED;
-            --primary-hover: #6D28D9;
-            --primary-subtle: rgba(124, 58, 237, 0.08);
-            --gold: #D97706;
-            --gold-subtle: rgba(217, 119, 6, 0.08);
-            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
-        }
-
-        html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: transparent;
-        }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
 
         body {
-            font-family: 'Inter', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
             min-height: 100vh;
@@ -88,23 +61,18 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            transition: background var(--transition), color var(--transition);
         }
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
 
         /* HEADER */
         .header {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: color-mix(in srgb, var(--bg) 85%, transparent);
-            backdrop-filter: saturate(180%) blur(16px);
-            -webkit-backdrop-filter: saturate(180%) blur(16px);
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
             border-bottom: 1px solid var(--border);
         }
 
@@ -112,84 +80,222 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 12px;
-            padding: 12px 0;
-            min-height: 60px;
+            gap: 16px;
+            padding: 14px 0;
+            min-height: 70px;
         }
 
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 12px;
-            background: transparent;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            color: var(--text-secondary);
-            font-family: inherit;
-            font-size: 13px;
-            font-weight: 500;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all var(--transition);
-            flex-shrink: 0;
-        }
-
-        .back-btn:active {
-            transform: scale(0.95);
-        }
-
-        .header-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text);
-            text-align: center;
-            flex: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-shrink: 0;
-        }
-
-        .icon-btn {
-            width: 36px;
-            height: 36px;
+        .menu-btn {
+            width: 42px;
+            height: 42px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: transparent;
-            border: 1px solid var(--border);
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 22px;
+            transition: all var(--transition);
             border-radius: var(--radius-sm);
+            flex-shrink: 0;
+        }
+
+        .menu-btn:active { background: var(--bg-hover); }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            flex: 1;
+            justify-content: center;
+        }
+
+        .header-brand .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px var(--gold-glow);
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .header-brand .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .header-brand .brand-text { display: flex; flex-direction: column; line-height: 1.15; text-align: center; }
+
+        .header-brand .brand-text .name { font-weight: 800; font-size: 17px; color: var(--gold); letter-spacing: -0.01em; }
+
+        .header-brand .brand-text .tag { font-size: 9px; color: var(--text-muted); font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+
+        .header-spacer { width: 42px; flex-shrink: 0; }
+
+        /* SIDEBAR */
+        .sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition);
+        }
+
+        .sidebar-overlay.active { opacity: 1; visibility: visible; }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border);
+            z-index: 999;
+            transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar.active { right: 0; box-shadow: -20px 0 60px rgba(0, 0, 0, 0.7); }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-header .logo-mini { display: flex; align-items: center; gap: 10px; }
+
+        .sidebar-header .logo-mini .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-header .logo-mini .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .sidebar-header .logo-mini .text { display: flex; flex-direction: column; }
+
+        .sidebar-header .logo-mini .text .name { font-size: 15px; font-weight: 800; color: var(--gold); }
+
+        .sidebar-header .logo-mini .text .sub { font-size: 9px; color: var(--text-muted); letter-spacing: 2px; }
+
+        .sidebar-close {
+            width: 36px;
+            height: 36px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50%;
             color: var(--text-secondary);
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: all var(--transition);
             font-size: 14px;
         }
 
-        .icon-btn:active {
-            transform: scale(0.95);
+        .sidebar-close:hover { background: var(--bg-hover); color: var(--gold); border-color: var(--border-hover); }
+
+        .sidebar-nav { padding: 16px 0; flex: 1; }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 24px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all var(--transition);
+            border-right: 3px solid transparent;
         }
 
-        body:not(.light-mode) .theme-toggle .fa-sun { display: none; }
-        body.light-mode .theme-toggle .fa-moon { display: none; }
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            color: var(--gold);
+            background: var(--bg-hover);
+            border-right-color: var(--gold);
+        }
+
+        .sidebar-nav a i { width: 22px; font-size: 17px; text-align: center; color: var(--text-muted); transition: color var(--transition); }
+
+        .sidebar-nav a:hover i, .sidebar-nav a.active i { color: var(--gold); }
+
+        .sidebar-footer {
+            padding: 20px 24px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .sidebar-footer .dev { color: var(--gold); font-weight: 700; }
+
+        /* BACK LINK */
+        .back-link-wrapper { padding: 20px 0 0; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .back-link:active { transform: scale(0.96); }
+
+        .back-link i { color: var(--gold); font-size: 12px; }
 
         /* HERO */
-        .hero {
-            padding: 40px 0 30px;
-            position: relative;
-        }
+        .hero { padding: 30px 0 30px; position: relative; }
 
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 60% 50% at 50% 0%, var(--primary-subtle), transparent 70%);
+            background: radial-gradient(ellipse 60% 50% at 50% 0%, var(--gold-glow), transparent 70%);
             pointer-events: none;
             z-index: -1;
         }
@@ -201,26 +307,47 @@
             align-items: center;
         }
 
+        .hero-cover {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .hero-cover::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+            pointer-events: none;
+        }
+
         .hero-text .novel-tag {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 5px 12px;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border);
+            padding: 6px 14px;
+            background: rgba(245, 180, 0, 0.08);
+            border: 1px solid rgba(245, 180, 0, 0.25);
             border-radius: 100px;
             font-size: 11px;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 14px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
         }
 
         .hero-text h1 {
-            font-size: 32px;
-            font-weight: 800;
+            font-size: clamp(28px, 6vw, 52px);
+            font-weight: 900;
             line-height: 1.1;
             letter-spacing: -0.03em;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             background: linear-gradient(180deg, var(--text) 0%, var(--text-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -229,117 +356,84 @@
 
         .hero-text p {
             font-size: 14px;
-            line-height: 1.7;
+            line-height: 1.8;
             color: var(--text-secondary);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .hero-meta {
             display: flex;
-            gap: 14px;
+            gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             font-size: 12px;
-            color: var(--text-tertiary);
+            color: var(--text-muted);
         }
 
-        .hero-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 500;
-        }
+        .hero-meta span { display: flex; align-items: center; gap: 6px; font-weight: 600; }
 
-        .hero-meta i { color: var(--primary); }
+        .hero-meta i { color: var(--gold); }
 
         .btn-pdf {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 12px 20px;
-            background: var(--primary);
-            color: #FFFFFF;
+            gap: 10px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #0A0A0A;
             border: none;
-            border-radius: var(--radius-sm);
+            border-radius: 100px;
             font-family: inherit;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 800;
             cursor: pointer;
             transition: all var(--transition);
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+            box-shadow: var(--shadow-gold);
             width: 100%;
         }
 
-        .btn-pdf:active {
-            transform: scale(0.97);
-        }
+        .btn-pdf:active { transform: scale(0.97); }
 
-        .btn-pdf.loading {
-            opacity: 0.7;
-            pointer-events: none;
-        }
+        .btn-pdf.loading { opacity: 0.7; pointer-events: none; }
+        .btn-pdf.loading i { animation: spin 1s linear infinite; }
 
-        .btn-pdf.loading i {
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .hero-cover {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 3 / 2;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            background: var(--bg-subtle);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-lg);
-            order: -1;
-        }
-
-        .hero-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .hero-cover::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.3) 100%);
-            pointer-events: none;
-        }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
         /* CHAPTERS */
-        .chapters-section {
-            padding: 24px 0 60px;
-        }
+        .chapters-section { padding: 24px 0 60px; }
 
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             gap: 12px;
         }
 
-        .section-header h2 {
+        .section-header .title-group { display: flex; align-items: center; gap: 12px; }
+
+        .section-header .title-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(245, 180, 0, 0.08);
+            border: 1px solid rgba(245, 180, 0, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
             font-size: 18px;
-            font-weight: 700;
-            letter-spacing: -0.01em;
+            flex-shrink: 0;
         }
 
-        .section-header .count {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            font-weight: 500;
+        .section-header h2 {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 800;
+            color: var(--text);
         }
+
+        .section-header .count { font-size: 12px; color: var(--text-muted); font-weight: 600; }
 
         .chapters-grid {
             display: grid;
@@ -348,7 +442,7 @@
         }
 
         .chapter-card {
-            background: var(--bg-elevated);
+            background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 14px 12px;
@@ -364,19 +458,20 @@
         .chapter-card:active {
             transform: scale(0.97);
             background: var(--bg-hover);
+            border-color: var(--border-hover);
         }
 
         .chapter-card .num {
             font-size: 20px;
-            font-weight: 800;
-            color: var(--primary);
+            font-weight: 900;
+            color: var(--gold);
             line-height: 1;
             letter-spacing: -0.02em;
         }
 
         .chapter-card .title {
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text);
             line-height: 1.4;
             display: -webkit-box;
@@ -387,7 +482,7 @@
 
         .chapter-card .arrow {
             font-size: 11px;
-            color: var(--text-tertiary);
+            color: var(--text-muted);
             transition: all var(--transition);
             margin-top: 2px;
         }
@@ -404,20 +499,14 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .chapter-view.active {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
+        .chapter-view.active { display: block; animation: fadeIn 0.3s ease; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .chapter-view-inner {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .chapter-view-inner { max-width: 800px; margin: 0 auto; }
 
         .chapter-view-header {
             display: flex;
@@ -429,37 +518,30 @@
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            background: color-mix(in srgb, var(--bg) 92%, transparent);
+            background: rgba(10, 10, 10, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             z-index: 10;
         }
 
-        .chapter-view-header .title-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            flex: 1;
-            min-width: 0;
-        }
+        .chapter-view-header .title-info { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
 
         .chapter-view-header .ch-num {
             display: inline-block;
             padding: 3px 10px;
-            background: var(--primary-subtle);
-            color: var(--primary);
+            background: rgba(245, 180, 0, 0.1);
+            color: var(--gold);
             border-radius: 6px;
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 700;
             white-space: nowrap;
             align-self: flex-start;
         }
 
         .chapter-view-header .ch-title {
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--text);
-            letter-spacing: -0.01em;
             line-height: 1.3;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -479,181 +561,159 @@
             color: var(--text-secondary);
             font-family: inherit;
             font-size: 12px;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: all var(--transition);
             flex-shrink: 0;
         }
 
-        .btn-close:active {
-            transform: scale(0.95);
-        }
+        .btn-close:active { transform: scale(0.95); }
 
         .chapter-body {
             font-size: 16px;
-            line-height: 1.95;
+            line-height: 2;
             color: var(--text);
             padding-bottom: 60px;
         }
 
-        .chapter-body p {
-            margin-bottom: 1.2rem;
-        }
+        .chapter-body p { margin-bottom: 1.2rem; }
 
         .chapter-body .first-letter {
             font-size: 2.8rem;
-            font-weight: 800;
+            font-weight: 900;
             float: right;
             margin-left: 10px;
             margin-top: 4px;
-            color: var(--primary);
+            color: var(--gold);
             line-height: 0.9;
         }
 
         /* FOOTER */
         .footer {
+            margin-top: 40px;
+            padding: 40px 0 24px;
+            background: var(--bg-secondary);
             border-top: 1px solid var(--border);
-            padding: 24px 0 16px;
-            background: var(--bg-subtle);
         }
+
+        .footer-brand { text-align: center; margin-bottom: 24px; }
+
+        .footer-brand .logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 30px var(--gold-glow);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-brand .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .footer-brand .name { font-size: 18px; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+
+        .footer-brand .sub { font-size: 10px; color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 20px;
+            margin-bottom: 24px;
+            padding: 0 16px;
+        }
+
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 4px; transition: color var(--transition); }
+
+        .footer-links a:hover { color: var(--gold); }
 
         .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
             gap: 8px;
+            text-align: center;
             font-size: 11px;
-            color: var(--text-tertiary);
+            color: var(--text-muted);
         }
 
-        .footer-bottom .copy .author {
-            color: var(--text);
-            font-weight: 600;
-        }
+        .footer-bottom .author { color: var(--gold); font-weight: 700; }
+        .footer-bottom .dev { color: var(--text-secondary); font-weight: 600; }
+        .footer-bottom .phone { direction: ltr; color: var(--gold); font-weight: 700; }
 
-        .dev-credit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .dev-credit i {
-            color: var(--primary);
-            margin-left: 3px;
-        }
-
-        .dev-credit .phone {
-            direction: ltr;
-            color: var(--text-secondary);
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        /* ============================================================
-           RESPONSIVE - لكل الشاشات
-           ============================================================ */
-
-        /* شاشات كبيرة (1400+) */
-        @media (min-width: 1400px) {
-            .container { padding: 0 40px; }
-            .hero { padding: 80px 0 60px; }
-            .hero-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 60px;
-            }
-            .hero-cover { order: 0; }
-            .hero-text h1 { font-size: 56px; }
-            .hero-text p { font-size: 16px; }
-            .btn-pdf { width: auto; padding: 12px 24px; }
-            .chapters-grid {
-                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-                gap: 12px;
-            }
-            .chapter-card { padding: 18px 16px; }
-            .chapter-card .num { font-size: 24px; }
-            .chapter-card .title { font-size: 13px; }
-            .chapter-body { font-size: 17px; }
-        }
-
-        /* شاشات كبيرة ومتوسطة (900-1399) */
-        @media (min-width: 900px) and (max-width: 1399px) {
-            .hero-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-            }
-            .hero-cover { order: 0; }
+        /* RESPONSIVE */
+        @media (min-width: 600px) {
+            .container { padding: 0 28px; }
+            .hero { padding: 40px 0; }
+            .hero-content { grid-template-columns: 1fr 1fr; gap: 40px; }
             .hero-text h1 { font-size: 44px; }
             .hero-text p { font-size: 15px; }
-            .btn-pdf { width: auto; padding: 12px 24px; }
-            .chapters-grid {
-                grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-            }
-        }
-
-        /* تابلت (600-899) */
-        @media (min-width: 600px) and (max-width: 899px) {
-            .container { padding: 0 24px; }
-            .hero { padding: 40px 0 30px; }
-            .hero-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-            .hero-cover { order: 0; }
-            .hero-text h1 { font-size: 34px; }
-            .hero-text p { font-size: 14px; }
-            .btn-pdf { width: auto; padding: 10px 20px; font-size: 13px; }
-            .chapters-grid {
-                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-                gap: 12px;
-            }
+            .btn-pdf { width: auto; padding: 14px 28px; }
+            .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
             .chapter-card { padding: 16px 14px; }
             .chapter-card .num { font-size: 22px; }
             .chapter-card .title { font-size: 13px; }
-            .chapter-view { padding: 20px; }
-            .chapter-body { font-size: 16px; }
-            .chapter-view-header .ch-title { font-size: 16px; }
-            .footer-bottom {
-                flex-direction: row;
-                justify-content: space-between;
-                text-align: right;
-                font-size: 12px;
+            .chapter-view { padding: 24px; }
+            .chapter-body { font-size: 17px; }
+            .chapter-view-header { padding: 16px 0; margin-bottom: 28px; }
+            .chapter-view-header .ch-title { font-size: 17px; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; text-align: right; padding-top: 20px; }
+        }
+
+        @media (min-width: 900px) {
+            .header-inner { padding: 16px 0; }
+            .menu-btn, .header-spacer { width: 46px; height: 46px; }
+            .header-brand .logo { width: 50px; height: 50px; }
+            .header-brand .brand-text .name { font-size: 19px; }
+            .header-brand .brand-text .tag { font-size: 10px; }
+            .hero { padding: 60px 0; }
+            .hero-text h1 { font-size: 52px; }
+            .hero-text p { font-size: 16px; }
+            .chapter-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--border-hover);
+                box-shadow: var(--shadow);
             }
-            .dev-credit { flex-direction: row; gap: 16px; }
+            .chapter-card:hover .arrow {
+                transform: translateX(-4px);
+                color: var(--gold);
+            }
+            .btn-pdf:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 32px rgba(245, 180, 0, 0.4);
+            }
         }
 
-        /* جوال كبير (480-599) */
-        @media (min-width: 480px) and (max-width: 599px) {
-            .container { padding: 0 20px; }
-            .hero-text h1 { font-size: 34px; }
-            .hero-text p { font-size: 14px; }
-            .chapters-grid { gap: 12px; }
-            .chapter-card { padding: 16px 14px; }
-            .chapter-card .num { font-size: 22px; }
-            .chapter-card .title { font-size: 13px; }
-            .chapter-view { padding: 18px; }
-            .chapter-body { font-size: 16px; }
-        }
-
-        /* جوال عادي (375-479) */
-        @media (min-width: 375px) and (max-width: 479px) {
+        @media (max-width: 479px) {
             .container { padding: 0 16px; }
-            .header-inner { padding: 10px 0; min-height: 56px; }
-            .header-title { font-size: 13px; }
-            .back-btn { padding: 7px 10px; font-size: 12px; }
-            .back-btn span { display: none; }
-            .icon-btn { width: 34px; height: 34px; font-size: 13px; }
+            .header-inner { padding: 10px 0; min-height: 62px; gap: 10px; }
+            .menu-btn, .header-spacer { width: 38px; height: 38px; }
+            .header-brand .logo { width: 40px; height: 40px; }
+            .header-brand .brand-text .name { font-size: 15px; }
+            .header-brand .brand-text .tag { font-size: 8px; letter-spacing: 2px; }
+            .back-link-wrapper { padding: 14px 0 0; }
+            .back-link { font-size: 12px; padding: 7px 14px; }
             .hero { padding: 24px 0 20px; }
             .hero-content { gap: 20px; }
-            .hero-text h1 { font-size: 28px; }
+            .hero-text h1 { font-size: 30px; }
             .hero-text p { font-size: 13px; }
             .hero-meta { font-size: 11px; gap: 12px; }
-            .btn-pdf { padding: 11px 18px; font-size: 13px; }
-            .chapters-section { padding: 20px 0 50px; }
-            .section-header h2 { font-size: 16px; }
+            .btn-pdf { padding: 13px 22px; font-size: 13px; }
+            .chapters-section { padding: 20px 0 40px; }
+            .section-header .title-icon { width: 36px; height: 36px; font-size: 15px; }
+            .section-header h2 { font-size: 18px; }
             .chapters-grid { gap: 10px; }
             .chapter-card { padding: 14px 12px; }
             .chapter-card .num { font-size: 20px; }
@@ -664,25 +724,28 @@
             .chapter-body { font-size: 15px; line-height: 1.9; }
             .chapter-body .first-letter { font-size: 2.4rem; }
             .btn-close span { display: none; }
-            .footer { padding: 20px 0 12px; }
+            .footer { margin-top: 30px; padding: 30px 0 20px; }
+            .footer-brand .logo { width: 60px; height: 60px; }
+            .footer-brand .name { font-size: 16px; }
+            .footer-links { gap: 6px 16px; margin-bottom: 18px; }
+            .footer-links a { font-size: 12px; }
         }
 
-        /* جوال صغير (أقل من 375) */
         @media (max-width: 374px) {
             .container { padding: 0 12px; }
-            .header-inner { padding: 8px 0; min-height: 52px; }
-            .header-title { font-size: 12px; }
-            .back-btn { padding: 6px 8px; font-size: 11px; }
-            .icon-btn { width: 32px; height: 32px; font-size: 12px; }
+            .header-inner { padding: 8px 0; min-height: 56px; gap: 8px; }
+            .menu-btn, .header-spacer { width: 36px; height: 36px; font-size: 18px; }
+            .header-brand .logo { width: 36px; height: 36px; }
+            .header-brand .brand-text .name { font-size: 14px; }
+            .header-brand .brand-text .tag { font-size: 7px; letter-spacing: 1.5px; }
+            .back-link { font-size: 11px; padding: 6px 12px; }
             .hero { padding: 20px 0 16px; }
-            .hero-content { gap: 16px; }
-            .hero-text h1 { font-size: 24px; }
+            .hero-text h1 { font-size: 26px; }
             .hero-text p { font-size: 12px; }
             .hero-meta { font-size: 10px; gap: 10px; }
-            .hero-text .novel-tag { font-size: 10px; padding: 4px 10px; }
-            .btn-pdf { padding: 10px 16px; font-size: 12px; }
-            .chapters-section { padding: 16px 0 40px; }
-            .section-header h2 { font-size: 15px; }
+            .btn-pdf { padding: 12px 18px; font-size: 12px; }
+            .section-header .title-icon { width: 32px; height: 32px; font-size: 13px; }
+            .section-header h2 { font-size: 16px; }
             .chapters-grid { gap: 8px; }
             .chapter-card { padding: 12px 10px; }
             .chapter-card .num { font-size: 18px; }
@@ -691,57 +754,103 @@
             .chapter-view-header .ch-title { font-size: 12px; }
             .chapter-body { font-size: 14px; line-height: 1.85; }
             .chapter-body .first-letter { font-size: 2.2rem; }
-            .footer-bottom { font-size: 10px; }
         }
 
-        /* شاشات لمسية */
         @media (hover: none) and (pointer: coarse) {
-            .chapter-card:hover {
-                border-color: var(--border);
-                box-shadow: none;
-                transform: none;
-            }
-            .icon-btn:hover {
-                background: transparent;
-                color: var(--text-secondary);
-                border-color: var(--border);
-            }
-            .back-btn:hover {
-                background: transparent;
-                color: var(--text-secondary);
-                border-color: var(--border);
-            }
-            .btn-close:hover {
-                background: transparent;
-                color: var(--text-secondary);
-                border-color: var(--border);
-            }
-            .btn-pdf:hover {
-                background: var(--primary);
-                transform: none;
-            }
+            .chapter-card:hover { transform: none; border-color: var(--border); box-shadow: none; }
+            .chapter-card:hover .arrow { transform: none; color: var(--text-muted); }
+            .btn-pdf:hover { transform: none; }
+            .sidebar-nav a:hover { background: transparent; color: var(--text-secondary); border-right-color: transparent; }
+            .sidebar-nav a.active { background: var(--bg-hover); color: var(--gold); border-right-color: var(--gold); }
         }
     </style>
 </head>
 <body>
+
     <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="header-inner">
-                <a href="index.html" class="back-btn">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>العودة</span>
+                <button class="menu-btn" id="menuBtn" aria-label="القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a href="index.html" class="header-brand">
+                    <div class="logo">
+                        <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);\'></i>';" />
+                    </div>
+                    <div class="brand-text">
+                        <span class="name">عدسة الروايات</span>
+                        <span class="tag">LENS OF NOVELS</span>
+                    </div>
                 </a>
-                <div class="header-title">سكاي لاين</div>
-                <div class="header-actions">
-                    <button class="icon-btn theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                    </button>
-                </div>
+
+                <div class="header-spacer"></div>
             </div>
         </div>
     </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-mini">
+                <div class="icon">
+                    <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);\'></i>';" />
+                </div>
+                <div class="text">
+                    <span class="name">عدسة الروايات</span>
+                    <span class="sub">LENS OF NOVELS</span>
+                </div>
+            </div>
+            <button class="sidebar-close" id="sidebarClose" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>الصفحة الرئيسية</span>
+            </a>
+            <a href="novels.html" class="active">
+                <i class="fas fa-book"></i>
+                <span>الروايات</span>
+            </a>
+            <a href="episodes.html">
+                <i class="fas fa-film"></i>
+                <span>الحلقات والفيديوهات</span>
+            </a>
+            <a href="announcements.html">
+                <i class="fas fa-bullhorn"></i>
+                <span>الإعلانات</span>
+            </a>
+            <a href="about.html">
+                <i class="fas fa-users"></i>
+                <span>عن الفريق</span>
+            </a>
+            <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>تواصل معنا</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div>جميع الحقوق محفوظة &copy; 2026</div>
+            <div class="dev">بهاء الدين الحسين</div>
+            <div style="direction: ltr;">0982520358</div>
+        </div>
+    </aside>
+
+    <!-- BACK LINK -->
+    <div class="container">
+        <div class="back-link-wrapper">
+            <a href="novels.html" class="back-link">
+                <i class="fas fa-arrow-right"></i>
+                <span>العودة للروايات</span>
+            </a>
+        </div>
+    </div>
 
     <!-- HERO -->
     <section class="hero">
@@ -762,12 +871,11 @@
                     </p>
                     <div class="hero-meta">
                         <span><i class="fas fa-book"></i> 19 فصلاً</span>
-                        <span><i class="fas fa-user"></i> شادي رحال</span>
                         <span><i class="fas fa-clock"></i> قراءة 2 ساعة</span>
                     </div>
                     <button class="btn-pdf" id="downloadPdfBtn">
                         <i class="fas fa-file-pdf"></i>
-                        <span>تحميل PDF</span>
+                        <span>تحميل الرواية PDF</span>
                     </button>
                 </div>
             </div>
@@ -778,7 +886,12 @@
     <section class="chapters-section">
         <div class="container">
             <div class="section-header">
-                <h2>الفصول</h2>
+                <div class="title-group">
+                    <div class="title-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h2>الفصول</h2>
+                </div>
                 <span class="count">19 فصلاً</span>
             </div>
             <div class="chapters-grid" id="chaptersGrid"></div>
@@ -788,13 +901,29 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom">
-                <div class="copy">
-                    جميع الحقوق محفوظة &copy; 2026 <span class="author">شادي رحال</span> ❤️
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);font-size:28px;\'></i>';" />
                 </div>
-                <div class="dev-credit">
-                    <span><i class="fas fa-code"></i> بهاء الدين الحسين</span>
-                    <span class="phone"><i class="fas fa-phone"></i> 0982520358</span>
+                <div class="name">عدسة الروايات</div>
+                <div class="sub">LENS OF NOVELS</div>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="novels.html">الروايات</a>
+                <a href="episodes.html">الحلقات</a>
+                <a href="announcements.html">الإعلانات</a>
+                <a href="about.html">عن الفريق</a>
+                <a href="contact.html">تواصل معنا</a>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    ❤️ جميع الحقوق محفوظة &copy; 2026 <span class="author">عدسة الروايات</span>
+                </div>
+                <div>
+                    🔧 برمجة وتطوير: <span class="dev">بهاء الدين الحسين</span> | <span class="phone">0982520358</span>
                 </div>
             </div>
         </div>
@@ -818,21 +947,30 @@
     </div>
 
     <script>
-        // THEME TOGGLE
+        // SIDEBAR
         (function() {
-            const themeToggle = document.getElementById('themeToggle');
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') document.body.classList.add('light-mode');
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('light-mode');
-                const isLight = document.body.classList.contains('light-mode');
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            });
+            const menuBtn = document.getElementById('menuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarClose = document.getElementById('sidebarClose');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', openSidebar);
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
         })();
 
-        // ============================================================
-        //  DATA - فصول سكاي لاين
-        // ============================================================
+        // DATA - فصول سكاي لاين
         const chapters = [{
             id: 0,
             title: 'المقدمة',
@@ -1075,9 +1213,7 @@
     رامي & عسل`
         }];
 
-        // ============================================================
-        //  RENDER CHAPTERS
-        // ============================================================
+        // RENDER
         const gridContainer = document.getElementById('chaptersGrid');
 
         function renderChapters() {
@@ -1094,17 +1230,9 @@
                     const idx = parseInt(this.dataset.index);
                     openChapter(idx);
                 });
-                card.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        const idx = parseInt(this.dataset.index);
-                        openChapter(idx);
-                    }
-                });
             });
         }
 
-        // OPEN / CLOSE
         const view = document.getElementById('chapterView');
         const viewNum = document.getElementById('viewNum');
         const viewTitle = document.getElementById('viewTitle');
@@ -1170,10 +1298,10 @@
             pdfContainer.style.cssText = 'padding: 40px; background: #fff; color: #000; direction: rtl; font-family: Cairo, sans-serif;';
 
             pdfContainer.innerHTML = `
-                <div style="text-align:center; margin-bottom:40px; padding-bottom:20px; border-bottom:2px solid #7C3AED;">
-                    <h1 style="font-size:32px; color:#7C3AED; margin-bottom:8px;">سكاي لاين</h1>
-                    <p style="color:#666; font-size:16px;">قصة حب بين أستاذ وطالبة</p>
-                    <p style="color:#999; font-size:13px; margin-top:8px;">رواية للكاتب شادي رحال</p>
+                <div style="text-align:center; margin-bottom:40px; padding-bottom:20px; border-bottom:2px solid #F5B400;">
+                    <h1 style="font-size:32px; color:#0A0A0A; margin-bottom:8px; font-weight:900;">سكاي لاين</h1>
+                    <p style="color:#666; font-size:15px;">قصة حب بين أستاذ وطالبة</p>
+                    <p style="color:#F5B400; font-size:13px; margin-top:8px; font-weight:700;">عدسة الروايات - LENS OF NOVELS</p>
                 </div>
             `;
 
@@ -1182,7 +1310,7 @@
                 const content = ch.content.replace(/\n/g, '<br>');
                 pdfContainer.innerHTML += `
                     <div style="margin-bottom:30px; page-break-inside:avoid;">
-                        <h2 style="color:#7C3AED; font-size:20px; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #eee;">
+                        <h2 style="color:#0A0A0A; font-size:20px; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #F5B400; font-weight:800;">
                             ${title}: ${ch.title}
                         </h2>
                         <div style="line-height:2; font-size:15px; color:#333; text-align:justify;">${content}</div>
@@ -1192,7 +1320,7 @@
 
             pdfContainer.innerHTML += `
                 <div style="text-align:center; color:#999; font-size:12px; margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
-                    جميع الحقوق محفوظة &copy; 2026 شادي رحال<br>
+                    جميع الحقوق محفوظة &copy; 2026 عدسة الروايات<br>
                     برمجة وتطوير: بهاء الدين الحسين - 0982520358
                 </div>
             `;
@@ -1201,7 +1329,7 @@
 
             const opt = {
                 margin: [15, 15, 15, 15],
-                filename: 'سكاي_لاين_شادي_رحال.pdf',
+                filename: 'سكاي_لاين_عدسة_الروايات.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 2, useCORS: true, letterRendering: true, scrollY: 0 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
@@ -1211,16 +1339,17 @@
             html2pdf().set(opt).from(pdfContainer).save().then(() => {
                 document.body.removeChild(pdfContainer);
                 btn.classList.remove('loading');
-                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل PDF</span>';
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل الرواية PDF</span>';
             }).catch(() => {
                 document.body.removeChild(pdfContainer);
                 btn.classList.remove('loading');
-                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل PDF</span>';
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل الرواية PDF</span>';
                 alert('حدث خطأ أثناء التحميل');
             });
         });
 
         renderChapters();
     </script>
+
 </body>
 </html>
