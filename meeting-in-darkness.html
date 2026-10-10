@@ -1,0 +1,1757 @@
+<!-- ============================================================
+     FILE: meeting-in-darkness.html (عدسة الروايات - اللقاء في الظلام)
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>اللقاء في الظلام - عدسة الروايات | LENS OF NOVELS</title>
+    <meta name="description" content="رواية اللقاء في الظلام - قصة مثيرة عن الخيانة والانتقام والحب في عالم الظل | عدسة الروايات" />
+    <meta name="keywords" content="اللقاء في الظلام, رواية إثارة, عدسة الروايات, رواية تشويق" />
+    <meta name="author" content="عدسة الروايات" />
+    <meta property="og:title" content="اللقاء في الظلام - عدسة الروايات" />
+    <meta property="og:description" content="قصة مثيرة عن الخيانة والانتقام والحب" />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://bahaa90231-art.github.io/-6575/meeting-in-darkness.html" />
+    <link rel="icon" type="image/jpeg" href="logo.jpeg" />
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpeg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0A0A0A;
+            --bg-secondary: #111111;
+            --bg-card: #161616;
+            --bg-hover: #1F1F1F;
+            --gold: #F5B400;
+            --gold-light: #FFC933;
+            --gold-dark: #D49400;
+            --gold-glow: rgba(245, 180, 0, 0.15);
+            --text: #FFFFFF;
+            --text-secondary: #B8B8B8;
+            --text-muted: #7A7A7A;
+            --border: rgba(245, 180, 0, 0.12);
+            --border-hover: rgba(245, 180, 0, 0.3);
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+            --shadow-gold: 0 8px 24px rgba(245, 180, 0, 0.25);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 0;
+            min-height: 70px;
+        }
+
+        .menu-btn {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 22px;
+            transition: all var(--transition);
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+        }
+
+        .menu-btn:active { background: var(--bg-hover); }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            flex: 1;
+            justify-content: center;
+        }
+
+        .header-brand .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px var(--gold-glow);
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .header-brand .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .header-brand .brand-text { display: flex; flex-direction: column; line-height: 1.15; text-align: center; }
+
+        .header-brand .brand-text .name { font-weight: 800; font-size: 17px; color: var(--gold); letter-spacing: -0.01em; }
+
+        .header-brand .brand-text .tag { font-size: 9px; color: var(--text-muted); font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+
+        .header-spacer { width: 42px; flex-shrink: 0; }
+
+        .sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition);
+        }
+
+        .sidebar-overlay.active { opacity: 1; visibility: visible; }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border);
+            z-index: 999;
+            transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar.active { right: 0; box-shadow: -20px 0 60px rgba(0, 0, 0, 0.7); }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-header .logo-mini { display: flex; align-items: center; gap: 10px; }
+
+        .sidebar-header .logo-mini .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-header .logo-mini .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .sidebar-header .logo-mini .text { display: flex; flex-direction: column; }
+
+        .sidebar-header .logo-mini .text .name { font-size: 15px; font-weight: 800; color: var(--gold); }
+
+        .sidebar-header .logo-mini .text .sub { font-size: 9px; color: var(--text-muted); letter-spacing: 2px; }
+
+        .sidebar-close {
+            width: 36px;
+            height: 36px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            font-size: 14px;
+        }
+
+        .sidebar-close:hover { background: var(--bg-hover); color: var(--gold); border-color: var(--border-hover); }
+
+        .sidebar-nav { padding: 16px 0; flex: 1; }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 24px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all var(--transition);
+            border-right: 3px solid transparent;
+        }
+
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            color: var(--gold);
+            background: var(--bg-hover);
+            border-right-color: var(--gold);
+        }
+
+        .sidebar-nav a i { width: 22px; font-size: 17px; text-align: center; color: var(--text-muted); transition: color var(--transition); }
+
+        .sidebar-nav a:hover i, .sidebar-nav a.active i { color: var(--gold); }
+
+        .sidebar-footer {
+            padding: 20px 24px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .sidebar-footer .dev { color: var(--gold); font-weight: 700; }
+
+        .back-link-wrapper { padding: 20px 0 0; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .back-link:active { transform: scale(0.96); }
+
+        .back-link i { color: var(--gold); font-size: 12px; }
+
+        .hero { padding: 30px 0 30px; position: relative; }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 0%, var(--gold-glow), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .hero-cover {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .hero-cover::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+            pointer-events: none;
+        }
+
+        .hero-text .novel-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(245, 180, 0, 0.08);
+            border: 1px solid rgba(245, 180, 0, 0.25);
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(28px, 6vw, 52px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+            background: linear-gradient(180deg, var(--text) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .hero-meta span { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+
+        .hero-meta i { color: var(--gold); }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #0A0A0A;
+            border: none;
+            border-radius: 100px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-gold);
+            width: 100%;
+        }
+
+        .btn-pdf:active { transform: scale(0.97); }
+
+        .btn-pdf.loading { opacity: 0.7; pointer-events: none; }
+        .btn-pdf.loading i { animation: spin 1s linear infinite; }
+
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .chapters-section { padding: 24px 0 60px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .section-header .title-group { display: flex; align-items: center; gap: 12px; }
+
+        .section-header .title-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(245, 180, 0, 0.08);
+            border: 1px solid rgba(245, 180, 0, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .section-header h2 {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .section-header .count { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+        .chapters-grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .chapter-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 12px;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .chapter-card:active {
+            transform: scale(0.97);
+            background: var(--bg-hover);
+            border-color: var(--border-hover);
+        }
+
+        .chapter-card .num {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .chapter-card .title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .chapter-card .arrow {
+            font-size: 11px;
+            color: var(--text-muted);
+            transition: all var(--transition);
+            margin-top: 2px;
+        }
+
+        .chapter-view {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--bg);
+            overflow-y: auto;
+            padding: 16px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .chapter-view.active { display: block; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chapter-view-inner { max-width: 800px; margin: 0 auto; }
+
+        .chapter-view-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 12px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 10;
+        }
+
+        .chapter-view-header .title-info { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+
+        .chapter-view-header .ch-num {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(245, 180, 0, 0.1);
+            color: var(--gold);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+            align-self: flex-start;
+        }
+
+        .chapter-view-header .ch-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn-close {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 8px 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            flex-shrink: 0;
+        }
+
+        .btn-close:active { transform: scale(0.95); }
+
+        .chapter-body {
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text);
+            padding-bottom: 60px;
+        }
+
+        .chapter-body p { margin-bottom: 1.2rem; }
+
+        .chapter-body .first-letter {
+            font-size: 2.8rem;
+            font-weight: 900;
+            float: right;
+            margin-left: 10px;
+            margin-top: 4px;
+            color: var(--gold);
+            line-height: 0.9;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 40px 0 24px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand { text-align: center; margin-bottom: 24px; }
+
+        .footer-brand .logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 30px var(--gold-glow);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-brand .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .footer-brand .name { font-size: 18px; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+
+        .footer-brand .sub { font-size: 10px; color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 20px;
+            margin-bottom: 24px;
+            padding: 0 16px;
+        }
+
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 4px; transition: color var(--transition); }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .footer-bottom .author { color: var(--gold); font-weight: 700; }
+        .footer-bottom .dev { color: var(--text-secondary); font-weight: 600; }
+        .footer-bottom .phone { direction: ltr; color: var(--gold); font-weight: 700; }
+
+        @media (min-width: 600px) {
+            .container { padding: 0 28px; }
+            .hero { padding: 40px 0; }
+            .hero-content { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .hero-text h1 { font-size: 44px; }
+            .hero-text p { font-size: 15px; }
+            .btn-pdf { width: auto; padding: 14px 28px; }
+            .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+            .chapter-card { padding: 16px 14px; }
+            .chapter-card .num { font-size: 22px; }
+            .chapter-card .title { font-size: 13px; }
+            .chapter-view { padding: 24px; }
+            .chapter-body { font-size: 17px; }
+            .chapter-view-header { padding: 16px 0; margin-bottom: 28px; }
+            .chapter-view-header .ch-title { font-size: 17px; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; text-align: right; padding-top: 20px; }
+        }
+
+        @media (min-width: 900px) {
+            .header-inner { padding: 16px 0; }
+            .menu-btn, .header-spacer { width: 46px; height: 46px; }
+            .header-brand .logo { width: 50px; height: 50px; }
+            .header-brand .brand-text .name { font-size: 19px; }
+            .header-brand .brand-text .tag { font-size: 10px; }
+            .hero { padding: 60px 0; }
+            .hero-text h1 { font-size: 52px; }
+            .hero-text p { font-size: 16px; }
+            .chapter-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--border-hover);
+                box-shadow: var(--shadow);
+            }
+            .chapter-card:hover .arrow {
+                transform: translateX(-4px);
+                color: var(--gold);
+            }
+            .btn-pdf:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 32px rgba(245, 180, 0, 0.4);
+            }
+        }
+
+        @media (max-width: 479px) {
+            .container { padding: 0 16px; }
+            .header-inner { padding: 10px 0; min-height: 62px; gap: 10px; }
+            .menu-btn, .header-spacer { width: 38px; height: 38px; }
+            .header-brand .logo { width: 40px; height: 40px; }
+            .header-brand .brand-text .name { font-size: 15px; }
+            .header-brand .brand-text .tag { font-size: 8px; letter-spacing: 2px; }
+            .back-link-wrapper { padding: 14px 0 0; }
+            .back-link { font-size: 12px; padding: 7px 14px; }
+            .hero { padding: 24px 0 20px; }
+            .hero-content { gap: 20px; }
+            .hero-text h1 { font-size: 30px; }
+            .hero-text p { font-size: 13px; }
+            .hero-meta { font-size: 11px; gap: 12px; }
+            .btn-pdf { padding: 13px 22px; font-size: 13px; }
+            .chapters-section { padding: 20px 0 40px; }
+            .section-header .title-icon { width: 36px; height: 36px; font-size: 15px; }
+            .section-header h2 { font-size: 18px; }
+            .chapters-grid { gap: 10px; }
+            .chapter-card { padding: 14px 12px; }
+            .chapter-card .num { font-size: 20px; }
+            .chapter-card .title { font-size: 12px; }
+            .chapter-view { padding: 14px; }
+            .chapter-view-header { padding: 10px 0; margin-bottom: 18px; }
+            .chapter-view-header .ch-title { font-size: 13px; }
+            .chapter-body { font-size: 15px; line-height: 1.9; }
+            .chapter-body .first-letter { font-size: 2.4rem; }
+            .btn-close span { display: none; }
+            .footer { margin-top: 30px; padding: 30px 0 20px; }
+            .footer-brand .logo { width: 60px; height: 60px; }
+            .footer-brand .name { font-size: 16px; }
+            .footer-links { gap: 6px 16px; margin-bottom: 18px; }
+            .footer-links a { font-size: 12px; }
+        }
+
+        @media (max-width: 374px) {
+            .container { padding: 0 12px; }
+            .header-inner { padding: 8px 0; min-height: 56px; gap: 8px; }
+            .menu-btn, .header-spacer { width: 36px; height: 36px; font-size: 18px; }
+            .header-brand .logo { width: 36px; height: 36px; }
+            .header-brand .brand-text .name { font-size: 14px; }
+            .header-brand .brand-text .tag { font-size: 7px; letter-spacing: 1.5px; }
+            .back-link { font-size: 11px; padding: 6px 12px; }
+            .hero { padding: 20px 0 16px; }
+            .hero-text h1 { font-size: 26px; }
+            .hero-text p { font-size: 12px; }
+            .hero-meta { font-size: 10px; gap: 10px; }
+            .btn-pdf { padding: 12px 18px; font-size: 12px; }
+            .section-header .title-icon { width: 32px; height: 32px; font-size: 13px; }
+            .section-header h2 { font-size: 16px; }
+            .chapters-grid { gap: 8px; }
+            .chapter-card { padding: 12px 10px; }
+            .chapter-card .num { font-size: 18px; }
+            .chapter-card .title { font-size: 11px; }
+            .chapter-view { padding: 12px; }
+            .chapter-view-header .ch-title { font-size: 12px; }
+            .chapter-body { font-size: 14px; line-height: 1.85; }
+            .chapter-body .first-letter { font-size: 2.2rem; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .chapter-card:hover { transform: none; border-color: var(--border); box-shadow: none; }
+            .chapter-card:hover .arrow { transform: none; color: var(--text-muted); }
+            .btn-pdf:hover { transform: none; }
+            .sidebar-nav a:hover { background: transparent; color: var(--text-secondary); border-right-color: transparent; }
+            .sidebar-nav a.active { background: var(--bg-hover); color: var(--gold); border-right-color: var(--gold); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <button class="menu-btn" id="menuBtn" aria-label="القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a href="index.html" class="header-brand">
+                    <div class="logo">
+                        <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);\'></i>';" />
+                    </div>
+                    <div class="brand-text">
+                        <span class="name">عدسة الروايات</span>
+                        <span class="tag">LENS OF NOVELS</span>
+                    </div>
+                </a>
+
+                <div class="header-spacer"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-mini">
+                <div class="icon">
+                    <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);\'></i>';" />
+                </div>
+                <div class="text">
+                    <span class="name">عدسة الروايات</span>
+                    <span class="sub">LENS OF NOVELS</span>
+                </div>
+            </div>
+            <button class="sidebar-close" id="sidebarClose" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>الصفحة الرئيسية</span>
+            </a>
+            <a href="novels.html" class="active">
+                <i class="fas fa-book"></i>
+                <span>الروايات</span>
+            </a>
+            <a href="episodes.html">
+                <i class="fas fa-film"></i>
+                <span>الحلقات والفيديوهات</span>
+            </a>
+            <a href="announcements.html">
+                <i class="fas fa-bullhorn"></i>
+                <span>الإعلانات</span>
+            </a>
+            <a href="about.html">
+                <i class="fas fa-users"></i>
+                <span>عن الفريق</span>
+            </a>
+            <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>تواصل معنا</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div>جميع الحقوق محفوظة &copy; 2026</div>
+            <div class="dev">بهاء الدين الحسين</div>
+            <div style="direction: ltr;">0982520358</div>
+        </div>
+    </aside>
+
+    <!-- BACK LINK -->
+    <div class="container">
+        <div class="back-link-wrapper">
+            <a href="novels.html" class="back-link">
+                <i class="fas fa-arrow-right"></i>
+                <span>العودة للروايات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-cover">
+                    <img src="بين رصاصتين.jpg" alt="غلاف اللقاء في الظلام" onerror="this.style.display='none'" />
+                </div>
+                <div class="hero-text">
+                    <span class="novel-tag">
+                        <i class="fas fa-mask"></i>
+                        رواية إثارة وتشويق
+                    </span>
+                    <h1>اللقاء في الظلام</h1>
+                    <p>
+                        قصة مثيرة عن صحفية تُلتقط صورة قاتلة، ورجل غامض يختطفها في عالم الظل.
+                        رحلة من الخيانة والانتقام والحب في أخطر أروقة المنظمات السرية.
+                    </p>
+                    <div class="hero-meta">
+                        <span><i class="fas fa-book"></i> 21 فصلاً</span>
+                        <span><i class="fas fa-clock"></i> قراءة 3 ساعات</span>
+                    </div>
+                    <button class="btn-pdf" id="downloadPdfBtn">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>تحميل الرواية PDF</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTERS -->
+    <section class="chapters-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="title-group">
+                    <div class="title-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h2>الفصول</h2>
+                </div>
+                <span class="count">21 فصلاً</span>
+            </div>
+            <div class="chapters-grid" id="chaptersGrid"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);font-size:28px;\'></i>';" />
+                </div>
+                <div class="name">عدسة الروايات</div>
+                <div class="sub">LENS OF NOVELS</div>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="novels.html">الروايات</a>
+                <a href="episodes.html">الحلقات</a>
+                <a href="announcements.html">الإعلانات</a>
+                <a href="about.html">عن الفريق</a>
+                <a href="contact.html">تواصل معنا</a>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    ❤️ جميع الحقوق محفوظة &copy; 2026 <span class="author">عدسة الروايات</span>
+                </div>
+                <div>
+                    🔧 برمجة وتطوير: <span class="dev">بهاء الدين الحسين</span> | <span class="phone">0982520358</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAPTER VIEW -->
+    <div class="chapter-view" id="chapterView">
+        <div class="chapter-view-inner">
+            <div class="chapter-view-header">
+                <div class="title-info">
+                    <span class="ch-num" id="viewNum">الفصل 1</span>
+                    <span class="ch-title" id="viewTitle">عنوان الفصل</span>
+                </div>
+                <button class="btn-close" onclick="closeChapter()">
+                    <i class="fas fa-times"></i>
+                    <span>إغلاق</span>
+                </button>
+            </div>
+            <div class="chapter-body" id="viewBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // SIDEBAR
+        (function() {
+            const menuBtn = document.getElementById('menuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarClose = document.getElementById('sidebarClose');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', openSidebar);
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
+        })();
+
+        // DATA - فصول اللقاء في الظلام
+        const chapters = [
+            { id: 0, title: 'المقدمة', content: `كانت الرياح تعوي خارج نافذتها كما لو أن الليل ذاته قد قرر أن يصرخ. أطفأت ليان مصباح الطاولة، وأسندت ظهرها إلى الكرسي. الساعة تشير الثانية فجراً، وملف الترجمة ما زال مفتوحاً أمامها.
+
+لكن قلبها لم يكن هنا… بل على الشرفة، حيث لمحت قبل لحظات ظلاً عابراً… أو ربما كان خيالاً؟
+
+تقدّمت ببطء، فتحت النافذة، وأطلّت بحذر. شارع فارغ… إلا من سيارة سوداء، واقفة منذ ساعة دون حركة.
+
+من فيها؟ ولماذا لا تغادر؟ ولماذا شعرت بنبض قلبها يتسارع فجأة، كأنّه يصرخ: "اختبئي!"؟
+
+وفجأة… انطفأ كل شيء. الكهرباء، الضوء، الأمان.
+
+ثم… فُتح باب شقتها ببطء. ودخل.
+
+فتحت عينيها على الظلام، وداخلها صراع بين العقل والخوف. لم يكن الباب مخلوعاً… بل فُتح بمفتاح. لكن من يملك نسخة؟` },
+            { id: 1, title: 'الفصل الأول: اللقاء في الظلام', content: `تراجعت خطوة للخلف… ثم خطوة أخرى، حتى اصطدم ظهرها بالحائط البارد. وقالت بتلعثم وصوت مليء بالخوف: "من هناك؟"
+
+سؤال خرج من شفتيها مرتجفاً، كأنها تحاول أن تثبت لنفسها أنها ما زالت تملك زمام السيطرة… لكنها كانت تعلم أن الخوف هو من يحكم الآن.
+
+لم يجبها أحد. ثم… ظهر من الظل كأنه خرج من أعماق الجحيم نفسه. طويل، ملامحه غامضة، نظراته كالسكين… يراقبها بصمت لا يُحتمل.
+
+ثم همس بصوت مرعب: "أنتِ ليان خالد، أليس كذلك؟"
+
+جفّ حلقها، قالت وهي تتصنع القوة: "من أنت؟ وكيف دخلت؟"
+
+تقدم نحوها ببطء، وهمس بصوت غامض: "لا يهم من أكون. الأهم… ما الذي رأيته ليلة الأحد؟"
+
+شهقت. كان يتحدث عن تلك الليلة. عن الجريمة. هي لم تخبر أحداً، لم تتكلم، لم تنشر الصورة.
+
+كيف عرف؟ وكيف وصل إليها؟!
+
+قالت بتلعثم: "لم أرَ شيئاً. أقسم."
+
+رمقها بنظرة طويلة، ثم رفع شيئاً من سترته… هاتفها. وهمس بستهزاء: "غبية كفاية لالتقاط صورة… أذكى من أن تنشريها. لكن ليس كفاية لتنجو مني."
+
+اقترب حتى بات بينهما شبر واحد، وشعرت بأنفاسه الثقيلة تلامس وجهها. وقال بصوتٍ خافت: "كان من الممكن أن أنهي الأمر برصاصة… لكن لدي فضول. أريد أن أعرف… لماذا لم تصلي بالشرطة؟"
+
+همست، بالكاد تتحكم بصوتها: "لأنني خفت."
+
+نظر في عينيها طويلاً، كأنّه يبحث عن شيء فيها. ثم… ابتسم. كانت تلك الابتسامة أول جريمة في حق عقلها. فقد كانت قاتلة أكثر من المسدس الذي يحمله. قال بهدوء: "خوفك… أنقذك. لكن للأسف، لن يكفي. ستأتين معي الآن."
+
+همّت متفاجأة وخائفة: "إلى أين؟"
+
+همّ بنبرة مسيطرة: "إلى حيث لا صوت يصل… ولا سؤال يُسأل."` },
+            { id: 2, title: 'الفصل الثاني: الطريق الجبلي', content: `لكن جسدها لم يطاوعها. تجمدت الكلمات في حلقها. حاولت الركض، الصراخ، الدفاع… لا شيء.
+
+هو لم يقيّدها، ولم يضربها. كل ما فعله… هو أن نظر إليها، وأدار ظهره قائلاً: "اختاري… إما أن تمشي على قدميك، أو أحملك."
+
+اختارت أن تمشي.
+
+في السيارة، كان الصمت يملأ المساحة بينهما، لكن عقلها كان في دوّامة. من هو هذا الرجل؟ قاتل؟ مجرم؟ زعيم عصابة؟
+
+ولماذا ترك فيها شيئاً غريباً… شيء يجعلها تشعر بالخوف والانجذاب معاً؟ هل هو عدو… أم لعنة؟ أم ربما… قدر؟
+
+بينما كانت السيارة تشق طريقها عبر طريق جبلي مهجور، بدأ المطر يهطل فجأة، ثقيلاً، كأن السماء تحاول أن تطمس أثر خطيئة ما.
+
+رائد كان صامتاً، عيونه مثبتة على الطريق، ومشعل السيجار يعلّق بين شفتيه. ليان كانت تحاول تهدئة نفسها، تراقب الطريق المظلم وتفكر: هل هذه نهايتي؟
+
+وفجأة… انفجرت إحدى عجلات السيارة! انحرفت بقوة نحو الجانب، ارتطمت بالحافة الجبلية، ثم توقفت بقوة جعلت جسديهما يرتطم بالمقاعد أمامهما.
+
+"ما هذا؟!" صرخت ليان وهي تتشبث بالمقعد.
+
+أطفأ رائد المحرك فوراً، خرج من السيارة بسرعة ليتفقد العجلة. ثم تمتم بحدة: "خرقوا الطريق بمسامير… كمين."
+
+قبل أن ينهي كلمته… انطلقت رصاصتان نحو السيارة! إحداهما اخترقت المرآة، والثانية استقرت على بعد سنتيمترات من رأس ليان!` },
+            { id: 3, title: 'الفصل الثالث: الكمين', content: `"انزلي!" صاح رائد، وفتح بابها بعنف، وسحبها من ذراعها وأخذها خلف الصخور.
+
+كانت ترتجف، ممزقة بين الخوف والغضب والذهول، بينما هو يخرج سلاحاً من حزامه ويعطيها سكيناً صغيراً. وقال لها بحدة: "إذا اقترب منك أحد غيري… اغرزيه في عنقه. فهمتِ؟"
+
+نظرت إليه بدهشة: "أنا… لا أعرف كيف أستعمله…"
+
+أمسك يدها، وضع السكين فيها، وأقربها من صدره نظر في عينيها وهمس: "ركزي… السكين لا يحتاج إلى مهارة، بل إلى قرار. خذي القرار، تعيشي."
+
+ثم التفت، وأطلق النار نحو مصدر الطلقات.
+
+بينما قلبها يخبط صدرها كطبول الحرب، بدأت تدرك شيئاً مرعباً… رائد، رغم ظلامه، هو الشخص الوحيد الآن الذي يحارب من أجلها. وهي… رغم كل شيء… لم تعد متأكدة إن كانت تكرهه أم تخاف عليه.
+
+رصاصة ثالثة اخترقت صخرة قريبة منهم، وتناثرت شظاياها على شعر ليان ووجهها. شهقت بقوة وهي تغمض عينيها، دم خفيف سال من خدّها.
+
+تفتح عينيها ببطء، وترى وجه رائد المغمور بنيران القناصين، عيناه مليئتان بالتركيز والغضب معاً. يبقى ساكناً للحظة، يلتقط أنفاسه، ثم يصدر أمراً حازماً: "انزلي تحت الغطاء!"
+
+دفعها نحو حفرة صغيرة بين الصخور، حيث الظل يعتم ويخفيهم عن الأعين. تجلس ليان هناك، قلبها ينبض بسرعة لا تُصدق، يده تلمس السكين في كفها، وتشعر بثقل اللحظة كلها على كتفيها.
+
+رائد ينظر إلى وجهها، ثم يقول بهدوء لكنه قاسٍ: "هذه ليست لعبة، ليان. هنا تبدأ الحقيقة، والقرار ليس لكِ فقط."
+
+لحظة صمت، ثم تسمع صوت خطوات قادمة في الطريق، أصوات أقدام وأصوات همسات قاسية. يقترب العدو.
+
+يربت على كتفها بهدوء غير متوقع: "استعدي. إما أن تمضي هذه الليلة أو تمضي حياتك كلها تحت الأرض."
+
+ليان تغمض عينيها، تتذكر صورة الرجل الميت، صورة الجريمة التي حامت حولها، ثم تنظر إليه في تحد: "إذا كنت تعتقد أنني سأهرب أو أخاف، فأنت لا تعرفني."
+
+رائد يبتسم ابتسامة نصفها تهديد ونصفها اعتراف خفي: "لم أقل إنك ستخافين. قلت فقط أن الخوف سيقربنا أكثر."` },
+            { id: 4, title: 'الفصل الرابع: المقر', content: `كانت الأنفاس تخرج بصعوبة في البرد القارس، والرصاص يلتف حول الصخور كالعنكبوت القاتل. رائد رفع سلاحه بسرعة، ونقر بثلاث رصاصات في اتجاه الظلال التي تتحرك بين الأشجار.
+
+ليان، رغم خوفها، أمسكت السكين بقوة، عيناها تراقبان كل حركة في العتمة. صوت الطلقات تردد في الصمت، وكأن السماء نفسها تصرخ معهم.
+
+أشار رائد بيده: "استعدي… القتال الآن!" – لم يعد الاختباء خياراً.
+
+خرج من خلف الصخرة أحدهم يهاجم، ثم التفت نحو ليان: "تعالي!"
+
+انطلقت نحوه، والقلب ينبض بعنف، ليست من الخوف فقط بل من طوفان المشاعر المختلطة.
+
+ظهر فجأة آخر رجل يحمل بندقية، صرخ رائد: "هيا كوني قوية!"
+
+لم تكن ليان تتحرك، قد كانت أدركت أن الهروب لم يعد خياراً، وأن البقاء يعني القتال. اندفعت نحو الرجل، رمت السكين التي جرحت يدها في ذراعه، وسقط الرجل على الأرض صارخاً.
+
+اقترب رائد بسرعة، وأطلق رصاصة حاسمة. ليست هذه النهاية… فقط بداية معركة أكبر. عاد الصمت، لكنهما يعرفان أن هذه الليلة لن تُنسى أبداً.
+
+بعد المعركة القصيرة، استقرت السيارة على الطريق الوعر، والليل يلفّهما كغطاء من صمت قاتل. رائد يقود السيارة بثبات، عيونه متوترة، ولسانه يهمس بأوامر غير مرئية.
+
+ليان تجلس بجانبه، جرح خدها ينزف ببطء، لكنها لم تعد تخاف، بل صار قلبها ينبض بإيقاع مختلف… بإيقاع البقاء.
+
+اقتربا من بوابة ضخمة من الحديد الصلب، محاطة بأسوار عالية مزودة بكاميرات وأجهزة استشعار. وقف رائد أمام الحارس، ورفع يده ليقرأ رمزاً خاصاً، ثم انفتح الباب ببطء كأنه بوابة إلى عالم آخر.
+
+داخل المقر، أجواء مظلمة، أضواء خافتة تنبعث من أبراج المراقبة، ورائحة دخان عالقة في الأجواء. مرّر رائد بطاقة إلكترونية، وفتح باب المصعد المؤدي إلى الطابق السفلي حيث تقع مكاتب العصابة.
+
+شعرت ليان بثقل الهواء، كأن كل جدار يحمل أسرار دماء وجرائم. توقف المصعد، وانفتح الباب على غرفة واسعة، فيها يجلس رجال مهيبون، وعليهم عبء ماضي ثقيل.` },
+            { id: 5, title: 'الفصل الخامس: لعبة النفوذ', content: `نزل رائد بخطى ثابتة، ووجهه يعكس مزيجاً من التحدي والغموض. نظر إلى ليان وقال بصوت منخفض: "هذه هي البداية… أماكن مثل هذه لا ترحم الضعفاء."
+
+نظرت ليان حولها، عرفت أن رحلة لم تنته، بل بدأت للتو.
+
+دخل رائد وليان إلى الغرفة التي كانت تنبض بوحشية وسلطة، حيث جلس مجموعة من الرجال بوجوه صلبة، كل منهم يحمل عبء سنوات من الدماء والخيانة.
+
+في مركز الغرفة، جلس رجل ضخم البنية، ملامحه حادة. هذا هو سالم الجبوري: زعيم أكبر شبكة مافيا في المدينة، رجل لا يجرؤ أحد على مقاطعته، وقلبه قاسٍ كالصخر.
+
+وقف سالم وهو ينظر مباشرة إلى ليان، بنظرة تخترق روحها، ثم قال بصوت جهوري: "فهمتُ أنكِ سبب مشكلة… وهذا ما سنصلحه."
+
+ثم التفت إلى رائد، وقال بحدة: "أما أنت… فقد دخلت عوالمنا دون إذن. هل تعرف ماذا يعني هذا؟"
+
+ابتسم رائد بابتسامة باردة، ولم يحرك ساكناً، ثم رد: "أعرف أنني آتِ لم أطلب الإذن."
+
+في تلك اللحظة دخل رجل آخر، بشعر أسود كثيف وعينين خضراوين كالأفعى، يرتدي بدلة سوداء ضيقة، ووجهه يحمل ابتسامة ساخرة تفضح طبيعته المتقلبة. هذا هو فارس النمر: الخصم الرئيسي، رجل المكر والخيانة، الذي لا اليمنى يد سالم إلا الذي يتطلع لسرقة العرش يوماً ما.
+
+اقترب من ليان وهمس بسخرية: "أهلاً بكِ في عرين الأسود، ليان. لا مكان للضعفاء هنا."
+
+أومأ رائد برأسه وقال بحدة: "الحياة لا تعطي فرصة ثانية… فهل أنت مستعد لخسارتها؟"
+
+بدأت لعبة النفوذ تتشكل أمام أعين ليان، التي أدركت أن البقاء على قيد الحياة لن يكون سهلاً، بل معركة مستمرة… بين قوى تحكمها الدماء والخيانة.` },
+            { id: 6, title: 'الفصل السادس: الليلة الثانية', content: `كان الليل ما زال يحكم قبضته على المدينة، وأضواء المصابيح الخافتة تتراقص على جدران المقر كأنها أشباح تحرس الأسرار.
+
+ليان جلست في زاوية الغرفة، عينان تراقبان كل حركة، وكل همسة، وكل نظرة تحمل أكثر من معنى.
+
+رائد وقف أمام نافذة ضخمة تطل على المدينة، يعبث بأصابعه بحذر، يفكر في الخطوات القادمة، في الأعداء الذين يحيطون به من كل جانب.
+
+داخل المقر، بدأت الهمسات تتحول إلى أصوات، والصمت إلى صراعات.
+
+فارس النمر، بابتسامته الماكرة، اجتمع مع بعض رجاله في غرفة جانبية، يخطط لتحرك قادم قد يزلزل أركان العصابة ويكشف عن أضعف نقاطها. قال بصوت منخفض: "رائد أصبح مشكلة. ليان... نقطة ضعف أو سلاح. علينا أن نستخدم الاثنين لصالحنا."
+
+في ذات الوقت، سالم الجبوري كان يتابع تحركاته بعيون لا تغفل، يعلم أن هذه اللعبة ستأخذ الكثير من الدماء، لكنه مستعد للتضحية… لأن السلطة لا تُمنح، بل تُنتزع.
+
+ليان، التي لم تعد مجرد رهينة، بدأت تشعر بشيء مختلف يتسلل إلى داخلها. كانت تعرف أن البقاء يعني أن تتحول إلى شيء جديد، إلى شخص لا يهاب العتمة، لا يخشى الظلال. ولكن هل ستستطيع أن تبقى إنسانة وسط هذا العالم القاسي؟
+
+صوت خطوات اقترب منها، رائد عاد، وجلس بجانبها بهدوء، وقال: "الوقت يمضي، والأعداء لا ينتظرون. هل أنت مستعدة للحقيقة؟"
+
+ليان نظرت إليه بعينيها المتوهجتين: "الآن… أكثر من أي وقت مضى."
+
+قال بصوت منخفض: "الحقيقة التي سأخبرك بها… ليست للجميع. لكنها قد تكون سبب حياتك… أو موتك."
+
+ليان التقطت أنفاسها، قلبها ينبض بقوة، وقالت: "أنا لم أعد خائفة، رائد. أخبرني. الآن."
+
+ابتعد عن النافذة واقترب منها، وهمس: "الليلة التي شاهدتِ فيها الجريمة… لم تكن مجرد حادث عابر. كانت رسالة. رسالة من داخل العصابة نفسها."
+
+نظرت إليه بدهشة، ثم استدركت: "رسالة؟ من؟ ولماذا؟"
+
+همس وهو ينظر حوله بحذر: "من داخل… من فارس النمر. إنه يخطط لإسقاط سالم… وربما يستخدمك كأداة."
+
+قبل أن تستوعب ليان كلامه، انقطع الحديث بصوت انفجار قوي في الطابق العلوي.` },
+            { id: 7, title: 'الفصل السابع: الظل الأسود', content: `قفز الاثنان على قدميهما، أصوات الصراخ وطلقات الرصاص تملأ الممرات. رائد مسك يد ليان بسرعة، وجذبها خلف باب خشبي عتيق.
+
+قال بابتسامة تعكس مزيجاً من الخطر والتحدي: "يبدو أن اللعبة بدأت بالفعل."
+
+أطلق رائد يد ليان فجأة، ثم قال بحدة: "تابعيني بسرعة، ولا تتوقفي!"
+
+انطلقت الخطوات بسرعة في الممرات الضيقة، أصوات إطلاق النار تتصاعد كأنها عاصفة تهدد بابتلاعهم. ليان تشعر بقلبها يكاد يقفز من صدرها، لكنها تحاول أن تبقى هادئة، تلتقط أنفاسها وتخطو بحذر.
+
+رائد كان يتقدم بخطى ثابتة، يعرف كل زاوية وكل ممر في المقر كأنه يمتلكه. وصلوا إلى مفترق طرق، التفت رائد وقال: "إلى اليمين، ثم درج الطوارئ!"
+
+صعدوا الدرج بسرعة، لكن صوت خطوات مطاردة صار أقرب، أصوات النداء تتردد في الأرجاء: "أمسكوهم! لا تدعوهم يفلتون!"
+
+وصلوا إلى سطح المبنى، الهواء البارد يصفع وجوههم، لكن لم يكن هناك مهرب، فقط حافة شاهقة تطل على المدينة.
+
+رائد تنفس بعمق، نظر إلى ليان وقال: "اقفزي إلى القفص الحديدي هناك، سأنزل وأعترضهم."
+
+ليان ترددت، لكن لم يكن هناك خيار. قفزت بسرعة إلى القفص الصغير، وهو ينغلق عليها بقفل ثقيل.
+
+نزل رائد عبر السلالم المعدنية بسرعة، وتخفى في الظلال ليواجه أعداءه، بينما ليان في القفص تحاول أن تسيطر على خوفها، وتدرك أن معركتها الحقيقية قد بدأت للتو.
+
+ظهر مهاجم أول، حاول ضربه بسلاح أبيض، لكن رائد كان أسرع، استدار بمهارة، وأوقعه بضربة قوية على رقبته. ثم تحرك بسرعة نحو آخر، اقتحام لمحاولة إحداهما وضعت الظلام، اخترقت الرصاصة الأولى، الرصاصة الثانية كانت التي كان يستعد لإطلاق النار، مسدسه في يده.
+
+تبادلا اللكمات والركلات في قتال عنيف، صوت ضربات الأجساد على المعدن يمأل المكان، بينما يتطاير الرصاص حولهم.
+
+كان رائد يقاتل ليس من أجل حياته، بل من أجل ليان التي كانت في القفص تنتظر بفارغ الصبر. صراخها المختنق يرن في أذنه كمنبه خطر.
+
+بضربة نهائية، تمكن من إسقاط المهاجم الأخير، ثم رفع رأسه ليجد طريقاً للهروب، ينطلق بسرعة ليصل إلى ليان.
+
+وصل إلى القفص، وبدأ يفك القفل بسرعة، بينما أصوات خطوات العدو تقترب مجدداً. قال لها: "لا تقلقي، أنا هنا."
+
+ثم فُتح الباب، وهربا معاً في الظلام. لكنهما يعلمان جيداً أن هذه الهروب مجرد بداية المعركة أكبر… معركة للبقاء على قيد الحياة في عالم لا يرحم.` },
+            { id: 8, title: 'الفصل الثامن: اعتصام الظل', content: `عاد رائد وليان إلى غرفة صغيرة داخل المقر، بعيدة عن عيون الجميع، حيث الضوء خافت والهواء مشحون بعبق التوتر. جلس رائد على الطاولة، وفتح خريطة كبيرة للمدينة، عيناه تتفحصان المواقع بعناية.
+
+قال بنبرة جادة: "فارس النمر بدأ يتحرك بقوة، وكل خطوة يخطوها تقربه من السيطرة على العصابة. لدينا وقت قليل لنوقفه."
+
+ليان نظرت إليه بثبات، وقالت: "وأنتَ ماذا تريد مني؟"
+
+رائد التفت نحوها، وابتسم ابتسامة نصفها تحدٍ ونصفها دعوة للمخاطرة: "أريدكِ أن تكوني عينيَّ وأذنيَّ داخل العصابة. عليكِ أن تتعلمي كيف تلعبين اللعبة."
+
+ترددت ليان لوهلة، لكنها شعرت بشيء جديد في داخلها، شيء لم تشعر به من قبل: القوة. قالت بثقة متزايدة: "سأفعل ذلك. لكن أريد أن أعرف شيئاً واحداً فقط… هل يمكنني أن أثق بك؟"
+
+رائد نظر إليها بعمق، وكأنما يعرض عليها شيئاً أكثر من مجرد حلف. قال بهدوء: "الثقة… هي أولى ضحايا هذه الحرب."
+
+خفت الأضواء، وغابت الأصوات، وبقيت فقط الخريطة… وقلوبهما التي تخطت نبضاتها حد الخطر.` },
+            { id: 9, title: 'الفصل التاسع: الظل يعود', content: `كانت الغرفة خافتة الإضاءة، كل ظل يحمل معه أسراراً لم تُروَ، وكل نفس ينطق بحكاية لم تُكتب بعد. جلست ليان مقابل رائد، والنظرات بينهما لا تحتاج إلى كلمات لتفهمها، ففي كل مرة يلتقيان، كان هناك معركة غير معلنة تدور في أعماقهما.
+
+مد رائد يده ببطء نحوها، لمسة خفيفة كأنها وعد غير معلن، وقال بصوت منخفض مفعم بالتردد: "هذه اللعبة التي ندخلها معاً… ليست فقط حرباً على السلطة. هي… اختبار لقلبينا."
+
+رفعت ليان يدها، لتمسك يده بحذر، وردت ببطء، وكأنها تعترف لأول مرة بحقيقة دفينة: "هل تثق بي حقاً؟ أم أنني مجرد ورقة على رقعة الشطرنج؟"
+
+ابتسم رائد ابتسامة خافتة، نظراته تذوب بين العاطفة والبرود: "الثقة… صعبة، لكن معكِ أشعر بأنها ممكنة."
+
+لم يكن هناك وقت للمزيد من الكلام، فجأة دقت أبواب الغرفة بعنف، وأصوات رجال فارس النمر تتسلل من الممر.
+
+وقف رائد بسرعة، وأمسكت ليان بيده بقوة: "الآن… لنثبت أننا أكثر من مجرد ورقة."
+
+خرج الاثنان من الغرفة، وبدأت المطاردة من جديد، أصوات الرصاص، الصراخ، والقلوب التي تضخ بأقصى سرعتها.
+
+في زحمة القتال، كان رائد يحمي ليان بكل ما أوتي من قوة، وكانت هي تبادله النظرات التي تقول أكثر من ألف كلمة. كانت المعركة ليست فقط على الأرض، بل على المشاعر التي بدأت تنمو في قلبين يخشيان الاعتراف.
+
+خرج رائد وليان من الغرفة، ودخلا ممراً ضيقاً مظلماً تملؤه رائحة البارود والغبار. أصوات الأقدام تلاحقهم بسرعة، ترتطم الحوائط بصدى مهدد، وكانت صيحات الجنود تتزايد.
+
+قبض رائد على يد ليان بقوة، قائلاً: "لا تتركي يدي أبداً."
+
+خطت ليان خطوات سريعة، لكنها كانت تحس بثقل الخوف في صدرها، مزيج من القلق والإثارة.
+
+سمعوا طلقات نارية تخترق الهواء، واحدة منها اصطدمت بالحيط فتطايرت شظايا الحجر، ودخان كثيف ملأ الممر.
+
+دفع رائد ليان إلى الجانب، وأخذ موقف القتال، مسدسه يلمع في ضوء خافت، عينيه تلمعان بحدة قاتلة.
+
+ظهر منهم رجل ضخم يحمل رشاشاً، أطلق رشقة سريعة، انحنى رائد بسرعة خلف عمود، رد عليه بإطلاق نار مركز، فوقع الرجل مغشياً عليه.
+
+تقدموا مسرعين، وصادفوا باباً حديدياً مغلقاً، حاول رائد فتحه، لكنه كان مقفلاً بإحكام.
+
+عاد الصوت الصارخ من الخلف، صوت أقدام قادمة: "أمسكوهما! لا تدعوهما يفلتان!"
+
+شعرت ليان بأن الوقت ينفد، نظرت لرائد، وقالت بصوت مرتجف: "ماذا نفعل؟"
+
+قال بثقة رغم توتره: "هناك مخرج جانبي، لكن يجب أن نركض."
+
+فتح الباب فجأة، فاندفعوا إلى ممر طويل يؤدي إلى درج طوارئ. صعدوا الدرج بسرعة، وسمعوا انفجاراً يهز المبنى، اهتزت الأرض تحت أقدامهم، وتحطمت زجاجات وديكورات من حولهم.
+
+كان رائد يحمي ليان، يدفعها للأمام، ويتجنب كل خطر. عندما وصلوا إلى السطح، كان الهواء بارداً، والمدينة تتألأل بأضوائها البعيدة، لكن كان عليهم أن يقفزوا إلى الساحة المجاورة، فارغة تماماً، لا بديل.
+
+قال لها: "استعدي للقفز. سأمسك بكِ."
+
+قفزت ليان، واحتضنها رائد بقوة في الهواء، هبطا معاً على الأرض، قلباهما ينبضان بعنف، والأدرينالين يمأل عروقهما.
+
+لم يكن هناك وقت للراحة، فقد رأوا مجموعة من الرجال يقتربون من جهة الشارع، مجموعة أخرى من الرجال، لكن هذه المرة بدأت معركة جديدة، القتال وجهًا لوجه، ضربات يدوية، ركالت، وأسلحة بيضاء.
+
+وجدت ليان نفسها تقاتل بشراسة غير متوقعة، كل ضربة تخرج كانت من عمق خوفها وغضبها، لكنها أيضًا كانت تحمي هذا الشعور الجديد الذي نما داخلها مع رائد.
+
+قاتل رائد كوحش، لا يترك فرصة للخصم، يلتقط ليان بين المعارك ليطمئن عليها، ويتبادل معها نظرات تخفي وعودًا لم تُقال بعد.` },
+            { id: 10, title: 'الفصل العاشر: دوامة الماضي', content: `حين انتهت المعركة، كانا مغطّيين بالدماء والعرق، لكنهما على قيد الحياة، والقلوب بدأت تتقارب وسط الدمار.
+
+تحت جسر مهجور، في زاوية لا تصلها أضواء المدينة ولا عيون العدو، جلس رائد وهو يضغط على جرح في ذراعه اليمنى، بينما كانت ليان تحاول إيقاف النزيف بقطعة قماش ممزقة من قميصها. الأنفاس ثقيلة… والليل ساكن كأنه يراقب بصمت.
+
+قالت وهي تحاول كبت ارتجاف يديها: "كنتَ ستُقتل بسبب هذا الجنون… بسبب مَن؟ أنا؟"
+
+نظر إليها، ملامحه مزيج من الإرهاق والاهتمام، ثم تمتم: "بسببك؟ لا، ليان… ما أفعله ليس جنوناً. ما أفعله هو الشيء الوحيد الذي شعرت يوماً أنه… حقيقي."
+
+رفعت عينيها نحوه ببطء، دموع غير مُذرفة تتأرجح في عينيها. "لا تفهمني بشكل خاطئ… أنا لا أطلب منك أن تكون بطلاً. أنا فقط… لم أعد أحتمل رؤية الدم."
+
+اقترب منها، يده المصابة ترتجف، لكنه رفعها ولمس خدها بلطف. "وأنا… لم أعد أحتمل فكرة أن أراكِ تختفين من أمامي."
+
+توقفت اللحظة. سكنت كل الأصوات، سوى دقات قلبين متسارعين. كانت المسافة بينهما ضئيلة… أقل من خوف، وأكبر من اعتراف.
+
+قالت بصوت خافت، كأنها تعترف لنفسها أولاً: "أنا خائفة."
+
+أجابها بتلعثم: "وأنا أيضاً… لكن للمرة الأولى، لا أخشى الخوف ذاته… ما أخشاه هو أن أفقدك."
+
+اقترب وجهه منها أكثر، وعيناها تلتقيان في نقطة لا عودة منها، ثم همس: "أحتاجكِ إلى جانبي، ليس فقط كشاهدة على هذه الحرب… بل كجزء منها. كظهري… وقلبي."
+
+لم تجبه بكلمات. فقط، أغمضت عينيها… وأرخت رأسها على صدره. وهناك، في تلك اللحظة المسروقة من الزمن، لم يعودا ضحيةً وخاطفاً… بل روحين تمزقتا في العاصفة، ووجدتا مأوى مؤقتاً في بعضهما.` },
+            { id: 11, title: 'الفصل الحادي عشر: الكشف الكبير', content: `كان الليل ثقيلاً على المدينة، وكأن السماء حبست أنفاسها، والقمر انسحب إلى خلف الغيوم ليتوارى عن شيء ما… شيء قاتم يزحف بصمت.
+
+في ذلك المكان المنسي، حيث احتمى رائد وليان من العيون والرصاص، غفت ليان لبعض الوقت… نومٌ متقطع، كأن عقلها يرفض الاستسلام.
+
+لكنها استيقظت فجأة… شعور غريب، كأن هناك أحداً يراقبها. نظرت حولها… لا أحد. ورائد؟ لم يكن بجوارها. قلبها انقبض، وقامت بخفة، تبحث عنه بنبض متسارع.
+
+سمعت صوت خافتاً… خطوات؟ همسات؟ لا يمكنها الجزم. سارت في الممر الضيق المجاور، حيث تهب الريح بين الجدران كأنها تهمس بأسرارها.
+
+وفجأة… يدٌ امتدت من الظلام، أمسكت بفمها وسحبتها إلى الخلف!
+
+"هشش، ليان! أنا هنا لا تخافي."
+
+كان رائد. عيونه مليئة بالتوتر، وأشار نحو زاوية أعلى الجدار. "شخص ما راقبنا الليلة."
+
+قالت وهي تلهث: "أنت متأكد؟"
+
+أومأ برأسه. "ليس أحد رجال فارس النمر. هذا… مختلف."
+
+قبل أن تسأل، أخرج من سترته شيئاً غريباً: جهاز تتبع صغير، أسود، لا يحمل شعاراً. "وجدته على سيارتي. هناك طرف ثالث في اللعبة… طرف لا نعرفه."
+
+أحست ليان بشعور غريب… كأن الخطر لم يكن فارس النمر فقط، بل شيء أكبر… وأقرب مما تظن.
+
+مرّت ساعات قليلة، وفي الصباح التالي، كان رائد يتلقى مكالمة مشفّرة من أحد مصادره الموثوقين.
+
+"المقر الرئيسي لفارس النمر تغيّر… تم نقله إلى منطقة صناعية قديمة جنوب المدينة. تحصين كامل، كاميرات، رجال على مدار الساعة."
+
+رد رائد وهو يشد قبضته: "حان وقت الرد."` },
+            { id: 12, title: 'الفصل الثاني عشر: صراع النخبة', content: `في وقت لاحق من نفس اليوم، وقف رائد وليان على سطح مبنى مهجور، يطل مباشرة على المقر الجديد. المكان بدا كقلعة محصنة، أبواب حديدية، وساحة داخلية مليئة بالحراس.
+
+رائد أخرج منظاره الليلي، وقال: "هذا انتحار إن دخلنا دون خطة."
+
+ثم نظر إلى ليان: "لكن لدينا أفضل سلاح… أنتِ."
+
+قالت بدهشة: "أنا؟"
+
+أجابها بثقة: "أنتِ الوحيدة التي لم تُعرف بعد. ووجهك لا يعرفه أحد داخل التنظيم."
+
+أخذ لحظة صمت، ثم تابع: "ستتسللين كعاملة جديدة… وتفتحين لنا ثغرة من الداخل."
+
+ليان نظرت إليه مطولاً. كانت تعرف أنها تخطت حدود الخوف، وأنها أصبحت جزءاً من حرب لا رجوع فيها.
+
+قالت أخيراً: "أوافق… لكن إن مت، فلن أسامحك أبداً."
+
+ابتسم رائد رغم توتره، ولم يقل شيئاً. فقط نظر إليها بنظرة عميقة كأنها وعد صامت بحمايتها… أو الانتقام إن فشل.
+
+ليلاً، ارتدت ليان زياً بسيطاً ووضعت سماعة أذن مخفية. دخلت من بوابة خلفية صغيرة، تنكرت كعاملة تنظيف، وكانت نبضاتها تخونها في كل خطوة. لكنها نجحت… وصلت إلى الداخل.
+
+ورائد… يتابع تحركاتها من السطح. مرت دقائق بدت كالدهر. ثم فجأة، اختفى صوت ليان من السماعة.
+
+"ليان؟ ليان، هل تسمعينني؟" لا جواب. "ليان، أجيبي!"
+
+شيء ما انكسر داخله. في تلك اللحظة، لم يفكر… لم يخطط. فقط قفز من السطح، ودخل من الباب الخلفي للمبنى.
+
+كل شيء في عينيه كان يصرخ: "لن أتركها."
+
+وبين الممرات، بدأت المعركة. رصاص، صراخ، طلقات متبادلة، رائد يتحرك كذئب جريح يبحث عن فريسته… أو عن قلبه الضائع.
+
+وفي إحدى الغرف، كانت ليان مقيدة على كرسي، أمام رجل مجهول… وجهه مغطى بقناع أبيض.
+
+قال لها بصوت هادئ بشكل مرعب: "لم أكن أريدكِ… لكنكِ اخترت الدخول. والآن… لن تخرجي."` },
+            { id: 13, title: 'الفصل الثالث عشر: حرب الظل', content: `كانت العتمة تبتلع الغرفة، إلا من ضوء خافت يتسلل من مصباح معلق يتأرجح ببطء، كأنّه يهتز مع نبض ليان المتسارع.
+
+الرجل الجالس أمامها لم يحرّك ساكناً. لا علامات في ملامحه… لأنه بلا ملامح أصلاً. القناع الأبيض الذي يغطي وجهه يشبه وجهاً بلا روح، بلا ملامح… مجرد طيف.
+
+قال بصوت هادئ وثقيل كأنه يُلقي تعويذة: "أتعلمين، يا ليان… هناك أشياء أكبر بكثير من فارس النمر، ومن رائد… حتى منّا نحن."
+
+لم تردّ. كانت تحاول حفظ كل كلمة، كل إشارة، تنتظر فرصة للهروب… أو للنجاة.
+
+تابع وهو يدور حولها: "رائد لم يخبرك من يكون. لم يخبرك أنه… كان واحداً منّا."
+
+رفعت عينيها ببطء، الصدمة في نظراتها أقوى من أي سؤال.
+
+"نعم، رائد... كان أحد نخبة (الظل الأسود). الوحدة التي تهرب الأسلحة… تزرع العملاء… وتُسقط الدول دون أن تطلق رصاصة. لكنه خانهم. سرق شحنة سلاح… وهرب."
+
+"ولماذا أنا؟" سؤالها خرج كهمسة مكسورة.
+
+قال بابتسامة باردة: "لأنكِ نقطة ضعفه الوحيدة."
+
+في تلك اللحظة، اخترق انفجار خفيف الجدار الخلفي للغرفة، تلاه صوت طلق ناري، ثم آخر. كانت هذه إشارة: رائد قد دخل.
+
+صوت إطلاق نار يتردد في الممرات. الحراس يسقطون، والجدران تتهشم. أما الرجل المقنّع، فاختفى بسرعة كأن الأرض ابتلعته.
+
+رائد دخل الغرفة وهو يتصبب عرقاً، وجهه ممتلئ بالغضب والقلق. فك قيود ليان بيدين ترتجفان، وقال بصوت مختنق: "هل آذاكِ؟!"
+
+أجابت بصوت مرتجف: "من هو؟ ما هذا المكان؟"
+
+لكن لم يكن هناك وقت. أخرج مسدسه ووضعه في يدها. "سنركض. من هنا."
+
+في الممر الخلفي، كانا يتقدمان بسرعة وسط أصوات الإنذار وضجيج اشتباكات متفرقة، حتى وصلا إلى مستودع ضخم… وهناك، تراجع رائد فجأة.
+
+شحنات ضخمة. أسلحة. صواريخ. متفجرات. طائرات بدون طيار.
+
+قال وهو يحدّق بالمشهد: "هذه ليست شحنة عادية… هذه استعداد لحرب."
+
+ليان بتعجب: "من الجهة؟ من يموّل هذا؟"
+
+رائد بصوت خافت: "دولة؟ عصابة؟ منظمة؟ لا أعرف بعد… لكن هذا يتجاوز فارس النمر. هذا مشروع خراب عالمي."
+
+ثم رأى صناديق مكتوباً عليها بلغة مشفّرة، لا يفهمها إلا من كان ضمن (الظل الأسود). جفل، تمتم لنفسه: "هذا مستحيل… هذا الشعار اختفى منذ سنوات."` },
+            { id: 14, title: 'الفصل الرابع عشر: جسر النار', content: `من الخلف، انطلقت صافرة إطلاق. أحد القناصة رصدهم من الأعلى. دفع رائد ليان أرضاً، وأطلق رصاصته الأولى… فأصاب الضوء فوق القناص، وأربكه.
+
+صرخ: "إلى الشاحنة! سنهرب بالشحنة!"
+
+ركضا بين النيران، قفزا داخل شاحنة نصف ممتلئة، وأدار المحرّك بينما الرصاص ينهال على المعدن.
+
+"تمسكي!"
+
+قالها وانطلق بالشاحنة محطماً البوابة الحديدية، خارقاً طريقه وسط الظلام… والصراخ… والانفجارات.
+
+على الطريق السريع، في سيارة تصدر منها رائحة البارود والموت، ساد الصمت.
+
+ليان نظرت إلى رائد وقالت: "قل لي الحقيقة كاملة."
+
+نظر إليها، عينيه مليئتان بالندم والخطر. "أنا… كنتُ سلاحاً في يدهم. صنعتُ الخراب. وعندما حاولت التراجع… بدأوا بملاحقتي. واليوم؟ نحن نحمل في هذه الشاحنة بداية حرب… أو نهايتها."
+
+أوقف رائد الشاحنة داخل مرآب مهجور تحت الأرض، في أطراف المدينة. الهواء كان ثقيلاً… كأن كل نفس يحمل شيئاً من الخوف.
+
+ليان كانت تراقبه بصمت، بينما يفتح صندوقاً معدنياً سرياً خلف مقعد السائق، ويُخرج منه ملفاً قديماً، أوراقه بالية، لكنها مختومة بخاتم مألوف.
+
+قال وهو يمرر يده على الختم: "هذه كانت بداية كل شيء."
+
+"ما هذا؟"
+
+"ملف العميل رقم 7… الملقب بـ(الظل الأيسر). أخطر وأذكى من مر على المنظمة… وشريكي السابق."
+
+قبل أن تكمل سؤالها… سُمع صوت أقدام يقترب. شخص طويل، معطفه الطويل ينساب خلفه مثل الظل، ونظارة سوداء تُخفي نظراته، لكنه لم يكن غريباً عن رائد.
+
+تجمّد الأخير، وعيناه تضيقان. "أنت…"
+
+ابتسم القادم ابتسامة شاحبة، وقال بصوت مائل للسخرية: "مر وقت طويل، يا شريك."
+
+ليان همست: "من هذا؟"
+
+رائد بصوت مبحوح: "اسمه سامر. كنت أظنه ميتاً منذ سنوات."` },
+            { id: 15, title: 'الفصل الخامس عشر: دوامة الخيانة', content: `سامر اقترب، وألقى حقيبة على الطاولة، وفتحها ليكشف وثائق، صور، وخرائط.
+
+قال بهدوء: "ما هربتما به… ليس فقط أسلحة. بل أدلة. عقود تمويل، توقيعات، أوامر رسمية من جهات عليا في دولة أوروبية كبرى تدعم الميليشيات في الشرق… لخلق فوضى تسوّغ تدخلها السياسي والعسكري لاحقاً."
+
+ليان بصوت مصدوم: "كل هذا… لعبة دولية؟!"
+
+سامر أومأ: "ليست لعبة… بل رقعة شطرنج، والجميع فيها بيادق. وأنا… جئت لأحرق اللوح بالكامل."
+
+قال رائد بحزم: "ولماذا الآن؟ لماذا تظهر؟"
+
+"لأنهم أعادوا تفعيل (المشروع 19)، ولأنهم وضعوا اسمك على رأس القائمة… كخائن يجب تصفيته."
+
+سحب سامر صورة من الملف… صورة بالأقمار الصناعية تُظهر قاعدة ضخمة، وفيها كلمة واحدة: "Vesper".
+
+قال بنبرة قاتمة: "هذه القاعدة… من يدمرها، يقطع رأس الأفعى."
+
+هم رائد قائلاً: "ومن معنا؟"
+
+سامر نظر لهما، ثم قال ببرود: "أنتم… وأنا."
+
+قبل أن ينتهوا من النقاش، اهتز المبنى بسبب انفجار صغير في الخارج. ليان اندفعت نحو النافذة. "لقد وجدونا!"
+
+سامر بسلاسة سحب مسدسين، وفتح الباب الخلفي قائلاً: "إلى النفق. لدينا دقيقة واحدة قبل أن تمألهم الرصاصات."
+
+رائد أمسَك بيد ليان، ركض بها وسط الظلال، وصوت الأحذية الثقيلة يقترب. العدو الآن ليس مجرد عصابة… بل دولة بأكملها.
+
+والمعركة؟ لتوّها بدأت.` },
+            { id: 16, title: 'الفصل السادس عشر: المرحلة الصفرية', content: `كانت خطواتهم تتسارع في النفق المظلم، حين قال سامر فجأة: "قبل أن نكمل… عليكما أن تعرفا من هم خصومنا. ومن نحن."
+
+توقف، أشعل شعلة صغيرة من على الجدار، فكشفت عشرات الصور المعلّقة على جدار خرساني متهالك… كانت تلك "غرفته الخاصة"، أرشيفه السري.
+
+علّق وهو يشير إلى الصور: "هذه ليست حرب عصابات. هذه حرب بين سبعة رموز… سبعة قادة، كل واحد منهم يسيطر على شريان من شرايين الفوضى."
+
+ثم بدأ يضغط على كل صورة ليُضيء اسماً، وشخصية.
+
+"رائد خالد" – الذئب الرمادي. العميل الذي انقلب على النظام. بارع في التخفي والاقتحام، لكنه يحمل جرحاً عاطفياً لم يُشفَ بعد. كان شريك سامر… والآن هدف النظام.
+
+"ليان خالد" – شقيقته الصغرى، وأصغر صحفية جريمة صاعدة في الشرق الأوسط، لكنها تورّطت عندما التقطت صورة للجريمة التي لا يجب أن تُوثّق. لا تزال تجهل الكثير عن ماضي عائلتها.
+
+"سامر النداف" – الظل الأيسر. أذكى العملاء السابقين. منذ خمس سنوات يسعى لتدمير النظام من الداخل، لكن نواياه لا تزال رمادية.
+
+ثم توقف سامر عند صورة بها رجل ببذلة داكنة ونظرة باردة، وقال: "والآن، من يدير كل هذا… هو هو."
+
+"الجنرال ستيفان كراوس" – رئيس وحدة الاستخبارات السوداء في دولة أجنبية كبرى. يموّل الفوضى مقابل النفط والسلطة. يظهر أمام العالم كرجل سياسة… لكنه في الظل قاتل.
+
+تبادل رائد وليان نظرات مذهولة. همت ليان بدهشة وارتباك: "ونحن الثالثة… سنقف في وجههم جميعاً؟"
+
+قال سامر بنبرة حازمة مليئة بالقوة: "لا. سنبدأ بالضرب في القلب."
+
+وقبل أن يخرجوا، صرخت أجهزة الإنذار مجدداً! رائد سحب سلاحه فوراً. "لقد دخلوا من الجهة الأخرى."
+
+انطلقوا نحو مخرج الطوارئ… لكن الطريق لم يكن خالياً. عند زاوية الممر، وقف رجلان مسلحان، وجاء الصوت: "انزلوا أسلحتكم."
+
+لكن رائد لم ينتظر. أطلق رصاصة نحو المصباح، غرق الممر في الظلام، ثم اندفعت الفوضى.` },
+            { id: 17, title: 'الفصل السابع عشر: المواجهة الكبرى', content: `كانت المعركة شرسة. ليان اختبأت خلف صندوق معدني، تتنفس بصعوبة، ثم وجدت نفسها تمسك بمسدس، لأول مرة… بإرادتها.
+
+رائد أوقع أحد المسلحين أرضاً، وأخذ سلاحه، لكن فجأة… ظهر وجه مألوف من بين الظلال.
+
+"آدم منصور" – أحد القادة السبعة، والعدو القديم لرائد.
+
+قال بابتسامة ملتوية: "أنت دائم الهرب، رائد… لكنك نسيت، أنا من علّمتك كيف تختفي."
+
+رائد بنبرة تحدٍ: "ونسيت أنت أنك علمتني القتل أيضاً."
+
+انفجرت المعركة مجددًا. طلقات، صراخ، دماء.
+
+وفي النهاية، خرج الثالثة بصعوبة، يحملون معهم حقيبة تحوي الأدلة، والأسماء… وذكريات لا تُنسى.
+
+لكن لحظة الصعود إلى السطح، أدركوا شيئاً. السماء كانت تُضيء بوهج أحمر. القاعدة Vesper… قد بدأت بالتحرك.
+
+المخبأ كان عبارة عن فيلا مهجورة في أعالي الجبل، بعيدة عن إشارات الهواتف، والرصد الحراري. ثلاثتهم جلسوا حول طاولة خشبية متهالكة، أمام خريطة إلكترونية ثلاثية الأبعاد، تُظهر القاعدة.
+
+سامر أشار بإصبعه إلى نقطة ضوء صغيرة داخل مجمّع من الأبنية العسكرية، وقال: "هذا هو القلب. الغرفة المحمية التي تحتوي على السيرفر المركزي. من هناك… نحرقهم."
+
+همّت ليان، التي لم تكن يوماً في حرب، كانت تحاول السيطرة على رعشة أصابعها: "هل ندخل ليلاً؟"
+
+رائد، بصوت خافت وعينين غارقتين في الظل: "لا. ندخل مع شروق الشمس. حين لا يتوقعون الهجوم. الضوء يجعلهم واثقين… والغرور عدوهم الأول."
+
+سامر أومأ، ثم قال: "واصغي جيداً يا ليان… لن تكوني في الصفوف الخلفية. بل ستدخلين معنا."
+
+شهقت، ونظرت إلى رائد بذهول: "ماذا؟ لا! أنا لست مثلكم، لا أجيد القتال."
+
+قال سامر بثقة: "لكن تجيدين شيئاً آخر… الكاميرا. وسنحتاج عدسة توثّق الجريمة الكبرى التي دفنها العالم."
+
+رائد نظر إليها طويلاً… بعينيه شيء لم تراه فيه من قبل، مزيج من الخوف والاهتمام والحزن. قال: "أثق بكِ، ليان. لكن هذه المرة… إن دخلنا، قد لا نخرج."
+
+في تلك الليلة، لم يغمض لأحدهم جفن. ليان جلست وحيدة على سطح الفيلا، تحدق في ضوء القمر، بينما رائد اقترب منها بهدوء، وجلس إلى جانبها.
+
+قالت دون أن تلتفت: "هل كنتَ تعلم منذ البداية؟ أنني سأُسحب إلى هذا العالم؟"
+
+قال رائد شارداً: "لا… كنتُ أتمنى أن تبقي بعيدة عنه."
+
+همت بيأس: "لكننا هنا."
+
+صمت. ثم قالت: "أخبرني… لماذا فعلت كل هذا؟ لماذا تركت المنظمة؟"
+
+تنهد طويلاً، ثم قال: "لأنهم قتلوا من أحب… لأنها كانت تحلم بالسلام، وهم أطفأوا الحلم بالرصاص."
+
+نظرت إليه، فرأت في عينيه شيئاً لا يمكن تفسيره… قلب يحترق، وقناع بدأ يتشقق.` },
+            { id: 18, title: 'الفصل الثامن عشر: الحرب الخفية', content: `مع أول خيوط الفجر، ارتدى الثلاثة لباس التمويه، وبدأت العملية. راديو صغير في أذن كل واحد، طائرات مراقبة مسيّرة تحوم فوق القاعدة، وشيفرات تم التحقق منها قبل الانطلاق.
+
+عندما قال سامر عبر الراديو: "انطلقوا." لم يكن هناك وقت للتراجع. كانوا ثلاثة… يتسللون إلى قلب النار.
+
+ولم يكن أحد يعلم… أن هناك من يراقبهم من الداخل.
+
+ثلاثة ظلال تسللت عبر فتحة التهوية القديمة في الطابق الثالث من مبنى الأبحاث داخل قاعدة Vesper. رائد في الأمام، سامر خلفه، وليان في المنتصف، تتنفس بهدوء محموم وتحمل الكاميرا الموصولة بجهاز البث المشفّر.
+
+صوت سامر في أذنها: "الممر القادم مراقب. لدينا خمس ثوانٍ قبل أن تعود الكاميرا للدوران."
+
+ردّ رائد بنبرة حاسمة: "ثلاثة... اثنان... الآن!"
+
+اندفعوا كالبرق، عبَروا الممر الخالي بسرعة، حتى وصلوا إلى المصعد المغلق. سامر بدأ في اختراق النظام.
+
+"أحتاج دقيقة... فقط دقيقة."
+
+لكن الدقيقة لم تأتِ. إنذارٌ مزق السكون. صوت معدني آلي صدح في كل مكان: "اختراق أمني في القطاع 3C. جميع العناصر إلى الموقع فوراً."
+
+رائد صرخ: "خطة B!"
+
+سحب ليان من ذراعها، وسامر خرج أولاً، يطلق رصاصات تشويش على الكاميرات. انطلقت المطاردة. من الخلف، صدى خطوات ثقيلة، وأوامر عسكرية تصرخ: "اقبضوا عليهم أحياء! لا تطلقوا النار على الفتاة!"
+
+ليان تلهث، وصوت ضربات قلبها أعلى من صوت الأحذية خلفها. سامر أشار نحو درج حلزوني: "الطابق السفلي! المخرج الثاني هناك!"
+
+اندفعوا للأسفل، لكن الطريق لم يكن خالياً. ظهرت فرقة مسلحة.
+
+رائد لم يتردد، أطلق ثلاث طلقات بسرعة، ثم سحب ليان نحو باب جانبي. "سامر، احمنا!"
+
+سامر أطلق قنبلة دخانية، وفتح رشاشه الآلي بعنف، يُغلق خلفه باباً إلكترونياً ليربح ثواني.
+
+في الداخل، ممر ضيق مضاء بأنوار الطوارئ الحمراء. ليان تشهق، ساقها اصطدمت بأحد الصناديق، لكنها تابعت.
+
+رائد تمتم: "نحن في قنوات التهريب. يجب أن نجد نقطة الخروج قبل أن يغلقوا الأنفاق."
+
+لكن المفاجأة الأكبر كانت في انتظارهم. عند آخر الممر… وقفت امرأة، بلباس رسمي، وجهاز اتصال.
+
+رفعت عينيها إليهم، وابتسمت بسخرية: "متأخرون… كالعادة."
+
+رائد تجمد في مكانه. ليان همست: "من هذه؟"
+
+قال بصوت منخفض: "أمل… العميلة التي خانتنا."
+
+ثم رفعت المرأة يدها… وبدأت الجولة التالية من المطاردة، لكن هذه المرة، لم تكن الفرار هو الخيار. بل القتال.` },
+            { id: 19, title: 'الفصل التاسع عشر: الظل الأخير', content: `لم تكن "أمل" مجرد خائنة… كانت ماضياً لم يُدفن. وقفت هناك بثبات قاتل، سلاحها معلّق على خصرها، ونظرتها كالسيف.
+
+قال رائد بصوتٍ منخفض، وهو يرفع سلاحه ببطء: "ظننتكِ ميتة."
+
+ابتسمت بسخرية: "وكان يجب أن تبقى تظن."
+
+أشارت برأسها إلى ليان: "ومن هذه؟ فتاة جديدة تحتمي بها؟ أم مجرد لعبة؟"
+
+صرخت ليان: "أنا لست لعبة!"
+
+أمل ضحكت، ثم رفعت سلاحها فجأة، لكن رائد كان أسرع… طلقات خاطفة… تشتبك في لحظات برق ورعد.
+
+سامر ظهر من خلف الصناديق، انقضّ على أحد الحراس، طوّقه بساعديه، ثم قال عبر الراديو: "خمس دقائق قبل الإغلاق الكامل للمنشأة!"
+
+رائد صرخ: "انقسموا! سامر إلى السيرفر… أنا سأوقف أمل."
+
+ليان نظرت إليه بعينين فيهما كل القلق، لكنه قال لها وهو يمد لها جهاز التوثيق: "أكملي. ما سنكشفه هناك… سيهدم عالماً ويبني آخر."
+
+ركضت خلف سامر، وخلفها طلقات تتقافز كالشرر.
+
+في الغرفة السوداء… السيرفر المركزي كان مثل وحش نائم. سامر بدأ في اختراق الأنظمة، وعرقه يتصبب: "رمز التشفير تغيّر… أحتاج تغطية."
+
+ليان وقفت أمام الباب، تصوّب السلاح بيدها المرتجفة، وكلما اقترب صوت خطوة، كانت تصرخ بصمت: "لا تضعفِي الآن."
+
+في تلك اللحظة، كانت أمل قد جُرحت، لكنها لم تستسلم. قاتلت رائد بكل وحشية، وكأنها تريد قتله والانتقام من نفسها في الوقت نفسه.
+
+قالت وهي تحاول أن تطعنه بالخنجر: "أردتك أن تكون مثلي! أن ترى العالم كما هو… مكسوراً!"
+
+لكن رائد، وهو يُبعدها ويجذبها إلى الجدار، همس بصوت يشبه الوداع: "أنا رأيته… لكني اخترت ألا أتحول لوحش."
+
+دفعها بقوة، فارتطمت بالزاوية، وأُغمي عليها.
+
+في غرفة السيرفر، صرخ سامر: "فتحنا الملفات! كل شيء هنا… عقود الدم، تمويلات الأحزاب، تهريب السلاح… صور اغتيالات! حتى فيديو عملية الإعدام التي شهدتها ليان!"
+
+ليان صرخت: "انسخه! انسخه الآن!"
+
+بينما كانت الملفات تُنقل على الجهاز، اخترقت رصاصة الباب وكادت تصيبها. رائد دخل فجأة، وجهه مليء بالكدمات، لكن نظرته حادة: "خرجوا من المخرج الجنوبي… سنحاصرهم من الداخل!"
+
+قال سامر بمزيج من الخوف والقوة: "النسخ اكتمل! هيا!"
+
+بدأ العد التنازلي للانفجار التلقائي.
+
+ركضوا كأن الأرض تحترق تحت أقدامهم… من خلفهم، قاعدة تنهار، ومن أمامهم… مستقبل مجهول.
+
+وهم في الخارج، بين الأشجار، وقفت ليان تلهث، تنظر إلى الشاشة الصغيرة في يدها. تمتمت بهمس: "هل هذا… يكفي لإسقاطهم؟"
+
+أجاب رائد، وعيناه لا تزالان تراقبان الأفق: "لا. لكنه البداية."` },
+            { id: 20, title: 'الفصل العشرون: الحقيقة وأخيراً', content: `بعد أن خرجوا من قلب الجحيم، والقاعدة تتهاوى خلفهم كقصر من رماد، وقفوا في الظل بعيداً عن أنظار العالم، تتسارع أنفاسهم، والوجوه ملطخة بالغبار والدماء.
+
+ليان نظرت إلى رائد، عينيها تلمعان ببريق خاص، مزيج من الإعجاب والخوف والأمل. قالت بصوت متقطع: "كنت تخاطر بحياتك من أجلي… لماذا؟"
+
+ابتسم رائد، وهو يمسح الغبار عن وجهها بنعومة غير متوقعة في هذا العالم القاسي: "لأنكِ لم تكوني مجرد هدف… كنتِ السبب."
+
+اقترب منها ببطء، وخطواته كانت كأنها نبض قلبه، يختلط فيها التهديد بالحنان.
+
+لم تستطع ليان أن تمنع نفسها، اقتربت منه، ورفعت يدها لتلمس وجهه، مرتعشة لكنها حازمة. قالت باستغراب: "أنا لا أفهم هذا العالم… ولا أفهمك."
+
+ضحك قائلاً: "وأنا لا أريدك أن تفهمي كل شيء… فقط أن تكوني معي."
+
+في تلك اللحظة، احتضنها بقوة، وكأنهما يحاولان أن يعيدا بناء كل شيء مفقود في صمت العالم. هنا قالت ليان بينها وبين نفسها: "ربما هذا الذي كنت أريده شخصياً… يحميني من ظلي. رجل بكل معنى الكلمة."
+
+لكن الصوت القادم من الراديو كسر السحر: "تحذير… اكتشاف جديد في مقر الفرقة المعادية."
+
+ابتعدا بسرعة، العيون لا تهدأ، والأعداء لا يغفو. كان ذلك المشهد الرومانسي مجرد وميض وسط عاصفة لا تنتهي.
+
+في الوقت ذاته، في غرفة مظلمة حيث تجتمع أوراق وملفات مسربة، تومض شاشة كبيرة بكلمات: "الاختراق الكامل... الأنظمة تهتز… والمؤامرة تكشف."
+
+صوت من الظل: "لقد بدأنا… الحرب الحقيقية الآن."
+
+عادوا إلى المخبأ، لكن الهواء لم يكن هنا أبداً هادئاً. الملفات التي سرقوها لم تكن مجرد أدلة عادية، بل قنابل موقوتة بيد من يملكها.
+
+ليان فتحت الملف الأول، صورة تظهر رجلاً معروفاً في السياسة وهو يستقبل حقيبة مليئة بالنقود، وفيديو يُظهر صفقة سرية مع مهربين دوليين.
+
+قال سامر وهو يحدق في الشاشة: "هذه ليست مجرد تجارة أسلحة… هذه شبكة فساد ضخمة… تمتد إلى أعلى المستويات."
+
+رائد سحب هاتفه وأجرى اتصالاً سريعاً، صوته كان جلياً: "يجب أن نعلنها… لكن كيف نثق بمن حولنا؟"
+
+دخل المخبأ فجأة شخص غامض، وجهه نصفه مخفي، وعيناه تلمعان بحذر: "الوقت ينفد الآن… هناك من يعرف أنكم اخترقتم النظام… وأنتم الهدف الآن."
+
+ليان التفتت بسرعة، نظرت له بحدة: "من أنت؟"
+
+ابتسم الرجل: "أنا الوسيط… من يستطيع أن يربطكم بالجهات التي تريد الحقيقة… أو تقضي عليكم."
+
+رائد تفحصه بتوجس: "كيف نعرف أنك لست أحد أعدائنا؟"
+
+ضحك الوسيط: "الأعداء لا يدعونكم تعيشون لتروي قصتكم."
+
+في الخارج، قُطع صمت الليل بصوت سيارات مسرعة. ليان نظرت عبر النافذة، وصرخت: "إنهم يهاجمون! المخابئ تحاصر!"
+
+بدأت المعركة من جديد، صراخ ورصاص، انفجارات قريبة.
+
+رائد أمسك يد ليان وسحبها إلى الظل: "ابقي خلفي."
+
+داخل قلب الفوضى، تعانقت الخيانة والوفاء. ليان شعرت بشيء يتغير بداخلها… لم يعد الخوف وحده مسيطراً، بل إرادة للقتال من أجل مستقبل ليس فقط لنفسها، بل لكل من يحبهم… أو بالأصح من أجله، من أجل رائد.
+
+بينما كان الرصاص يطير حولهم، فهموا أن الحرب الحقيقية لم تبدأ بعد… بل الآن فقط تبدأ.` }
+        ];
+
+        const gridContainer = document.getElementById('chaptersGrid');
+
+        function renderChapters() {
+            gridContainer.innerHTML = chapters.map((ch, idx) => `
+                <div class="chapter-card" data-index="${idx}" role="button" tabindex="0">
+                    <div class="num">${idx === 0 ? 'م' : idx}</div>
+                    <div class="title">${ch.title}</div>
+                    <i class="fas fa-arrow-left arrow"></i>
+                </div>
+            `).join('');
+
+            document.querySelectorAll('.chapter-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const idx = parseInt(this.dataset.index);
+                    openChapter(idx);
+                });
+            });
+        }
+
+        const view = document.getElementById('chapterView');
+        const viewNum = document.getElementById('viewNum');
+        const viewTitle = document.getElementById('viewTitle');
+        const viewBody = document.getElementById('viewBody');
+
+        function openChapter(idx) {
+            const ch = chapters[idx];
+            if (!ch) return;
+            viewNum.textContent = idx === 0 ? 'المقدمة' : `الفصل ${idx}`;
+            viewTitle.textContent = ch.title;
+
+            const paragraphs = ch.content.split('\n\n').filter(p => p.trim().length > 0);
+            let html = '';
+            paragraphs.forEach((p, i) => {
+                const trimmed = p.trim();
+                if (trimmed.length === 0) return;
+                if (i === 0) {
+                    const firstChar = trimmed.charAt(0);
+                    const rest = trimmed.slice(1);
+                    html += `<p><span class="first-letter">${firstChar}</span>${rest}</p>`;
+                } else {
+                    html += `<p>${trimmed}</p>`;
+                }
+            });
+            viewBody.innerHTML = html;
+            view.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            history.pushState({ idx }, '', `#chapter-${idx}`);
+            view.scrollTop = 0;
+        }
+
+        function closeChapter() {
+            view.classList.remove('active');
+            document.body.style.overflow = '';
+            history.pushState({}, '', window.location.pathname);
+        }
+
+        window.addEventListener('popstate', function() {
+            if (view.classList.contains('active')) {
+                view.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#chapter-')) {
+                const idx = parseInt(hash.replace('#chapter-', ''));
+                if (!isNaN(idx) && chapters[idx]) {
+                    setTimeout(() => openChapter(idx), 100);
+                }
+            }
+        });
+
+        document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+            const btn = this;
+            btn.classList.add('loading');
+            btn.innerHTML = '<i class="fas fa-spinner"></i> جاري التحميل...';
+
+            const pdfContainer = document.createElement('div');
+            pdfContainer.id = 'pdfContainer';
+            pdfContainer.style.cssText = 'padding: 40px; background: #fff; color: #000; direction: rtl; font-family: Cairo, sans-serif;';
+
+            pdfContainer.innerHTML = `
+                <div style="text-align:center; margin-bottom:40px; padding-bottom:20px; border-bottom:2px solid #F5B400;">
+                    <h1 style="font-size:32px; color:#0A0A0A; margin-bottom:8px; font-weight:900;">اللقاء في الظلام</h1>
+                    <p style="color:#666; font-size:15px;">رواية إثارة وتشويق</p>
+                    <p style="color:#F5B400; font-size:13px; margin-top:8px; font-weight:700;">عدسة الروايات - LENS OF NOVELS</p>
+                </div>
+            `;
+
+            chapters.forEach((ch, idx) => {
+                const title = idx === 0 ? 'المقدمة' : `الفصل ${idx}`;
+                const content = ch.content.replace(/\n/g, '<br>');
+                pdfContainer.innerHTML += `
+                    <div style="margin-bottom:30px; page-break-inside:avoid;">
+                        <h2 style="color:#0A0A0A; font-size:20px; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #F5B400; font-weight:800;">
+                            ${title}: ${ch.title}
+                        </h2>
+                        <div style="line-height:2; font-size:15px; color:#333; text-align:justify;">${content}</div>
+                    </div>
+                `;
+            });
+
+            pdfContainer.innerHTML += `
+                <div style="text-align:center; color:#999; font-size:12px; margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+                    جميع الحقوق محفوظة &copy; 2026 عدسة الروايات<br>
+                    برمجة وتطوير: بهاء الدين الحسين - 0982520358
+                </div>
+            `;
+
+            document.body.appendChild(pdfContainer);
+
+            const opt = {
+                margin: [15, 15, 15, 15],
+                filename: 'اللقاء_في_الظلام_عدسة_الروايات.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf().set(opt).from(pdfContainer).save().then(() => {
+                document.body.removeChild(pdfContainer);
+                btn.classList.remove('loading');
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل الرواية PDF</span>';
+            }).catch(() => {
+                document.body.removeChild(pdfContainer);
+                btn.classList.remove('loading');
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل الرواية PDF</span>';
+                alert('حدث خطأ أثناء التحميل');
+            });
+        });
+
+        renderChapters();
+    </script>
+<script> window.chtlConfig = { chatbotId: "4317194458" } </script>
+<script async data-id="4317194458" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!-- ============================================================
      FILE: novels.html (عدسة الروايات - قسم الروايات)
+     VERSION: 2.1 - مربوطة بـ Supabase + رواية اللقاء في الظلام
      ============================================================ -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -8,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>الروايات - عدسة الروايات | LENS OF NOVELS</title>
     <meta name="description" content="استكشف مجموعة رواياتنا العربية المميزة - عدسة الروايات" />
-    <meta name="keywords" content="روايات, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, عدسة الروايات" />
+    <meta name="keywords" content="روايات, سكاي لاين, الأماكن, ماذا لو ما كانت الحرب, اللقاء في الظلام, عدسة الروايات" />
     <meta name="author" content="عدسة الروايات" />
     <meta property="og:title" content="الروايات - عدسة الروايات" />
     <meta property="og:type" content="website" />
@@ -478,6 +479,16 @@
             overflow: hidden;
         }
 
+        .novel-card .body .description {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
         .novel-card .body .meta {
             display: flex;
             gap: 10px;
@@ -485,13 +496,14 @@
             color: var(--text-muted);
             font-weight: 600;
             flex-wrap: wrap;
+            margin-top: auto;
         }
 
         .novel-card .body .meta span { display: flex; align-items: center; gap: 4px; }
 
         .novel-card .body .meta i { color: var(--gold); font-size: 10px; }
 
-        /* EMPTY STATE */
+        /* EMPTY & LOADING */
         .empty-state {
             grid-column: 1 / -1;
             text-align: center;
@@ -505,6 +517,27 @@
         .empty-state i { font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 16px; display: block; }
 
         .empty-state p { font-size: 14px; }
+
+        .loading-skeleton {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .skeleton-card {
+            height: 220px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-hover) 50%, var(--bg-card) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border: 1px solid var(--border);
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
 
         /* FOOTER */
         .footer {
@@ -586,6 +619,7 @@
             .filter-group { padding: 0; }
             .novels-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
             .novel-card .body h3 { font-size: 16px; }
+            .loading-skeleton { grid-template-columns: repeat(3, 1fr); }
             .footer-bottom { flex-direction: row; justify-content: space-between; text-align: right; padding-top: 20px; }
         }
 
@@ -607,6 +641,7 @@
 
         @media (min-width: 1200px) {
             .novels-grid { grid-template-columns: repeat(4, 1fr); }
+            .loading-skeleton { grid-template-columns: repeat(4, 1fr); }
         }
 
         @media (max-width: 479px) {
@@ -627,6 +662,7 @@
             .novels-grid { gap: 12px; padding-bottom: 40px; }
             .novel-card .body { padding: 12px 10px; gap: 6px; }
             .novel-card .body h3 { font-size: 13px; }
+            .novel-card .body .description { font-size: 11px; }
             .novel-card .body .meta { font-size: 10px; gap: 8px; }
             .novel-card .cover .category-tag { font-size: 9px; padding: 3px 10px; top: 8px; right: 8px; }
             .footer { margin-top: 30px; padding: 30px 0 20px; }
@@ -764,12 +800,16 @@
                 </div>
                 <div class="filter-group" id="filterGroup">
                     <button class="filter-btn active" data-filter="all">الكل</button>
-                    <button class="filter-btn" data-filter="رومانسية">💕 رومانسية</button>
-                    <button class="filter-btn" data-filter="اجتماعية">🏙️ اجتماعية</button>
                 </div>
             </div>
 
-            <div class="novels-grid" id="novelsGrid"></div>
+            <div class="novels-grid" id="novelsGrid">
+                <div class="loading-skeleton">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -804,8 +844,16 @@
         </div>
     </footer>
 
+    <!-- ============================================================
+         سكربت Supabase
+         ============================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+
     <script>
-        // SIDEBAR
+        // ============================================================
+        //  SIDEBAR
+        // ============================================================
         (function() {
             const menuBtn = document.getElementById('menuBtn');
             const sidebar = document.getElementById('sidebar');
@@ -828,46 +876,72 @@
             sidebarOverlay.addEventListener('click', closeSidebar);
         })();
 
-        // DATA
-        const novels = [
+        // ============================================================
+        //  بيانات احتياطية (Fallback) — 4 روايات
+        // ============================================================
+        const FALLBACK_NOVELS = [
             {
                 id: 'skylane',
                 title: 'سكاي لاين',
-                category: 'رومانسية',
-                chapters: 19,
-                image: 'skylane.jpg',
                 description: 'قصة حب بين أستاذ وطالبة في وادي الياسمين.',
+                cover_url: 'skylane.jpg',
                 file: 'skylane.html'
             },
             {
                 id: 'places',
                 title: 'الأماكن',
-                category: 'رومانسية',
-                chapters: 13,
-                image: 'places.jpg',
                 description: 'أربع سنوات من الوفاء والانتظار.',
+                cover_url: 'places.jpg',
                 file: 'places.html'
             },
             {
                 id: 'what-if-war',
                 title: 'ماذا لو ما كانت الحرب؟',
-                category: 'اجتماعية',
-                chapters: 10,
-                image: 'what-if-war.jpg',
                 description: 'رواية تأملية عن النزوح والفقد والأمل.',
+                cover_url: 'what-if-war.jpg',
                 file: 'what-if-war.html'
+            },
+            {
+                id: 'meeting-in-darkness',
+                title: 'بين رصاصتين',
+                description: 'رواية إثارة وتشويق عن عالم الظل والخيانة.',
+                cover_url: 'بين رصاصتين.jpg',
+                file: 'meeting-in-darkness.html'
             }
         ];
 
-        const grid = document.getElementById('novelsGrid');
-        const searchInput = document.getElementById('searchInput');
+        // ============================================================
+        //  خريطة ربط ملفات الروايات (بحسب الـ title)
+        //  ⚠️ الأسماء يجب أن تكون مطابقة تماماً لِـ Supabase
+        // ============================================================
+        const NOVEL_FILE_MAP = {
+            'سكاي لاين': 'skylane.html',
+            'الأماكن': 'places.html',
+            'ماذا لو ما كانت الحرب؟': 'what-if-war.html',
+            'اللقاء في الظلام': 'meeting-in-darkness.html'
+        };
+
+        // ============================================================
+        //  الحالة العامة
+        // ============================================================
+        let allNovels = [];
         let activeFilter = 'all';
 
+        const grid = document.getElementById('novelsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const filterGroup = document.getElementById('filterGroup');
+
+        // ============================================================
+        //  عرض الروايات
+        // ============================================================
         function render() {
             const query = searchInput.value.trim().toLowerCase();
-            const filtered = novels.filter(n => {
-                const matchFilter = activeFilter === 'all' || n.category === activeFilter;
-                const matchSearch = n.title.includes(query) || n.category.includes(query) || n.description.includes(query);
+
+            const filtered = allNovels.filter(n => {
+                const matchFilter = activeFilter === 'all';
+                const title = (n.title || '').toLowerCase();
+                const desc = (n.description || '').toLowerCase();
+                const matchSearch = !query || title.includes(query) || desc.includes(query);
                 return matchFilter && matchSearch;
             });
 
@@ -881,36 +955,67 @@
                 return;
             }
 
-            grid.innerHTML = filtered.map(n => `
-                <a href="${n.file}" class="novel-card">
-                    <div class="cover">
-                        <img src="${n.image}" alt="غلاف ${n.title}" loading="lazy" onerror="this.style.display='none'" />
-                        <span class="category-tag">${n.category}</span>
-                    </div>
-                    <div class="body">
-                        <h3>${n.title}</h3>
-                        <div class="meta">
-                            <span><i class="fas fa-book"></i> ${n.chapters} فصل</span>
-                            <span><i class="fas fa-tag"></i> ${n.category}</span>
+            grid.innerHTML = filtered.map(n => {
+                const fileUrl = n.file || NOVEL_FILE_MAP[n.title] || '#';
+                const cover = n.cover_url || 'logo.jpeg';
+                const desc = n.description || '';
+
+                return `
+                    <a href="${fileUrl}" class="novel-card">
+                        <div class="cover">
+                            <img src="${cover}" alt="غلاف ${n.title}" loading="lazy" onerror="this.src='logo.jpeg'" />
+                            <span class="category-tag">رواية</span>
                         </div>
-                    </div>
-                </a>
-            `).join('');
+                        <div class="body">
+                            <h3>${n.title}</h3>
+                            ${desc ? `<p class="description">${desc}</p>` : ''}
+                            <div class="meta">
+                                <span><i class="fas fa-book-open"></i> اقرأ الآن</span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }).join('');
         }
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                activeFilter = this.dataset.filter;
-                render();
-            });
-        });
-
+        // ============================================================
+        //  البحث
+        // ============================================================
         searchInput.addEventListener('input', render);
-        render();
+
+        // ============================================================
+        //  التحميل الرئيسي
+        // ============================================================
+        (async function loadNovels() {
+            try {
+                const novels = await fetchNovels();
+
+                if (novels !== null) {
+                    // نجح الجلب من Supabase
+                    allNovels = novels;
+                } else {
+                    // فشل — نستخدم Fallback
+                    console.warn('[Novels] استخدام البيانات الاحتياطية');
+                    allNovels = FALLBACK_NOVELS;
+                    if (typeof showToast === 'function') {
+                        showToast('يتم عرض نسخة محفوظة من المحتوى', 'info', 4000);
+                    }
+                }
+
+                render();
+
+            } catch (err) {
+                console.error('[Novels] خطأ عام:', err);
+                allNovels = FALLBACK_NOVELS;
+                render();
+                if (typeof showToast === 'function') {
+                    showToast('يتم عرض نسخة محفوظة من المحتوى', 'info', 4000);
+                }
+            }
+        })();
     </script>
-<script> window.chtlConfig = { chatbotId: "4317194458" } </script>
-<script async data-id="4317194458" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+
+    <script> window.chtlConfig = { chatbotId: "4317194458" } </script>
+    <script async data-id="4317194458" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 </body>
 </html>
