@@ -1,0 +1,2338 @@
+<!-- ============================================================
+     FILE: daughter-of-sun.html (عدسة الروايات - ابنة الشمس)
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>ابنة الشمس - عدسة الروايات | LENS OF NOVELS</title>
+    <meta name="description" content="رواية ابنة الشمس - قصة خيالية عن فتاة من نار الشمس ورجل من طين الأرض | عدسة الروايات" />
+    <meta name="keywords" content="ابنة الشمس, رواية خيالية, عدسة الروايات, رواية رومانسية, فانتازيا" />
+    <meta name="author" content="عدسة الروايات" />
+    <meta property="og:title" content="ابنة الشمس - عدسة الروايات" />
+    <meta property="og:description" content="قصة خيالية عن فتاة من نار الشمس ورجل من طين الأرض" />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://bahaa90231-art.github.io/-6575/daughter-of-sun.html" />
+    <link rel="icon" type="image/jpeg" href="logo.jpeg" />
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg" />
+    <link rel="apple-touch-icon" href="logo.jpeg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0A0A0A;
+            --bg-secondary: #111111;
+            --bg-card: #161616;
+            --bg-hover: #1F1F1F;
+            --gold: #F5B400;
+            --gold-light: #FFC933;
+            --gold-dark: #D49400;
+            --gold-glow: rgba(245, 180, 0, 0.15);
+            --text: #FFFFFF;
+            --text-secondary: #B8B8B8;
+            --text-muted: #7A7A7A;
+            --border: rgba(245, 180, 0, 0.12);
+            --border-hover: rgba(245, 180, 0, 0.3);
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+            --shadow-gold: 0 8px 24px rgba(245, 180, 0, 0.25);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 0;
+            min-height: 70px;
+        }
+
+        .menu-btn {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 22px;
+            transition: all var(--transition);
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+        }
+
+        .menu-btn:active { background: var(--bg-hover); }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            flex: 1;
+            justify-content: center;
+        }
+
+        .header-brand .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px var(--gold-glow);
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .header-brand .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .header-brand .brand-text { display: flex; flex-direction: column; line-height: 1.15; text-align: center; }
+
+        .header-brand .brand-text .name { font-weight: 800; font-size: 17px; color: var(--gold); letter-spacing: -0.01em; }
+
+        .header-brand .brand-text .tag { font-size: 9px; color: var(--text-muted); font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+
+        .header-spacer { width: 42px; flex-shrink: 0; }
+
+        .sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition);
+        }
+
+        .sidebar-overlay.active { opacity: 1; visibility: visible; }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border);
+            z-index: 999;
+            transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar.active { right: 0; box-shadow: -20px 0 60px rgba(0, 0, 0, 0.7); }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-header .logo-mini { display: flex; align-items: center; gap: 10px; }
+
+        .sidebar-header .logo-mini .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-header .logo-mini .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .sidebar-header .logo-mini .text { display: flex; flex-direction: column; }
+
+        .sidebar-header .logo-mini .text .name { font-size: 15px; font-weight: 800; color: var(--gold); }
+
+        .sidebar-header .logo-mini .text .sub { font-size: 9px; color: var(--text-muted); letter-spacing: 2px; }
+
+        .sidebar-close {
+            width: 36px;
+            height: 36px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            font-size: 14px;
+        }
+
+        .sidebar-close:hover { background: var(--bg-hover); color: var(--gold); border-color: var(--border-hover); }
+
+        .sidebar-nav { padding: 16px 0; flex: 1; }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 24px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all var(--transition);
+            border-right: 3px solid transparent;
+        }
+
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            color: var(--gold);
+            background: var(--bg-hover);
+            border-right-color: var(--gold);
+        }
+
+        .sidebar-nav a i { width: 22px; font-size: 17px; text-align: center; color: var(--text-muted); transition: color var(--transition); }
+
+        .sidebar-nav a:hover i, .sidebar-nav a.active i { color: var(--gold); }
+
+        .sidebar-footer {
+            padding: 20px 24px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .sidebar-footer .dev { color: var(--gold); font-weight: 700; }
+
+        .back-link-wrapper { padding: 20px 0 0; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        .back-link:active { transform: scale(0.96); }
+
+        .back-link i { color: var(--gold); font-size: 12px; }
+
+        .hero { padding: 30px 0 30px; position: relative; }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 0%, var(--gold-glow), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .hero-cover {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .hero-cover::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+            pointer-events: none;
+        }
+
+        .hero-text .novel-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(245, 180, 0, 0.08);
+            border: 1px solid rgba(245, 180, 0, 0.25);
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(28px, 6vw, 52px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+            background: linear-gradient(180deg, var(--text) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .hero-meta span { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+
+        .hero-meta i { color: var(--gold); }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #0A0A0A;
+            border: none;
+            border-radius: 100px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-gold);
+            width: 100%;
+        }
+
+        .btn-pdf:active { transform: scale(0.97); }
+
+        .btn-pdf.loading { opacity: 0.7; pointer-events: none; }
+        .btn-pdf.loading i { animation: spin 1s linear infinite; }
+
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .chapters-section { padding: 24px 0 60px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .section-header .title-group { display: flex; align-items: center; gap: 12px; }
+
+        .section-header .title-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(245, 180, 0, 0.08);
+            border: 1px solid rgba(245, 180, 0, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .section-header h2 {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .section-header .count { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+        .chapters-grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .chapter-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 12px;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .chapter-card:active {
+            transform: scale(0.97);
+            background: var(--bg-hover);
+            border-color: var(--border-hover);
+        }
+
+        .chapter-card .num {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .chapter-card .title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .chapter-card .arrow {
+            font-size: 11px;
+            color: var(--text-muted);
+            transition: all var(--transition);
+            margin-top: 2px;
+        }
+
+        .chapter-view {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--bg);
+            overflow-y: auto;
+            padding: 16px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .chapter-view.active { display: block; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chapter-view-inner { max-width: 800px; margin: 0 auto; }
+
+        .chapter-view-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 12px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 10;
+        }
+
+        .chapter-view-header .title-info { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+
+        .chapter-view-header .ch-num {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(245, 180, 0, 0.1);
+            color: var(--gold);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+            align-self: flex-start;
+        }
+
+        .chapter-view-header .ch-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn-close {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 8px 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            flex-shrink: 0;
+        }
+
+        .btn-close:active { transform: scale(0.95); }
+
+        .chapter-body {
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text);
+            padding-bottom: 60px;
+        }
+
+        .chapter-body p { margin-bottom: 1.2rem; }
+
+        .chapter-body .first-letter {
+            font-size: 2.8rem;
+            font-weight: 900;
+            float: right;
+            margin-left: 10px;
+            margin-top: 4px;
+            color: var(--gold);
+            line-height: 0.9;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 40px 0 24px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand { text-align: center; margin-bottom: 24px; }
+
+        .footer-brand .logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 30px var(--gold-glow);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-brand .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+        }
+
+        .footer-brand .name { font-size: 18px; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+
+        .footer-brand .sub { font-size: 10px; color: var(--text-muted); letter-spacing: 4px; text-transform: uppercase; }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 20px;
+            margin-bottom: 24px;
+            padding: 0 16px;
+        }
+
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 4px; transition: color var(--transition); }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .footer-bottom .author { color: var(--gold); font-weight: 700; }
+        .footer-bottom .dev { color: var(--text-secondary); font-weight: 600; }
+        .footer-bottom .phone { direction: ltr; color: var(--gold); font-weight: 700; }
+
+        @media (min-width: 600px) {
+            .container { padding: 0 28px; }
+            .hero { padding: 40px 0; }
+            .hero-content { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .hero-text h1 { font-size: 44px; }
+            .hero-text p { font-size: 15px; }
+            .btn-pdf { width: auto; padding: 14px 28px; }
+            .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+            .chapter-card { padding: 16px 14px; }
+            .chapter-card .num { font-size: 22px; }
+            .chapter-card .title { font-size: 13px; }
+            .chapter-view { padding: 24px; }
+            .chapter-body { font-size: 17px; }
+            .chapter-view-header { padding: 16px 0; margin-bottom: 28px; }
+            .chapter-view-header .ch-title { font-size: 17px; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; text-align: right; padding-top: 20px; }
+        }
+
+        @media (min-width: 900px) {
+            .header-inner { padding: 16px 0; }
+            .menu-btn, .header-spacer { width: 46px; height: 46px; }
+            .header-brand .logo { width: 50px; height: 50px; }
+            .header-brand .brand-text .name { font-size: 19px; }
+            .header-brand .brand-text .tag { font-size: 10px; }
+            .hero { padding: 60px 0; }
+            .hero-text h1 { font-size: 52px; }
+            .hero-text p { font-size: 16px; }
+            .chapter-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--border-hover);
+                box-shadow: var(--shadow);
+            }
+            .chapter-card:hover .arrow {
+                transform: translateX(-4px);
+                color: var(--gold);
+            }
+            .btn-pdf:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 32px rgba(245, 180, 0, 0.4);
+            }
+        }
+
+        @media (max-width: 479px) {
+            .container { padding: 0 16px; }
+            .header-inner { padding: 10px 0; min-height: 62px; gap: 10px; }
+            .menu-btn, .header-spacer { width: 38px; height: 38px; }
+            .header-brand .logo { width: 40px; height: 40px; }
+            .header-brand .brand-text .name { font-size: 15px; }
+            .header-brand .brand-text .tag { font-size: 8px; letter-spacing: 2px; }
+            .back-link-wrapper { padding: 14px 0 0; }
+            .back-link { font-size: 12px; padding: 7px 14px; }
+            .hero { padding: 24px 0 20px; }
+            .hero-content { gap: 20px; }
+            .hero-text h1 { font-size: 30px; }
+            .hero-text p { font-size: 13px; }
+            .hero-meta { font-size: 11px; gap: 12px; }
+            .btn-pdf { padding: 13px 22px; font-size: 13px; }
+            .chapters-section { padding: 20px 0 40px; }
+            .section-header .title-icon { width: 36px; height: 36px; font-size: 15px; }
+            .section-header h2 { font-size: 18px; }
+            .chapters-grid { gap: 10px; }
+            .chapter-card { padding: 14px 12px; }
+            .chapter-card .num { font-size: 20px; }
+            .chapter-card .title { font-size: 12px; }
+            .chapter-view { padding: 14px; }
+            .chapter-view-header { padding: 10px 0; margin-bottom: 18px; }
+            .chapter-view-header .ch-title { font-size: 13px; }
+            .chapter-body { font-size: 15px; line-height: 1.9; }
+            .chapter-body .first-letter { font-size: 2.4rem; }
+            .btn-close span { display: none; }
+            .footer { margin-top: 30px; padding: 30px 0 20px; }
+            .footer-brand .logo { width: 60px; height: 60px; }
+            .footer-brand .name { font-size: 16px; }
+            .footer-links { gap: 6px 16px; margin-bottom: 18px; }
+            .footer-links a { font-size: 12px; }
+        }
+
+        @media (max-width: 374px) {
+            .container { padding: 0 12px; }
+            .header-inner { padding: 8px 0; min-height: 56px; gap: 8px; }
+            .menu-btn, .header-spacer { width: 36px; height: 36px; font-size: 18px; }
+            .header-brand .logo { width: 36px; height: 36px; }
+            .header-brand .brand-text .name { font-size: 14px; }
+            .header-brand .brand-text .tag { font-size: 7px; letter-spacing: 1.5px; }
+            .back-link { font-size: 11px; padding: 6px 12px; }
+            .hero { padding: 20px 0 16px; }
+            .hero-text h1 { font-size: 26px; }
+            .hero-text p { font-size: 12px; }
+            .hero-meta { font-size: 10px; gap: 10px; }
+            .btn-pdf { padding: 12px 18px; font-size: 12px; }
+            .section-header .title-icon { width: 32px; height: 32px; font-size: 13px; }
+            .section-header h2 { font-size: 16px; }
+            .chapters-grid { gap: 8px; }
+            .chapter-card { padding: 12px 10px; }
+            .chapter-card .num { font-size: 18px; }
+            .chapter-card .title { font-size: 11px; }
+            .chapter-view { padding: 12px; }
+            .chapter-view-header .ch-title { font-size: 12px; }
+            .chapter-body { font-size: 14px; line-height: 1.85; }
+            .chapter-body .first-letter { font-size: 2.2rem; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .chapter-card:hover { transform: none; border-color: var(--border); box-shadow: none; }
+            .chapter-card:hover .arrow { transform: none; color: var(--text-muted); }
+            .btn-pdf:hover { transform: none; }
+            .sidebar-nav a:hover { background: transparent; color: var(--text-secondary); border-right-color: transparent; }
+            .sidebar-nav a.active { background: var(--bg-hover); color: var(--gold); border-right-color: var(--gold); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <button class="menu-btn" id="menuBtn" aria-label="القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a href="index.html" class="header-brand">
+                    <div class="logo">
+                        <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);\'></i>';" />
+                    </div>
+                    <div class="brand-text">
+                        <span class="name">عدسة الروايات</span>
+                        <span class="tag">LENS OF NOVELS</span>
+                    </div>
+                </a>
+
+                <div class="header-spacer"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-mini">
+                <div class="icon">
+                    <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);\'></i>';" />
+                </div>
+                <div class="text">
+                    <span class="name">عدسة الروايات</span>
+                    <span class="sub">LENS OF NOVELS</span>
+                </div>
+            </div>
+            <button class="sidebar-close" id="sidebarClose" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>الصفحة الرئيسية</span>
+            </a>
+            <a href="novels.html" class="active">
+                <i class="fas fa-book"></i>
+                <span>الروايات</span>
+            </a>
+            <a href="episodes.html">
+                <i class="fas fa-film"></i>
+                <span>الحلقات والفيديوهات</span>
+            </a>
+            <a href="announcements.html">
+                <i class="fas fa-bullhorn"></i>
+                <span>الإعلانات</span>
+            </a>
+            <a href="about.html">
+                <i class="fas fa-users"></i>
+                <span>عن الفريق</span>
+            </a>
+            <a href="contact.html">
+                <i class="fas fa-envelope"></i>
+                <span>تواصل معنا</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div>جميع الحقوق محفوظة &copy; 2026</div>
+            <div class="dev">بهاء الدين الحسين</div>
+            <div style="direction: ltr;">0982520358</div>
+        </div>
+    </aside>
+
+    <!-- BACK LINK -->
+    <div class="container">
+        <div class="back-link-wrapper">
+            <a href="novels.html" class="back-link">
+                <i class="fas fa-arrow-right"></i>
+                <span>العودة للروايات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-cover">
+                    <img src="ابنة الشمس.jpeg" alt="غلاف ابنة الشمس" onerror="this.style.display='none'" />
+                </div>
+                <div class="hero-text">
+                    <span class="novel-tag">
+                        <i class="fas fa-sun"></i>
+                        رواية خيالية
+                    </span>
+                    <h1>ابنة الشمس</h1>
+                    <p>
+                        قصة خيالية عن فتاة وُلدت من نار الشمس، ورجل من طين الأرض.
+                        رحلة بين عالمين، بين النور والظل، بين الحب والقدر.
+                    </p>
+                    <div class="hero-meta">
+                        <span><i class="fas fa-book"></i> 14 فصلاً</span>
+                        <span><i class="fas fa-clock"></i> قراءة ساعتين</span>
+                    </div>
+                    <button class="btn-pdf" id="downloadPdfBtn">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>تحميل الرواية PDF</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTERS -->
+    <section class="chapters-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="title-group">
+                    <div class="title-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h2>الفصول</h2>
+                </div>
+                <span class="count">14 فصلاً</span>
+            </div>
+            <div class="chapters-grid" id="chaptersGrid"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo.jpeg" alt="عدسة الروايات" onerror="this.parentElement.innerHTML='<i class=\'fas fa-eye\' style=\'color:var(--gold);font-size:28px;\'></i>';" />
+                </div>
+                <div class="name">عدسة الروايات</div>
+                <div class="sub">LENS OF NOVELS</div>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="novels.html">الروايات</a>
+                <a href="episodes.html">الحلقات</a>
+                <a href="announcements.html">الإعلانات</a>
+                <a href="about.html">عن الفريق</a>
+                <a href="contact.html">تواصل معنا</a>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    ❤️ جميع الحقوق محفوظة &copy; 2026 <span class="author">عدسة الروايات</span>
+                </div>
+                <div>
+                    🔧 برمجة وتطوير: <span class="dev">بهاء الدين الحسين</span> | <span class="phone">0982520358</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAPTER VIEW -->
+    <div class="chapter-view" id="chapterView">
+        <div class="chapter-view-inner">
+            <div class="chapter-view-header">
+                <div class="title-info">
+                    <span class="ch-num" id="viewNum">الفصل 1</span>
+                    <span class="ch-title" id="viewTitle">عنوان الفصل</span>
+                </div>
+                <button class="btn-close" onclick="closeChapter()">
+                    <i class="fas fa-times"></i>
+                    <span>إغلاق</span>
+                </button>
+            </div>
+            <div class="chapter-body" id="viewBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // SIDEBAR
+        (function() {
+            const menuBtn = document.getElementById('menuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarClose = document.getElementById('sidebarClose');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            menuBtn.addEventListener('click', openSidebar);
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
+        })();
+
+        // DATA - فصول ابنة الشمس
+        const chapters = [
+            {
+                id: 0,
+                title: 'المقدمة',
+                content: `في عالمين مختلفين، بين نار لا تنطفئ وطين لا يُحرق، تُولد الحكايات التي لا يرويها أحد.
+
+هذه ليست قصة عادية. هذه قصة فتاة وُلدت من نواة الشمس، ورجل عاش بين الورود والكتب. قصة التقاء النار بالطين، والضوء بالظل، والقدر بالإرادة.
+
+في هذه الصفحات، ستكتشفون أن الحب لا يعترف بالحدود، وأن الحقيقة قد تكون أثقل من الأسطورة، وأن بعض القلوب تحمل شموساً كاملة بداخلها.
+
+هذه رواية "ابنة الشمس".`
+            },
+            {
+                id: 1,
+                title: 'الفصل الأول: بين صفوف بستان الورد',
+                content: `كانت الشمس تميل نحو الغروب، والسماء تكتسي بلون برتقالي مائل. حين دخل آدم حقل الورود كعادته، يبحث عن أزهار نادرة لا تحترق.
+
+لكن توقف فجأة… هناك، بين صفوف الزنابق البيضاء والورود الحمراء، كانت تقف فتاة. كأنها وُلدت من الضوء ذاته. كان شعرها الأحمر يتألق تحت أشعة الشمس الأخيرة، وثوبها الأبيض يرقص مع الريح بهدوء. كان الهواء يتردد في لمسها، كأنها لا تمشي… بل تنحني الأرض تحت خطواتها.
+
+نظر إليها بتوتر وتقدم خطوة، قائلاً: "هل ضللت الطريق؟ ماذا تفعلين هنا؟"
+
+رفعت رأسها نحوه ببطء، وحدّقت فيه بتلك النظرة الغريبة. نظرة لا تنتمي لهذا العالم.
+
+"لستُ ضائعة. بل هذه الأرض هي الغريبة عني."
+
+انعقد حاجباه وتراجع خطوة: "ما الذي تقصدينه؟ من أين أنت؟"
+
+سكتت لحظة، ثم همست: "من الشمس."
+
+همَّ بتوتر قائلاً: "أي شمس؟ الشمس؟"
+
+قالت بثقة: "الشمس التي تستيقظون عليها كل يوم دون أن تتساءلوا ممَّ صُنعت… أنا منها. من نورها خُلقتُ وعشتُ فيها."
+
+ابتسم بارتباك وضحك بخفة: "مزحة لطيفة جداً؟ من أين أنت؟ يبدو أنك فقدت ذاكرتك أو شيئاً من هذا القبيل."
+
+اقتربت منه حتى بات عبقها بينهما، وقالت بصوت خافت: "لستُ أمزح، آدم. ألا ترى؟ وجهي وشعري وعيناي كلي نار مغلفة بشكل بشري. أنا لست واحدة منكم."
+
+تجمّد في مكانه، وقد شحب وجهه، ثم قال: "انتظري كيف عرفتِ اسمي؟!"
+
+أشارت بنظرها إلى البطاقة الصغيرة المثبتة على صدره، وقد كُتب عليها بخط أنيق: "د. آدم الرفاعي – باحث في علم النباتات والزهور."
+
+ابتسمت ابتسامة خفيفة، وقالت: "لستِ مجنونة اسميتني كأنك تحمل اسمك على صدرك كتعويذة."
+
+رمش سريعاً، ثم تمتم: "هذا كثير… كل هذا غير منطقي."
+
+مدت يدها ولمسته بخفة، وفجأة، ارتجف جسده وكأن فكرة خفية في عقله انكشفت. "ما الذي فعلته؟!"
+
+"أفكارك… كانت تصرخ… شكك وخوفك وفضولك… سمعتُها كلها. أحب لا الكذب، وأن أخفي حقيقتي عنك… آدم…"
+
+قال آدم بخوف طفيف: "لكن هذا… هذا ليس طبيعياً!"
+
+قالت: "أنا، والآدم يا…"
+
+جلس آدم على حافة الساقية الصغيرة، يحدّق في الماء الجاري أمامه. يداه متشابكتان، أنفاسه مضطربة، ونبض قلبه يطرق كأنما حقاً يراه أن حارّة بقبضات صدره.
+
+"ما الذي حدث؟ من تلك الفتاة؟ هل أنا أتوهم؟ هل تكون من…"`
+            },
+            {
+                id: 2,
+                title: 'الفصل الثاني: أساعده... أم لا؟',
+                content: `كان آدم يسير بسرعة عائداً نحو سيارته محاولاً إقناع نفسه أن ما رآه لم يكن سوى تهيؤات….
+
+لكن صوتاً ناعماً أوقفه: "آدم، انتظر!"
+
+استدار فوجدها خلفه… وقفت في وسط الحقل والشمس تغيب خلفها كأنها جزء من الضوء ذاته.
+
+"آت لم ألخيفك… ولا لأزرع الوهم في رأسك. أتيتُ لأنني أحتاج مساعدتك."
+
+قال باستغراب: "بعد كل هذا الجنون! تطلبين مساعدتي! أنت تقولين أنك من الشمس! ما يعنيه هذا؟"
+
+سارت نحوه بخطى هادئة ووقفت أمامه مباشرة، ثم همست: "سأخبرك كل شيء… لكن دعني أريك أولاً."
+
+رفعت كفّها بهدوء نحو وردة ذابلة بجانبها ولمستها بأطراف أصابعها. وفي ثوان، بدأت الأوراق تنبض بلون حي، تتفتح، تعود إلى الحياة.
+
+شهق آدم، ثم تراجع خطوة: "ما… ما هذا؟"
+
+"ما أفعله ليس سحراً… إنه جزء مني. طاقة الشمس… التي لا تفنى بداخلي. أنا روسيل… وُلدت من لهب نقي في قبيلة نارية تعيش في نواة الشمس."
+
+نظرت إليه بعينين تشتعلان بالصدق، وقالت: "أنا روسيل… وُلدت في قبيلة نارية تعيش في نواة الشمس. نحن قلّة، وكل واحد منا خُلق لهدف. لا يُسمح لنا بمغادرة عالمنا إلا لأسباب عظيمة."
+
+قال بنبرة من الاستغراب: "ولماذا أتيت؟"
+
+رفعت بصرها إليه ببطء، ثم نظرت إلى الأرض للحظة: "أرسلتني قبيلتي لأبحث عن شيء فُقد منذ آلاف السنين. شيء لم يُستعد بعد. ولا أعرف بالضبط ما هو أملك. إشارات. فقط… صور ورموز نبوءة قديمة. سيختل التوازن بين عالمنا وعالَمكم."
+
+ثم صمتت، وتابعت: "سقوط النيزك الذي رأيته قبل أسبوع… لم يكن نيزكاً فقط. كنتُ أنا. دخلتُ غلافكم الجوي كجسد من نار، وسقطتُ في أرض خالية لا بشر… لا صوت ولا دفء."
+
+تنفست بعمق وكأنها تسترجع الألم: "مكثتُ هناك ساعات حتى شعرت بشيء يهمس لي: عبير العطرات. تابعتُ طريقي فسرتُ عبر الأشجار والمزارع والحقول حتى أوصلتني الرائحة… إلى هنا. إلى بستانك. إلى زهورك. إلى أنت."
+
+نظر آدم إليها مذهولاً، صامتاً بين تصديق وإنكار: "ولم أنا؟"
+
+"لأنك الأقرب لهذا الشيء المفقود… ليس جسدياً بل روحياً. شيء ما بداخلك مربوط به. لا تسألني كيف… أنا نفسي لا أعلم."
+
+اقتربت منه خطوة وأمسكت يده بلطف: "أنا لا أطلب أن تصدّقني فوراً… فقط ساعدني. أعطني فرصة لأُثبت لك أنني لا أكذب."
+
+حدّق في عينيها… شيء انهار فيه وشيء عاشه طوال حياته… العالم الذي بل الخوف من الإيمان بأن كان. بل من لم يكن…`
+            },
+            {
+                id: 3,
+                title: 'الفصل الثالث: الليان',
+                content: `في عمق نواة الشمس، حيث ألسنة اللهب تتراقص بلا توقف، اجتمعت قبيلة الليان في قاعة مظلمة تحيط بها جدران من الضوء المتقد.
+
+وقف "كاسان" زعيم الجماعة المتشددة، وجهه قاس، وعيناه تحترقان بالغضب والقلق.
+
+قال بصوت متهدج لكنه حازم: "إن روسيل تسير في طريق خطير يتعلق بالعالم الذي لا ينتمي إليه. إنها ستصبح واحدة منهم… ستفقد نفسها، وستفقد طهرها ونقاءها."
+
+تداخلت همسات الغضب بين الحضور، ورفعت "ليانا" صوتها مهددة: "لقد تحولت عيونها إلى لون البشر! هذا ليس مجرد تغيير جسدي… هذا تالش روحها. نحتاج لإرجاعها قبل فوات الأوان!"
+
+من زاوية القاعة، ارتفع صوت هادئ لكنه مليء بالعزم، كانت "ميرا" الحكيمة التي تؤمن بحرية روسيل واختيارها.
+
+"هل تظنون أن إرادتها لا تعني شيئاً؟ هل نسيت مهمتها للقبيلة ليست فقط للحفاظ على توازن الكون؟ بل فق…"
+
+رد كاسان، واضعاً كفّاه على قلبه وكأنه يشعر بألم كبير: "لكن ماذا لو فقدت توازنها في هذا العالم؟"
+
+"العودة القسرية لن تكون إلا موتاً رمزياً لها. هي الآن تبحث و تعلم… وتواج ت مصيرها بنفسها." قالت ميرا، وعيونها تلمع بحزن وأمل.
+
+سكت الجميع للحظة، وكأن اللهب نفسه ينتظر الرد.
+
+"لقد بدأ لون عينيها يتحول تدريجياً، وكل يوم يمر يزيد تعلقها بالأرض." أضاف كاسان بحزن.
+
+"هذه ليست مجرد رحلة عادية… هي صراع بين قوى لا نراها بين مقدر هو وحرية الاختيار." قالت ميرا.
+
+جلس كاسان على العرش، وقال بصوت أخير: "إذا خسرت قبيلتنا ابنة الشمس هذه… فسنخسر جزءاً من ذاتنا. لكن إن لم ترجع… قد تهلك كل شيء. الوقت ينفد… القرار بيدنا."
+
+هدأت القاعة، والوجوه محاطة بظلال النيران وكل قلب ينبض بخوف على مصير روسيل… ومصيرهم جميعاً.
+
+في هدوء غرفة صغيرة مليئة بألوان الزهور والشموع، جلست روسيل وحده. كانت تنظر إلى النافذة حيث تعانق أشعة الشمس خضرة الأرض. لكن قلبها كان مثقالاً بألم لا يوصف.
+
+فجأة اجتاحها وميض أزرق بارد وظهر أمامها في الهواء شبح غامض.
+
+"روسيل…"
+
+جاء صوت ميرا الحكيمة من قبيلتها، لكنه واضحاً بعيد.
+
+"الوقت ينفد… وابن الشمس. كاسان يصر على عودتك الفورية. ليس فقط خوفاً على روحك، بل خوفاً من أن تتالشى قوة القبيلة كلها."
+
+"أنا لا أريد العودة… لقد أعدت أن أنتمي إلى مكان لم أرغب في الرحيل منه."
+
+"لكن هل تدركين المخاطر؟ أن تعلقك بالأرض يضعفك، وأنه بمرور الوقت ستفقدين كل ما كنت عليه."
+
+انهارت دموع روسيل، وصرخت في الهواء: "لم أكن أختار شيئاً! جئتُ لأكمل مهمة ألبحث وألختار بين عالمين."
+
+قالت ميرا بنبرة حازمة: "اختيارك يا روسيل هو ما يحدد مصيرنا جميعاً…"
+
+ثم اختفى الصوت والوميض،
+
+جلست روسيل تستجمع قواها، عينيها ما زالت تحترقان بلون أحمر خافت.
+
+كانت تعلم أن ما تقرره الآن سيؤثر لن فقط عليها… بل على العالمين… الشمس والأرض.`
+            },
+            {
+                id: 4,
+                title: 'الفصل الرابع: حان الوقت',
+                content: `في قلب الغابة حيث تتشابك الأشجار كأذرع عمالقة، توقف آدم وروسيل. فجأة، خرجت مجموعة من الظلال، بينهم أفراد قبيلة الليان، وجوههم صارمة.
+
+قال كاسان بصرامة، وهو يتقدم: "لقد حان الوقت لتعودي روسيل!"
+
+ردت روسيل بصوت قوي: "لن أعود إلى قبيلتي حتى أجد ما نزلت من أجله!"
+
+فجأة، هبت رياح باردة، وظهرت أمامهم ألسنة من الظلام، كالعرق، تتلوى وتتحول إلى شكل ضبابي غامض.
+
+همس آدم، وقلبه ينبض بشدة: "ذاكرون!"
+
+ظهر الكيان ذاكرون بألوان متداخلة من الظلام والنور، وعيناه تتألألان كجمرين.
+
+"إنها ليست لعبة، الليان. أنت تحاولين تغيير القدر، لكنني سأمنع ذلك بأي ثمن."
+
+توقف الزمن للحظة، وبدأت الأرض تهتز تحت أقدامهم.
+
+"آدم، لا تنظر إلى هذا الكيان كعدو… إنه يعكس ما يمكن أن نكون… فقط إذا فقدنا التوازن." قالت روسيل بصوت متهدج.
+
+اشتعلت النيران في عيون قبيلة الليان، واستعدوا للمعركة، لكن روسيل رفعت يدها وأشارت إليهم بالتوقف.
+
+"لا يجب أن نحارب بعضنا… بعضنا يجب أن نجد الحل قبل أن تدمرنا ظلال ذاكرون."
+
+توت ر الموقف، والكل ينتظر الخطوة التالية التي قد تغي ر مصير الجميع.
+
+قال آدم، وبصوت ثابت، متحدياً الظلام: "سنقف معك، روسيل."
+
+انطلقت الثلاثة معاً نحو المجهول، حيث المواجهة مع الحقيقة بدأت للتو.`
+            },
+            {
+                id: 5,
+                title: 'الفصل الخامس: النيزك الغامض',
+                content: `بعد المعركة العنيفة تحت سماء ممطرة، جلس آدم وروسيل أمام النيزك المتوهج.
+
+كان حجمه صغيراً، لكنه ينبض كأنه قلب ينبض في صمت الكون.
+
+لمست روسيل سطحه البارد برفق، فانتشرت موجة من الضوء الذهبي. وانتعشت الأرض حولها بألوان غريبة لم ترها من قبل. عبر أصابعها،
+
+همس آدم: "هذا النيزك… يحمل بداخله ذاكرة الشمس نفسها." وهو يفحص نقشاً خفياً على سطحه.
+
+فتحت يدها، وظهر فجأة بريق يشبه الحبر السائل، فتحولت الرموز إلى أشكال متحركة أمام عينيهما. كلما
+
+"هل ترى؟ إنها خريطة… لكنها ليست مكاناً واحداً، بل عدة عوالم مترابطة." قالت روسيل بدهشة.
+
+أضاف آدم ببطء: "ربما هو مفتاح… للعودة أو لعالم جديد."
+
+بينما كانا يدرسان الرموز، هبت رياح غريبة، وبدأت تخرج من النيزك همسات خافتة وأصوات غريبة، وكأنها تحذرهم من خطر قادم.
+
+قال آدم بقلق: "يبدو أن هذه القوى ليست فقط للشفاء… بل أيضاً للحماية أو التدمير."
+
+قالت روسيل بنظرة حادة: "يجب أن نكون حذرين. هناك من يراقبنا."
+
+فجأة انفتح فجوة صغيرة على جانب النيزك، وبدأ يخرج منها ضوء، نابض كأنه ينبض بالحياة، ثم تبلورت صورة خافتة أمامهما.
+
+كانت صورة مدينة من ذهب، وشمس، وقبائل من كائنات نارية تعيش في ضوء والظلال، وأحدهم كان يشير إليهما.
+
+"هذا هو عالم قبيلتي… وشيء مفقود هناك." قالت روسيل بحزم.
+
+همس آدم وهو ينظر: "علينا أن نعود إلى هناك… إذا أردنا معرفة الحقيقة."
+
+ارتفعت الهالة حول النيزك، وبدأ يتوهج بشكل أقوى، وكأنها بداية رحلة جديدة لا تعرف نهايتها.
+
+وقف آدم وروسيل أمام النيزك الذي بدأ يفتح بوابة ضوئية تتوهج بلون الشمس، وكأنه يسحب الزمان والمكان معاً.
+
+نظرت روسيل إليه، وعيناها تحترقان بالصمت:
+
+"لن تتمكن من الدخول معي، آدم… أنت بشري. العالم الذي أتيت منه لا يتقبل من يحمل نواة الشمس في دمه."
+
+سأل آدم، محاولاً أن يخفي صوت انكساره: "إذن، لن أراك مجدداً؟"
+
+"تس راني… يوماً ما. حين تلمس الضوء من قلبك، حين تبحث عني لا عن الشمس، بل بعينك، بعلمك، بإيمانك بي."
+
+ثم همست، ومدت يدها ولمست وجهه برقة:
+
+"ابقَ كما أنت، لكن لا تتوقف عن النظر للسماء… ستجدني هناك دائماً."
+
+دخلت الضوء، والتف حولها النيزك كعباءة ذهبية، ثم اختفت في ومضة، وتركته واقفاً بين الورود والغياب.`
+            },
+            {
+                id: 6,
+                title: 'الفصل السادس: بعد خمس سنوات',
+                content: `مضت سنوات خمس. تغير كل شيء.
+
+صار آدم على جدران مكتبه صور النيازك وخرائط النجوم، وتملأ الغرف. صار يُلقَّب بـ"عاشق الشمس"، لا فقط لعلمه، بل لشغف لا يعرف مصدره.
+
+في إحدى الليالي الصيفية، كان يرصد السماء من التلسكوب الضخم، بينما في المرصد الجبلي، لمح وميضاً مألوفاً… أحمر ذهبي وميض وسقط السماء… شق!
+
+قاد سيارته مسرعاً إلى مكان سقوط النيزك.
+
+وقف يتأمّل البقعة، والريح تداعب شعره… وفجأة، ظهر silhouette أنثوي من بين الضباب والوهج.
+
+كانت تمشي بهدوء… شعر أحمر طويل، عيون بلون البندق أشرقت عند رؤيته.
+
+همس بصوت مرتجف: "روسيل… رو…؟"
+
+ابتسمت بخفة، واقتربت منه خطوة بخطوة.
+
+"وعدتك أن أعود… وأنت فقط من نظرت إلي كأنني بشرية، ولهذا عدت."
+
+لحظة صمت مليئة بذكريات الورد والضوء والوداع.
+
+"آدم، أنا بحاجة أن لك من جديد… من تُكتشف أسرار هناك في أعظم من الشمس وحدها."
+
+"وهذه المرة، لن أدعك ترحلين وحدك."
+
+ابتسمت، ورفع نظره للسماء، ثم لها…
+
+بدأت حياة جديدة من رحلتهما.`
+            },
+            {
+                id: 7,
+                title: 'الفصل السابع: البقاء... أم العودة؟',
+                content: `المرصد خالٍ إلا من صوت أجهزة المراقبة، وضوء النجوم ينساب من الليل هادئ.
+
+روسيل واقفة بجانب النافذة، تنظر إلى القمر، وعيناها تلمعان بنور خافت، وقلبها مشتعل وهج يشبه بهدوء.
+
+دخل آدم، يحمل بيده كوبين من الشاي. وضع أحدهما أمامها دون أن ينبس بكلمة، وجلس بجوارها بصمت.
+
+قالت وهي تنظر إلى وجهه المنعكس على زجاج النافذة: "لم تتغير كثيراً."
+
+"لكن تغيرت تماماً."
+
+التفتت إليه، لم تكن كلماته اتهاماً، بل وصفاً لشيء من فقط يعرفه كان.
+
+"غيرتني… الغربة والاشتياق. في شمسي أشعر أكن لم بالوقت، أما هنا كل ثانية كانت ناراً بطيئة دونك…"
+
+وضع كوبه على الطاولة، اقترب قليلاً، ثم سأل: "هل كان قرارك أن تعودي… أم أنك لم تنجحي في مهمتك؟"
+
+ارتجفت كلماتها، ثم قالت بهدوء: "نجحت… لكني وجدت شفت أفت في عمق الشمس، عنك لا عن السر."
+
+لحظة صمت.
+
+كان بينهما مسافة بسيطة، لكنها بدت وكأنها سنوات ضوئية.
+
+اقتربت روسيل منه ببطء، ومدت يدها تمسك بأطراف قميصه الأبيض.
+
+كانت بينهما مسافة بسيطة، لكنها بدت وكأنها سنوات ضوئية.
+
+"كنت أعتقد أن مشاعري نحوك ستتالشى… إن عدتُ لعالمي، لكنها كانت هناك، رغم البعد تنمو."
+
+وضع يده على يدها، وقال بهمس: "وأنا بنيت عالمي كله من فكرة واحدة: أن تعودي."
+
+ضحكت بخفة، ثم سألته: "هل تحبني، يا آدم؟ حتى وأنا لستُ بشرية تماماً؟"
+
+نظر في عينيها طويلاً، ثم قال: "أنا لا أحبك رغم ذلك، بل لأنك كذلك لأنك نزلت من الشمس، ووقفت بين الورود، وكنت مختلفة وكنت الحياة."
+
+همست: "إذن، هل أستطيع البقاء… هنا معك؟"
+
+أجاب دون تردد: "ابقَ … وسأخلق لك سماء تشبه شمسك، وأرضاً تحبك أكثر من وطنك."
+
+وفي تلك الليلة، لم تكن النجوم وحدها من أضاءت السماء، بل قلوب من اختاروا الحب فوق كل الاختلافات.
+
+في اليوم التالي، للقاءهما كانت السماء صافية بشكل غريب، وكأنها تنذر بعاصفة غير مرئية.
+
+كان روسيل في المرصد، تساعد آدم في تحليل الطاقة التي خرجت من النيزك ليلة عودتها.
+
+فجأة تجمّد الهواء…
+
+وشعرت روسيل بقشعريرة مألوفة تتسلل في عمودها الفقري.
+
+همست بصوت مبحوح: "توقف… أوقف الأجهزة فوراً."
+
+"ماذا هناك؟"
+
+"هم إنهم هنا…"
+
+وفعلاً انشقت السماء بلون لا يشبه الغروب، ولا الشروق، بل شمس سوداء ظهرت في قلب النهار، وخرجت منها ثلاثة كائنات متوهجة، بملامح بشرية، لكن عيونهم تشتعل بنار راكدة.
+
+قال أحدهم، صوته صدى لا يسمعه إلا من يحمل شمساً في دمه: "روسـيـل"
+
+اقتربت منهم بثبات، ووضعت آدم خلفها.
+
+"لماذا جئتم؟"
+
+"جئنا نحذّرك. العالم الأرضي يجب أن يعود. جوهرك يفسد. أن تكون قبل ث لوّث تتلو بذات البشر."
+
+نظرت إليهم بعيونها النصف بشرية، النصف شمسية، ثم قالت:
+
+"لم أتلوث… بل فهمت. فهمت أن الشعور لا يضعفني، بل يمنحني ما لم تعل مني إياه شمسكم طوال قرون."
+
+صاح الأكبر:
+
+"اختيارك للبقاء يُعتبر خيانة. لقد بدأت تفقدين نورك بالفعل."
+
+عندها لاحظت روسيل أن ضوءها الداخلي لم يكن بالقوة ذاتها. تفت حد آدم،
+
+في عينيها، وكأنه يرى انطفاءاً بطيئاً.
+
+سألها بهمسة مذعورة: "هل ستفقدين حياتك إن لم تعودي؟"
+
+نظرت إليه بحزن شفاف، وقالت:
+
+"إن كانت حياتي هناك بدونك، فلا بأس إن فقدتها… هنا على الأقل سأكون حقيقية."
+
+اقترب الكائن الثالث منها، وقال:
+
+"أمامك يوم شمسي واحد. إما العودة، أو الانطفاء الأبدي."
+
+ثم اختفوا، تماماً كما ظهروا.
+
+بقيت روسيل واقفة، ترتجف ببطء. اقترب آدم منها، أمسك يدها المرتجفة، وقال:
+
+"لن أسمح لهم أن يأخذوك… حتى لو اضطررتُ أن أصعد إلى شمسك."
+
+"أخشى أنني حينها لن أكون روسيل التي أحببتها."
+
+"أنا أحب كل ما فيك… حتى في أجزائك التي لم تفهم نفسها بعد."
+
+وفي تلك اللحظة، بدأ سباق مع الزمن… يوم شمسي واحد ليتحدوا فيه قوانين الطبيعة، والتقاليد، والمصير.`
+            },
+            {
+                id: 8,
+                title: 'الفصل الثامن: المحكمة',
+                content: `نزلت شعلة من النور، ليست كشمس، ولا كبرق… بل كبرق، وفجأة انشق ت السماء بصوت بلا صوت.
+
+ظهر ثلاثة من أبناء شمسها، وجوههم قسوة النجوم وعلى شمسها، قدر كصفعة.
+
+"روسـيـل… لقد انتهى وقتك"
+
+صرخ آدم، محاولاً حمايتها: "لا!"
+
+لكن أحد الكائنات مد يده، فشل جسد آدم بالكامل بلحظة.
+
+ركضت روسيل باتجاهه، تحاول لمس يده، لكن لم تستطع.
+
+صرخت بخوف عليه:
+
+"دعوه… لا شأن له بي!"
+
+"بل هو السبب في سقوطك. وستُحاسبين."
+
+وقبل أن تنبس أن كلمة أخرى… اختفت.
+
+خُطفت كما يسحب الضوء من جسد مريض.
+
+وقفت روسيل وسط قاعة عظيمة، أعمدتها من نار، وأرضها من بلورات،
+
+أمام مجلس الحكماء، وجوههم بلا مشاعر، وأعينهم مشتعلة بحكم أزلي.
+
+"أيتها المنحدرة من النور، لقد خنت شمسك."
+
+"بل اخترت أن أفهم ما لا تفهمونه!"
+
+"لقد صرت ضعيفة… دموعك، قلبك، حنينك… ليست من نورنا."
+
+"لكنها جعلتني أعيش، لا أضيء فقط."
+
+صمت ثقيل.
+
+"روسيل، يُحكم عليك بأن تُجر دي من نورك، وأن تُنفَي إلى الأرض…"
+
+فجأة أحست بحرارة غريبة في صدرها كأن شيئاً يُسحب من روحها،
+
+انطفأ الضوء في عينيها، وذاب شعرها المتوهج ليصير أحمراً هادئاً،
+
+أ. لم تعد روسيل من شمس… بل صارت من لحم ودم.
+
+سقطت على ركبتيها، وحين رفعت رأسها، قالت بهمس:
+
+"سأبقى بشرية… إذا كان في آخر الأرض من يحبني"
+
+وفي لحظة، نُفيت
+
+سقطت من السماء، تائهة تهبط بين الغيوم،
+
+كان قلب عن تبحث . وطنا
+
+وصلت إلى الأرض في غابة قريبة من المرصد، جسدها متعب، روحها
+
+ناقصة… لكن عينيها تشتعلان، باسم واحد: "آدم".
+
+بدأت تمشي، حافية، بين الأشجار.
+
+كل زهرة تراها، تتذك ر لمساته.
+
+كل نسمة ريح، تهمس بصوته.
+
+يبقى… السؤال لك
+
+هل ما زال ينتظرها؟
+
+مرت سنة كاملة منذ أن نُفيت روسيل إلى الأرض…
+
+مشت بين البالد، عبرت الغابات، تجو لت بين المدن،
+
+تحمل معها إلا… اسماً "آدم"، وصورة محفورة في الذاكرة.
+
+أصبحت بشرية تماماً.
+
+تتألم، تتعب، تبرد، تجوع، لكنها لا تتوقف.
+
+خسرت ما كل رغ، في صدرها ظل نور صغير… من وعد لم يُقال.
+
+كان كلما سألت عن عالم فلك منعزل، يقولون:
+
+"ربما تقصد ذاك الغريب، يسكن قرب التل، لا يخرج من بيته منذ عام."
+
+يوم غائم. الرياح خفيفة، والسماء رمادية، كأنها تترد د أن تُمطر.
+
+وصلت روسيل إلى البيت المنعزل. ترد دت لحظة… ثم طرقت الباب.
+
+لم يُجب أحد.
+
+طرقت مجدداً، بصوت أضعف.
+
+فتح الباب، أخيراً، ورأسه منكس وببطء،
+
+آدم.
+
+كان شاحب الوجه، عيونه مرهقة، شعره من أطول المعتاد…
+
+وكأن العمر مضى عليه كله في هذه السنة.
+
+بدأ
+
+رفع عينيه… ليراها
+
+تجم د في مكانه.
+
+لم ينطق.
+
+كانت هي… لكنها الآن بلون البشر، لا ان يشع
+
+عينيها.
+
+همس بقلب مكسور، ثم نظر إليها لحظة،
+
+"هل أنا… أحلم؟"
+
+ابتسمت، ودموعها تسبق الكلمات:
+
+"لو كنتَ تحلم، لما توقظني… أمضيت سنة أبحث عنك، بين ماليين الوجوه"
+
+اقترب منها بخطوات مرتجفة
+
+"كيف…؟"
+
+"نفوني… جر دوني من كل شيء. لم أعد شمساً، ولا نوراً… فقط إنسانة فقط جاءت لتُحبك، وتُعيش من أجلك."
+
+نظر إلى وجهها، تحسس خديها، ثم انفجر بالبكاء،
+
+"كنت أظنني فقدتك… عشت في الليل، عشت في الصمت أنادي اسمك كل يوم في السماء."
+
+نظرت إلى المكتب… خلفه صورها في كل زاوية. رسمات خرائط نيازك.
+
+علامات… بخط يده
+
+عالم بُني من شظايا حب مكسور.
+
+قالت وهي تدخل بخطى بطيئة:
+
+"أنا الآن… أملك أنا كل وقتي هذه. وال لا يستطيع أحد أخذي من جديد."
+
+احتضنه العناق… ذلك وفي
+
+انطفأ جرح الزمن، واشتعلت الحياة من جديد.
+
+في ذلك اليوم كانت الشمس تُرسل دفئها بخف ة كأنها تشهد زفافاً من
+
+أجلنا.
+
+في البستان ذاته الذي التقى فيه آدم وروسيل أول مرة، وأُقيم الحفل
+
+الزهور كانت شاهدة على اللقاء الأول، تحت سماء صافية، تراقبهم
+
+بصمت.
+
+ارتدت روسيل فستاناً بلون الفجر كأنها قطعة من النور سقطت على
+
+الأرض.
+
+شعرها الأحمر انسدل بانس ياب خلف ظهرها، وعيناها – رغم بشريتهما – تحملان بريقاً لا يشبه أحداً.
+
+وقف آدم أمامها، مرتجفاً، يرتدي حُل ة بيضاء وتعلو صدره زهرة حمراء،
+
+اختارها بنفسه من البستان.
+
+تبادل الاثنان النظرات، صامتين، ثم قال آدم بصوت متهد ج:
+
+"هل ما زلتِ خائفة أن يأخذوك؟"
+
+أجابت هامسة:
+
+"ليس بعد الآن… فأنا أصبحت إنسانة… لك، ومعك."
+
+وعندما نُطق إعلان الزواج، اقترب منها ببطء، كأن الخطوة نحو عبور
+
+من عالم إلى آخر.
+
+رفع يده ليلمس وجهها… وخشي أن تتحو ل إلى ضوء بين يديه.
+
+لكنها ابتسمت، وقالت:
+
+"أنا باقية، يا آدم… قبلني، كما يُقب ل الإنسان وطنه بعد التيه."
+
+وتمت القُبلة الأولى.
+
+لم تكن مجرد لمسة شفاه، بل لقاء روحين عبرتا الكواكب، وخرقتا حدود القدر.`
+            },
+            {
+                id: 9,
+                title: 'الفصل التاسع: كنان',
+                content: `وُلد كنان بعد عامين، بهيئة بشرية كاملة… بشعر بني ناعم، وعينين عسليتين واسعتين. لكن منذ عامه الرابع، بدأ يُظهر شيئاً غريباً.
+
+كان ينظر إلى الأشخاص نظرة طويلة، ثم يقول:
+
+"أمي… هذا الرجل أم يقول الحقيقة لا الرجل هذا يقول الحقيقة."
+
+"أبي، هذه المرأة تفكر في السرقة."
+
+لكن روسيل كانت تعرف تماماً ما يجري، فارتع آدم في البداية.
+
+همست آدم، مساء ذات، وهما يجلسان قرب السرير:
+
+"ورث عني القوة… قدرة قراءة النوايا."
+
+"ولكنه يبدو بشرياً!"
+
+"القوة لا تحتاج مظهراً خارقاً… إنها داخله."
+
+ومنذ ذلك الحين بدأ الوالدان محاولة إخفاء قدرات كنان.
+
+علموه الصمت، تجن ب التحديق، إخفاء ما يشعر به.
+
+ولكن الطفل… كان يسأل نفسه في الليل:
+
+"لماذا يجب أن أخفي ما أنا عليه؟ لماذا وُلدت مختلفاً؟"
+
+ولم يكن يدري… أن أحداً من السماء يراقبه.
+
+حين بلغ كنان العاشر، راودته أحلام غريبة.
+
+رأى فيها نيزكاً يسقط، وامرأة تشع نوراً تسير وسط أرض مهجورة…
+
+رأى والدته تذرف الدموع، وتعود من السماء.
+
+في أحد الأيام دخل إلى غرفة والديه القديمة ووجد صندوقاً خشبياً صغيراً، مخب أ خلف الكتب.
+
+فتحه ببطء ليجد رسائل خرائط أوراقاً بحثية وصورة قديمة لوالدته حين كانت تشع نوراً سماوياً.
+
+كانت لا تزال تشع نوراً سماوياً.
+
+عندها واجهها قائلاً:
+
+"من حقاً أنتِ أمي… ومن أنا؟"
+
+فبكت، ثم قصت عليه كل شيء…
+
+كيف نزلت من الشمس، وكيف التقَت بآدم، وكيف أنجبته هو… ابن الضوء والطين.
+
+قالت له بارتباك:
+
+"كنتُ خائفة من أن تعرف… أنهم إن علموا بوجودك، سيعودون."
+
+قال كنان بثقة طفل بدأ يفهم ذاته:
+
+"وأنا لن أكون خائفاً… فأنا لست شمساً ولا بشراً فقط… أنا كل هذا."
+
+في بقعة نائية في الفضاء، على سطح الشمس، جلس "مجلس النقاء" – القادة الذين تبرؤوا من روسيل.
+
+كانوا يراقبون الأرض عبر بؤرة طاقة مت صلة بأثر قديم من دمها.
+
+قال أحدهم:
+
+"إن النور عاد… الصبي ذلك. وريث غير نقي. لم نخطئ."
+
+"يجب استعادته… أو . القضاء عليه."
+
+أرسلوا كائناً يُدعى "الظل الناري"، مخلوقاً لا يُرى في وضح النهار، إلا يعيش على حرارة القلوب.
+
+أُرسل للبحث عن كنان… واقتفاء أثر قوته.
+
+ولكن يُقاتل وحده.
+
+لم يكن الليل ككل ليلة.
+
+وقد بلغ كنان الثانية عشرة، وبدأ يشعر بأشياء لا يراها أحد.
+
+صوت خافت يتسل ل إلى أعماقه حين يكون وحده،
+
+وهج غير مرئي، يراقبه من بعيد.
+
+استيقظ ذات فجر وهو يتصب ب عرقاً، يهمس لنفسه:
+
+"هو يقترب ما شيء اسمي يُنادي من مكان لا أعرفه."
+
+في اليوم التالي، وبينما كان يلعب قرب النهر شعر بظل بارد يعبر جسده.
+
+نظر حوله، فلم يجد أحداً.
+
+لكن الأشجار اهتز ت دون ريح، والماء في النهر توق ف لحظة… ثم جرى من جديد.
+
+ركض إلى والدته، والقلق في عينيه.
+
+"أمي هناك شيء يتبعني."
+
+نظرت روسيل إليه بوجه شاحب:
+
+"هل شعرت بالبرودة؟"
+
+"نعم… وكأن الحقيقة انسحبت من حولي."
+
+أدركت روسيل.
+
+فقد عادوا.`
+            },
+            {
+                id: 10,
+                title: 'الفصل العاشر: الظل الناري',
+                content: `"الظل الناري" … الكائن الذي لا يعيش إلا في أثر النور المسروق.
+
+لا يُرى… بل يُحَس. لا يتسل ل بل يُهاجم…
+
+فقال آدم، أخبرت:
+
+"لكننا أخفيناه طوال هذه السنوات!"
+
+"يا آدم، بالنضج بدأت قو ته… لم يعد بإمكاننا حمايته وحدنا."
+
+في تلك الليلة، أحاطت العائلة بيتهم بحلقة من الضوء الاصطناعي، درع مؤقت يبعد "الظل الناري" عن الدخول.
+
+لكن كنان كان يشعر أن الوقت ينفد.
+
+في أحلامه، بدأ يرى ذاته يقف في مكان لا يعرفه، تحيط به أعمدة نارية، وصوت غريب يخاطبه:
+
+"كنان… ابن الدم ين… أجبنا، أو سنأخذك."
+
+في إحدى الليالي، استيقظ كنان من نومه، وكانت عيناه توه جان بلون ليس خارق… بل بضوء خافت لا يُرى إلا في الظلال.
+
+أخذ يكتب بيده رموزاً على المرآة، دون أن يعرف معناها.
+
+في اليوم التالي، وجدت روسيل الرموز وتجمد الدم في عروقها.
+
+"هذه لغة القدماء في شمسنا… الحر اس إلا يقرؤها لا."
+
+قال آدم:
+
+"لكن كيف يعرفها؟"
+
+أجابت:
+
+"إنه هو يقرؤها… لا يُحس ها. قوته تجاوزت اكتشاف النوايا… يقرأ بدأ جذورها."
+
+في الليلة التي تالها، تسل ل "الظل الناري" إلى البلدة، باحثاً عن مصدر الضوء المنكسر.
+
+وفي اللحظة التي اقترب فيها من المنزل، استيقظ كنان وحده.
+
+خرج دون أن يشعر به والداه، وقف في الحديقة، وهناك… رأى "الظل" لأول مرة.
+
+لم يكن له شكل… بل كان ظلمة تمشي، وصوتها يهمس داخل عظامه:
+
+"تعال معنا. وال منهم لست أنت."
+
+لكن كنان، طفل بثبات، لم يعد يخاف، قال:
+
+"أنا ابن الإنسان… وابن الضوء. لا أعود إلى حيث طُردت أمي."
+
+رفع يده، ورك ز كل ما يشعر به نحو "الظل".
+
+انفجرت دائرة ضوء صامت، دفعته للخلف، وتبعثرت ظلاله.
+
+لكن والداه ركضا إلى الخارج، ووجدوه واقفاً وسط الحديقة، يداه ترتجفان لكن عينيه صامدتان…
+
+قالت روسيل:
+
+"لقد بدأ."
+
+قال آدم:
+
+"ابننا… ليس فقط منا… بل أقوى منا."
+
+علمت قبيلة روسيل أن الظل قد فشل.
+
+فقال أحد القادة:
+
+"إنه ليس فتىاً عادياً… بل وُلد بين عالمين. إن بقي، سيفسد التوازن."
+
+قال آخر:
+
+"فلنرسل المرآة السوداء، ستجعل والدته تكرهه، ووالده يشك فيه، وسيأتي وحده."
+
+لكنهم لم يعلموا… أن كنان الآن ليس وحده أيضاً.
+
+فمن قلب الأرض… بدأ النور يفيق.
+
+كان الليل هادئاً أكثر مما ينبغي.
+
+في المنزل، داخل اشتعلت العاصفة. لكن
+
+في الزاوية، وقف كنان، يحد ق في المرآة التي لم تعد تعكس وجهه بل ظلاً غريباً يشبهه…
+
+يتكل م بصوته و…
+
+"أنت سبب ضعفهم… والدك يثق بك، ووالدتك تتمنى لو تُخلق لم."
+
+لكن فجأة، دخلت روسيل، وعيناها تتوه جان بوميض ذهبي:
+
+"اخْرُج من رأسه، أيها الوهم!"
+
+رفعت يدها نحو المرآة، ورددت كلمات بلغة الشمس القديمة فانكسر الزجاج وتناثر كالغبار.
+
+ركض آدم واحتضن كنان المرتجف، ثم نظر إلى روسيل:
+
+"المرآة… أرسلوا هم الآن يريدون تفتيت عائلتنا من الداخل."
+
+قالت روسيل:
+
+"أن يعلمون كنان لم يعد طفلاً… بل رابطاً بين عالمين، وما عادوا قادرين على كسره."
+
+في تلك اللحظة، اهتز الهواء حولهم وظهر بو اب من قبيلة الشمس، يحمل الضوء المحروق وشاح
+
+"يجب أن يعود الصبي، معنا فوراً."
+
+جئنا بأمر القبيلة.
+
+تقدم آدم خطوة:
+
+"هو ليس صبيكم. هو ابني."
+
+وتقدمت روسيل، بكل كرامة الشمس و حنان الأمومة:
+
+"وقد اخترتُ الأرض، واخترته. فإن كنتم ستأخذونه فخذونا معه…"
+
+سكت الحارس لحظة، ثم رفع بصره وقد بدا عليه الترد د.
+
+ظهرت خلفه وجوه من كبار القبيلة… السن، الحُر اس، والعرافات.
+
+همس أحدهم:
+
+"قوتنا تضعف يوم… كل يوم ترفضنا والأرض غادرنا إن ترفضنا.
+
+إن عدنا… لم نعد كما كن ا."
+
+رد ت عرافة بشعر أبيض يتطاير في الضوء:
+
+"لقد تغي ر كل شيء منذ أن نزلت روسيل… فليبقَ الفتى. فهو آخر عهد بيننا وبين النور."
+
+سكت الحارس، ثم طأطأ رأسه.
+
+"لقد حسم المجلس الأعلى… يُمنع على القبيلة التدخل في حياة من اختار الأرض."
+
+اختفي وا، كما جاءوا، بوميض من صامت نور مغبر.
+
+وفي المكان، بقي الثلاثة… روسيل وآدم وكنان، يحيطهم سكون لكنه
+
+سكون نصر.
+
+اقترب كنان من والديه:
+
+"لم أكن لأصمد دونكما… أنا أنتمي لأحد، لكنني أنتمي إليكما."
+
+ابتسم آدم، ورب ت على كتفه:
+
+"ولن تنتمي لغير هذا المكان… بيتك."
+
+عانقت روسيل ه، وهمست في أذنه:
+
+"حتى لو تغي ر لون السماء… سنبقى إلى جانبك."
+
+انتهت محاولة القبيلة، واستقر ت الأرض تحت أقدام كنان.
+
+لكن في أعماق السماء، كانت شمس قديمة تتشقق، ووالدة على وشك أن تبدأ.
+
+لأن كنان لم يُولد ليُحكم بل .... ليختار.`
+            },
+            {
+                id: 11,
+                title: 'الفصل الحادي عشر: الاختطاف',
+                content: `اعتادت لينا حيث عاد المساء يحمل نسماته إلى البيت الذي اعتاد الضحك
+
+أن تدخل وهي تثرثر عن تعبها وتضحك من بين الإرهاق.
+
+في ذلك اليوم، دخلت بصمت غير معتاد، وضعت حقيبتها عند المدخل
+
+قب لت رأس أمها روسيل، ثم همست:
+
+"متعبة أنا اليوم يا أمي سأخلد إلى النوم فوراً، أخبريهم أنني لا أرغب بالعشاء."
+
+لم تنتظر جواباً، بل صعدت إلى غرفتها بخطى بطيئة.
+
+أغلقت الباب خلفها وغابت.
+
+جاء الصباح.
+
+فتحت روسيل النوافذ، أعد ت طعام الفطور وحملت كوباً من الحليب الدافئ وبعض الخبز نحو غرفة لينا.
+
+طرقت الباب بلطف.
+
+"لينا؟ حبيبتي، استيقظي."
+
+لا إجابة.
+
+ابتسمت بخفة، وفتحت الباب…
+
+الغرفة كانت فارغة.
+
+ساكنة، السرير مرتب
+
+خطت إلى الداخل، وبدت ملامح وجهها تتجم د.
+
+لا أحد.
+
+والهواء ينساب منها بغرابة.
+
+تقد مت نحو النافذة، فوجدتها مفتوحة
+
+وهناك على حافة الخشب، وُجدت ورقة ذهبية اللون
+
+يتوه ج منها وهج يشبه نوراً محترقاً.
+
+أمسكتها روسيل، وسرعان ما التهبت الورقة بين أصابعها لكن قبل أن
+
+تذوب تماماً، قرأت ما كُتب فيها:
+
+"أخذنا لينا."
+
+صاحت:
+
+"آدم! كنان! تعالوا فوراً!"
+
+ركض الجميع نحو الغرفة، ووجوههم تتبد ل بين الفزع والذهول.
+
+دخل كنان أولاً، نظر إلى الفراش الخاوي، ثم إلى والدته التي كانت تحد ق
+
+في الالشيء، وعيونها تشع بوميض ناري.
+
+قالت بصوت مكسور:
+
+"ليست هنا اختُطفت."
+
+أجاب آدم وقد تلعثم لسانه:
+
+"من… من أخذها؟"
+
+أجابت روسيل ببطء، كمن يجر سيفاً من صدره:
+
+"قبيلتي."
+
+ارتفعت دقات قلب كنان، واقترب منها سريعاً:
+
+"لكنهم وعدوا! أقسموا ألا يتدخ لوا في حياتنا مجدداً!"
+
+همست روسيل:
+
+"وعودهم لا تصمد حين يشعرون بالخطر. ولينا، بنصفها البشري ونصفها الناري، باتت شيئاً يخيفهم."
+
+قال آدم وهو ينظر إلى السماء:
+
+"إذن، لا خيار لنا سوى أن نستعيدها بالقوة إن لزم الأمر."
+
+واقترب كنان من النافذة، نظر إلى الأفق، عيناه تغليان بنور خافت، ثم قال:
+
+"سأعيد أختي… ولو احترقت الشمس في طريقي."
+
+في قلب الشمس، حيث لا ظل، ولا ليل، يوجد الهدوء. كانت قاعة "النواة" تُشتعل بوهج لا يُحتمل.
+
+جدرانها من نار صافية، وسقفها كأنه امتداد للضوء ذاته.
+
+وفي داخله جسد بشري مقيد داخل أنبوب زجاجي يدور ببطء، وسطها معل ق، محاط بأشرطة ضوئية متوه جة…
+
+كانت لينا هناك، عالقة ومرتفعة عن الأرض، عيناها مغمضتان
+
+وشعرها منسدل على كتفيها المتوهجين، ومالمحها بين القوة والضعف.
+
+لم تكن تفهم تماماً ما يجري، لكنها كانت تشعر…
+
+وقف حولها عشرات من حُك ام "قبيلة الليان" وبعضهم يدو ن ملاحظات، وآخرون يراقبون بدهشة:
+
+"إن طاقتها مستقرة… رغم أنها بشرية!"
+
+"إنه الجسد الوحيد الذي لم يحترق من نار النواة."
+
+"وهذا ما يجعلها فريدة. هي نصفنا… لكنها لم تنشأ بيننا."
+
+اقترب أحد العلماء منها، مد يده ببطء نحو الجدار
+
+فامتأل الهواء بصوت خافت يشبه أنيناً ضوئياً.
+
+قال بصوت جاف:
+
+"اليوم، سنُفع ل النواة فيها. سنُشعل نصفها الشمسي ونُطه ر نصفها الأرضي."
+
+فُتحت عينا لينا ببطء.
+
+رأت النور، لكنها لم ترَ دفئه.
+
+رأت وجوهاً تحترق بالجدي ة لكنها لا تعرف الرحمة.
+
+حاولت أن تتحر ك… لم تستطع.
+
+صرخت بصوت خافت:
+
+"من أنتم…؟ ولماذا أنا هنا؟"
+
+اقترب أحد الحكماء، ويده تمسك بعصا مشتعلة:
+
+"لست في خطر… بل في بلد والدك."
+
+"أنتِ حقيقة إلى سنُعيدك.
+
+إلى ما يجب أن تكونيه."
+
+قالت بصوت مرتجف:
+
+"أنا ابنة الأرض… لي اسم، لي أهل، لي بيت…"
+
+قاطعها الصوت ذاته، بهدوء يخفي الرهبة:
+
+"بل أنتِ ابنة الشمس، وأنتِ رت ذلك الطين لأن نورك غل ف.
+
+بدأت الآلات من حولها تتحر ك.
+
+بدأت دوائر من الضوء تتقاطع فوق رأسها والحرارة تزداد.
+
+قال أحدهم وهو يراقب:
+
+"إنها الأجمل بينهم… ليست كائناً نارياً ولا بشراً خالصاً بل توازن ."
+
+تمم آخر:
+
+"لكن الجمال ليس المهم القوة هي ما نريده.
+
+إن استطعنا إشعال النواة داخلها ستكون المفتاح لعصر جديد."
+
+كانت لينا تقاوم.
+
+شيء داخلها يرفض الخضوع، في صرخ:
+
+"من أنا… أنا لا أُصهر في قوالبكم!"
+
+لكن الحرارة اشتد ت، والأصوات بدأت تهمس داخل جسدها.
+
+ارتجفت أصابعها بدأت تتوه جان بلون لا يُشبه أي لهب.
+
+عيناها بدأت تتوه جان بلون لا يُشبه أي لهب.
+
+وفجأة دوى إنذار داخل القاعة…
+
+صرخ أحد المساعدين:
+
+"نسبة الطاقة ترتفع! بسرعة هذا تحو ل غير متوق ع!"
+
+فُتح جفن لينا فجأة، وعيناها تشع ان بوميض متوحش.
+
+لكنها هذه المرة لم تكن صامتة…
+
+قالت بنبرة تزلزل النور نفسه:
+
+"أنا لينا… لا شمسية ولا أرضية، وال نصفاً مني تسرقوا ولن االثنتان… أنا"
+
+وإذا بالنور يتداخل حولها، جهاز التحو ل ينهار.
+
+لكن العملية لم تتوقف بعد.
+
+فهم الجميع شيئاً واحداً:
+
+إن لم يتدخلوا الآن لينا لن تعود ابنة شمس فقط
+
+بل شيئاً لم يولد من قبل.`
+            },
+            {
+                id: 12,
+                title: 'الفصل الثاني عشر: العودة من حافة الاحتراق',
+                content: `في قاعة النواة، كانت الأجهزة تومض بشكل هستيري، أصوات تنبيه تصدح والألوان تتبدل بسرعة جنونية.
+
+صرخ أحد العلماء:
+
+"الطاقة تتسارع! النواة في داخلها تتفاعل مع طينها! لم نعد نسيطر!"
+
+قال كبير المراقبين، وجهه يشتعل بالغضب:
+
+"أوقفوا العملية! أطفئوا الحلقة الضوئية فوراً!"
+
+أسرع المساعدون نحو الألواح المتوهجة، يحاولون تهدئة الأجهزة، لكن كل محاولة كانت تزيد الفوضى.
+
+في وسط القاعة، كانت لينا تتمو ج داخل الحقل الضوئي، عيناها بين اللهب والدمع، وجسدها يتلو ى بين نورين يتصارعان في قلبها: نور خُلق فيها، ونور يُفرض عليها.
+
+اقترب أحد العلماء منها، وضع يده على لوح زجاجي، وقال بصوت كمن يهمس للغضب:
+
+"اهدئي… لينا دعينا نكملك."
+
+لكنها نظرت إليه، وقالت بصوت يتردد في كل جدار:
+
+"أنا كاملة… لا تمسسني ناركم! لستُ مشروعاً، أنا إنسانة."
+
+وفجأة، دوى انفجار ضوئي عنيف داخل الغرفة، سقط على إثره بعض الحراس أرضاً واختل توازن الحقل الضوئي.
+
+في البيت الحجري القابع عند حافة البستان كانت زوجة كنان تمسك بكف ابنتها الصغيرة سيلين، تجلس قرب النافذة تنتظر خبراً، أي خبر.
+
+قالت الصغيرة بصوت خافت:
+
+"أمي… هل ستعود خالتي؟"
+
+أجابت بصوت مكسور:
+
+"خالَتُك قوية يا سيلين… وستعود."
+
+لكنها كانت ترتجف، وعيناها لا تكفان عن النظر إلى السماء.
+
+في قلب الحديقة وقف كنان، وإلى جانبه روسيل.
+
+قال كنان:
+
+"سأكسر البوابة إن لزم الأمر… إن لم تُفتح لنا سندخل كما نحن، بجذور الأرض ولهيب الشمس."
+
+أجابته روسيل، تمد يدها نحو السماء:
+
+"قلب الأم لا يعود فارغاً… لن أدعهم يأخذون ابنتي."
+
+رفع الاثنان أيديهما نحو الأفق، وبدأ بترتيل كلمات قديمة بلغة الضوء والطين كلمات لا تُقال إلا في آخر المحاولات.
+
+وبينما الأرض ترتجف تحت أقدامهم تشقق الهواء أمامهم، وتفتحت بوابة من النور يخرج منها وهج لا يُحتمل.
+
+قال كنان دون تردد:
+
+"الوقت ينفد… لننتزعها منهم!"
+
+في لحظة خاطفة، وبينما المختبر يهتز من ضغط الطاقة المتصاعدة انفتحت بوابة فضية من السماء داخل القاعة
+
+ومنها خرجت روسيل أولاً، تتبعها كتلة من الضوء… كنان.
+
+أصيب الحراس بالذهول، وصرخ القائد:
+
+"تسلل أرضي ون! أوقفوهم فوراً!"
+
+اندفع الحراس الناريون بسياط من اللهب لكن روسيل رفعت يدها فتكو نت أمامها قبة ضوئية صد ت الهجوم الأول.
+
+أما كنان، فانطلق كالسهم، عيونه تشتعل، وصوته يهدر:
+
+"أعيدوا أختي… قبل أن أُحول هذا المكان إلى رماد!"
+
+لكن ه تفادى ضرباتهم، ولو ح بيده
+
+تقدم نحوه ثالثة من الحراس، اندفعوا بقوة فانطلقت موجة من الطاقة شق ت الأرضية تحت أقدامهم.
+
+قالت روسيل بصوت حاد:
+
+"لينا… أين أنتِ؟!"
+
+من داخل الحقل الزجاجي، ارتجف جسد لينا نظرت إليهما وابتسمت بضعف:
+
+"أمي… كنان… لقد انتظرتكما."
+
+أسرع كنان نحوها، لكن الحقل الضوئي منعه ارتد للخلف بقوة، سقط أرضاً.
+
+اقتربت روسيل من لوحة التحك م وضعت يدها ثم تمتمت بلغتها القديمة فانطفأ الحقل شيئاً فشيئاً…
+
+لكن قبل أن يُفتح بالكامل، صرخ أحد الحكماء:
+
+"لا تدعوها تهرب! إن خرجت الآن ستبقى متحو لة… وسيبقى النور بداخلها حراً!"
+
+لكنهم تأخروا.
+
+فقد فُتح القفص… ومد ت روسيل يدها لابنتها:
+
+"تعالي إلي يا ابنتي… النار التي فيك، لن تُطفئك… سنحتضنها."
+
+احتضنت روسيل ابنتها بقوة
+
+وفي لحظة انصهار بين النور والعاطفة
+
+وانهار كل المختبر من حولهم.
+
+ركض كنان، أمسك بيديه الاثنتين دائرة الزمن التي بدأت تنغلق، وصرخ:
+
+"أمي، الآن! أسرعي!"
+
+وفي لحظة خاطفة، عبر الثالثة البوابة…
+
+في حديقة المنزل، انفتح الفضاء مجدداً
+
+وسقط منه ضوء ذهبي ارتطم بالأرض بهدوء…
+
+ومن بينه… خرجت لينا، نصفها مُتعب، لكنها حي ة مالمحها مشع ة
+
+وجسدها متوازن.
+
+ركضت سيلين نحوها، وصرخت:
+
+"خالتي!!!"
+
+ركعت لينا، واحتضنت الصغيرة، وهمست:
+
+"اشتقتُ لكم… اشتقتُ لكل شيء يشبه الأرض."`
+            },
+            {
+                id: 13,
+                title: 'الفصل الثالث عشر: إزهار الشمس على الأرض',
+                content: `مر ت الأعوام كأنها حلم ناعم، فيه ألم وفيه شفاء.
+
+أصبحت لينا طبيبة لا تعالج الأجساد فقط، بل تلمس الأرواح قبل أن تكتب الوصفة.
+
+كان يوم تخر جها يوم كان اليو.
+
+ارتدت ثوبها الأبيض، وعلى صدرها خُطَّ اسمها الكامل بخيط ذهبي:
+
+"لينا آدم رو سيل"
+
+اسم يجمع الأرض والنار بالقو ة والحنان.
+
+كانت تمشي بين صفوف الخريجين، والناس تصفق لها، ووجوه فقط ليس لها
+
+بل الشهادة نالت لأنها لب نالت لأنها نفسها.
+
+في الصف الأمامي، كانت روسيل تبكي بصمت، وآدم يمسك يدها كأنها تنزل من بين الزمن، وكنان يصفق لأخته وكأن قلبه يطير، وسيلين تصرخ:
+
+"خالتي الأجمل في المجرة!"
+
+بعد الحفل، حدث ما لم يكن متوقعاً…
+
+شق ق الهواء… وخرج منه وهج خافت لا يُشبه ناراً بل أشبه باعتذار
+
+ظهرت مجموعة من كبار قبيلة الشمس، بوجوه منحنية، وهاالتهم منخفضة، كأن نورهم خجل.
+
+اقترب كبيرهم، وانحنى أمام آدم، وروسيل، ثم قال بصوت رخيم:
+
+"لقد كن ا نعتقد أن النقاء لا يُولد إلا من الشمس، لكنكم أثبتم لنا أن النقاء الحقيقي من الاختيار من الرحمة أن نكون بشراً رغم قدرتنا على أن نكون ناراً."
+
+ثم التفت إلى لينا:
+
+"جئنا نعتذر… كان يجب أن نتعل م منك بينما سعينا إلى تحويلك، لأننا ظننا أننا سنفنى لق د بدأت طاقة النواة في شمسنا تضعف… وكنا نظن أننا سنفنى لكننا أدركنا أن النجاة لا تأتي من التوسع… من بل التواضع."
+
+"لقد أنقذتينا دون أن ترفعي سيفاً، فقط لأنك بقيت كما أنت."
+
+رفعت لينا عينيها، وقالت بهدوء:
+
+"أنا لا أكرهكم… لكني لا أنتمي إليكم.
+
+أن أكون نور… لا يعني أن أعيش مشتعلة.
+
+أنا ابنة الأرض… وأفتخر أن جذوري من الطين نأل الطين يصنع الحياة لا يحرقها."
+
+ثم انحنى وفد الشمس احتراماً، وتاركين خلفهم ضوءاً لا يُضيء بل يُحرق، في صمت.
+
+في تلك الليلة، اجتمع الجميع حول المائدة في الحديقة،
+
+ضحكت سيلين وهي تقول:
+
+"خالتي… هل أصبحتِ الآن أشهر من الشمس نفسها؟"
+
+أجابت لينا مبتسمة:
+
+"لا… لكنني تعلمت شيئاً أهم:
+
+أن الضوء لا قيمة له إن لم يجد قلباً يسكنه."
+
+ثم أضافت وهي تنظر إلى أبيها وأمها وأخيها:
+
+"وهذا قلبي الحقيقي…"
+
+و همَّ كنان إلى لينا و هي تقول تلك العبارات الجادة لابنته وهمَّ بسخرية: نظر
+
+"ما هذه العبارات يا لينا، كل هذا منك، أيتها الحكماء لقد كبرت و القطة الصغيرة"
+
+نظرت لينا إليه، وشعرت بالإحراج ضربته بكفها الناعم على كتفه وقالت:
+
+"اصمت"
+
+و ضحك الجميع بفرح و سعادة، و كهذا انتهت
+
+قصة بين النور و الطين.
+
+في النهاية ليس الانتماء لما نُولد منه،
+
+بل لمن وقف معنا حين أردنا أن نختار
+
+و ان
+
+وحدها الأرض تحتضن… لا تُحرق.`
+            }
+        ];
+
+        const gridContainer = document.getElementById('chaptersGrid');
+
+        function renderChapters() {
+            gridContainer.innerHTML = chapters.map((ch, idx) => {
+                let label = idx;
+                if (idx === 0) label = 'م';
+                else if (idx === chapters.length - 1) label = 'خ';
+                return `
+                    <div class="chapter-card" data-index="${idx}" role="button" tabindex="0">
+                        <div class="num">${label}</div>
+                        <div class="title">${ch.title}</div>
+                        <i class="fas fa-arrow-left arrow"></i>
+                    </div>
+                `;
+            }).join('');
+
+            document.querySelectorAll('.chapter-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const idx = parseInt(this.dataset.index);
+                    openChapter(idx);
+                });
+            });
+        }
+
+        const view = document.getElementById('chapterView');
+        const viewNum = document.getElementById('viewNum');
+        const viewTitle = document.getElementById('viewTitle');
+        const viewBody = document.getElementById('viewBody');
+
+        function openChapter(idx) {
+            const ch = chapters[idx];
+            if (!ch) return;
+
+            if (idx === 0) viewNum.textContent = 'المقدمة';
+            else if (idx === chapters.length - 1) viewNum.textContent = 'الخاتمة';
+            else viewNum.textContent = `الفصل ${idx}`;
+
+            viewTitle.textContent = ch.title;
+
+            const paragraphs = ch.content.split('\n\n').filter(p => p.trim().length > 0);
+            let html = '';
+            paragraphs.forEach((p, i) => {
+                const trimmed = p.trim();
+                if (trimmed.length === 0) return;
+                if (i === 0) {
+                    const firstChar = trimmed.charAt(0);
+                    const rest = trimmed.slice(1);
+                    html += `<p><span class="first-letter">${firstChar}</span>${rest}</p>`;
+                } else {
+                    html += `<p>${trimmed}</p>`;
+                }
+            });
+            viewBody.innerHTML = html;
+            view.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            history.pushState({ idx }, '', `#chapter-${idx}`);
+            view.scrollTop = 0;
+        }
+
+        function closeChapter() {
+            view.classList.remove('active');
+            document.body.style.overflow = '';
+            history.pushState({}, '', window.location.pathname);
+        }
+
+        window.addEventListener('popstate', function() {
+            if (view.classList.contains('active')) {
+                view.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            if (hash && hash.startsWith('#chapter-')) {
+                const idx = parseInt(hash.replace('#chapter-', ''));
+                if (!isNaN(idx) && chapters[idx]) {
+                    setTimeout(() => openChapter(idx), 100);
+                }
+            }
+        });
+
+        document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+            const btn = this;
+            btn.classList.add('loading');
+            btn.innerHTML = '<i class="fas fa-spinner"></i> جاري التحميل...';
+
+            const pdfContainer = document.createElement('div');
+            pdfContainer.id = 'pdfContainer';
+            pdfContainer.style.cssText = 'padding: 40px; background: #fff; color: #000; direction: rtl; font-family: Cairo, sans-serif;';
+
+            pdfContainer.innerHTML = `
+                <div style="text-align:center; margin-bottom:40px; padding-bottom:20px; border-bottom:2px solid #F5B400;">
+                    <h1 style="font-size:32px; color:#0A0A0A; margin-bottom:8px; font-weight:900;">ابنة الشمس</h1>
+                    <p style="color:#666; font-size:15px;">قصة خيالية عن فتاة من نار الشمس ورجل من طين الأرض</p>
+                    <p style="color:#F5B400; font-size:13px; margin-top:8px; font-weight:700;">عدسة الروايات - LENS OF NOVELS</p>
+                </div>
+            `;
+
+            chapters.forEach((ch, idx) => {
+                let title = `الفصل ${idx}`;
+                if (idx === 0) title = 'المقدمة';
+                else if (idx === chapters.length - 1) title = 'الخاتمة';
+
+                const content = ch.content.replace(/\n/g, '<br>');
+                pdfContainer.innerHTML += `
+                    <div style="margin-bottom:30px; page-break-inside:avoid;">
+                        <h2 style="color:#0A0A0A; font-size:20px; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid #F5B400; font-weight:800;">
+                            ${title}: ${ch.title}
+                        </h2>
+                        <div style="line-height:2; font-size:15px; color:#333; text-align:justify;">${content}</div>
+                    </div>
+                `;
+            });
+
+            pdfContainer.innerHTML += `
+                <div style="text-align:center; color:#999; font-size:12px; margin-top:40px; padding-top:20px; border-top:1px solid #eee;">
+                    جميع الحقوق محفوظة &copy; 2026 عدسة الروايات<br>
+                    برمجة وتطوير: بهاء الدين الحسين - 0982520358
+                </div>
+            `;
+
+            document.body.appendChild(pdfContainer);
+
+            const opt = {
+                margin: [15, 15, 15, 15],
+                filename: 'ابنة_الشمس_عدسة_الروايات.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf().set(opt).from(pdfContainer).save().then(() => {
+                document.body.removeChild(pdfContainer);
+                btn.classList.remove('loading');
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل الرواية PDF</span>';
+            }).catch(() => {
+                document.body.removeChild(pdfContainer);
+                btn.classList.remove('loading');
+                btn.innerHTML = '<i class="fas fa-file-pdf"></i> <span>تحميل الرواية PDF</span>';
+                alert('حدث خطأ أثناء التحميل');
+            });
+        });
+
+        renderChapters();
+    </script>
+<script> window.chtlConfig = { chatbotId: "4317194458" } </script>
+<script async data-id="4317194458" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
