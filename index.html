@@ -1043,10 +1043,17 @@
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal('myIdModal')"><i class="fas fa-times"></i></button>
             <h2 style="color:var(--gold); margin-bottom:15px; text-align:center;">معرّفك الفريد</h2>
-            <p style="text-align:center; font-size:13px; color:#aaa; margin-bottom:20px;">هذا هو معرّفك الخاص في الموقع. احتفظ به، إذ تُفعّل مشترياتك وتُتابع عبره.</p>
+            <p style="text-align:center; font-size:13px; color:#aaa; margin-bottom:20px;">هذا هو معرّفك الخاص في الموقع. احتفظ به، إذ تُفعّل مشترياتك وتُتابع عبره. إذا فتحت الموقع من متصفح آخر (مثل انستغرام أو جهاز جديد) استخدم "استعادة مشترياتك" بالأسفل.</p>
             <div class="copy-wrapper">
                 <input type="text" id="myIdInput" value="" readonly />
                 <button class="copy-btn" onclick="copyMyId()">نسخ</button>
+            </div>
+            <hr style="border-color:#333; margin:22px 0;" />
+            <h3 style="color:var(--gold-light); font-size:15px; margin-bottom:10px; text-align:center;">استعادة مشترياتك</h3>
+            <p style="text-align:center; font-size:12px; color:#999; margin-bottom:14px;">ادخل معرّفك السابق هنا وستُستعاد كل مشترياتك على هذا المتصفح فوراً.</p>
+            <div class="copy-wrapper">
+                <input type="text" id="restoreIdInput" placeholder="LN-XXXXXXXX" style="direction:ltr; text-align:left;" />
+                <button class="copy-btn" id="restoreBtn" onclick="restorePurchases()">استعادة</button>
             </div>
         </div>
     </div>
@@ -1169,6 +1176,38 @@
             }).catch(() => {
                 showToast('تعذر النسخ، يرجى النسخ يدوياً: ' + uid, 'error');
             });
+        }
+
+        // استعادة المشتريات على متصفح آخر بإدخال المعرّف السابق
+        window.restorePurchases = async function() {
+            const raw = document.getElementById('restoreIdInput').value.trim().toUpperCase();
+            if (!/^LN-[A-Z2-9]{8}$/.test(raw)) {
+                showToast('صيغة المعرّف غير صحيحة. مثال: LN-AB2CD3EF', 'error');
+                return;
+            }
+            const btn = document.getElementById('restoreBtn');
+            btn.disabled = true;
+            try {
+                const pSnap = await getDoc(doc(db, "purchases", raw));
+                const ids = (pSnap.exists() && pSnap.data().novelIds) ? pSnap.data().novelIds : [];
+                if (!ids.length) {
+                    showToast('لم نجد مشتريات مرتبطة بهذا المعرّف. تأكد من كتابته بشكل صحيح.', 'error');
+                    btn.disabled = false;
+                    return;
+                }
+                localStorage.setItem('lens_unique_id', raw);
+                userPurchases = ids;
+                document.getElementById('myIdInput').value = raw;
+                document.getElementById('headerMyId').textContent = raw;
+                document.getElementById('restoreIdInput').value = '';
+                closeModal('myIdModal');
+                renderAll();
+                showToast('تمت استعادة مشترياتك بنجاح (' + ids.length + ' رواية)');
+            } catch (e) {
+                console.log('Restore error', e);
+                showToast('تعذر الاستعادة، حاول مرة أخرى', 'error');
+            }
+            btn.disabled = false;
         }
 
         function initUniqueId() {
